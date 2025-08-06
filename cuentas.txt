@@ -1,0 +1,33 @@
+URL del proyecto
+http://lab403azms01.itesm.mx/TC2005B_401_3/Gerry/
+
+Estudiante:
+sofia_lara_nieves@tec.mx
+123b
+
+Profesor:
+husein_sadam@tec.mx
+111ghi
+
+Juez:
+monica_galindo_turbas@tec.mx
+111def
+
+Admin:
+rodrigo_hernadez@tec.mx
+123abc
+
+Enlace de video final:
+https://www.youtube.com/watch?v=8ItQELpJwsY&t=211s
+
+Mi Admin
+http://lab403azms01.itesm.mx/TC2005B_401_3/Gerry/incioadmin/
+
+MiEstudiante
+http://lab403azms01.itesm.mx/TC2005B_401_3/Gerry/inicioestudiante/
+
+Mi Juez
+http://lab403azms01.itesm.mx/TC2005B_401_3/Gerry/iniciojuez/
+
+Mi Profesor
+http://lab403azms01.itesm.mx/TC2005B_401_3/Gerry/inicioprof/
