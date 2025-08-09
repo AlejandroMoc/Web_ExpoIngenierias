@@ -16,7 +16,6 @@ if ($id == "Estudiante") {
 	$xd = " L seguida de 8 números.";
 }
 
-
 $nombreError = null;
 $apellidoPError = null;
 $apellidoMError = null;
@@ -35,23 +34,23 @@ if (!empty($_POST)) {
 	$valid = true;
 
 	if (empty($nombre)) {
-		$nombreError = 'Ingrese un nombre para continuar';
+		$nombreError = 'Ingresa un nombre para continuar';
 		$valid = false;
 	}
 	if (empty($apellidoP)) {
-		$apellidoPError = 'Ingrese un apellido paterno para continuar';
+		$apellidoPError = 'Ingresa un apellido paterno para continuar';
 		$valid = false;
 	}
 	if (empty($apellidoM)) {
-		$apellidoMError = 'Ingrese un apellido materno para continuar';
+		$apellidoMError = 'Ingresa un apellido materno para continuar';
 		$valid = false;
 	}
 	if (empty($correo)) {
-		$correoError = 'Ingrese un correo para continuar';
+		$correoError = 'Ingresa un correo para continuar';
 		$valid = false;
 	}
 	if (empty($matricula) || strlen($matricula) != 9 || ($id == "Estudiante" and $matricula[0] != "A") || ($id == "Profesor" and $matricula[0] != "L") || ($id == "Juez" and $matricula[0] != "X")) {
-		$matriculaError = 'Ingrese una matrícula correcta para continuar.';
+		$matriculaError = 'Ingresa una matrícula correcta para continuar.';
 		$valid = false;
 	}
 
@@ -76,6 +75,7 @@ if (!empty($_POST)) {
 			$q4->execute(array($matricula, $nombre, $apellidoP, $apellidoM, $correo));
 			Database::disconnect();
 			header("Location: http://lab403azms01.itesm.mx/TC2005B_401_3/Gerry/incioadmin/admin.php");
+		
 		} elseif ($matricula[0] == "X") {
 			// Delete data
 			$sql5 = 'INSERT INTO juez (id_juez, nombre, apellidoPaterno, apellidoMaterno, correo) values(?, ?, ?, ?, ?)';
@@ -98,7 +98,6 @@ if (!empty($_POST)) {
 
 }
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -134,7 +133,6 @@ if (!empty($_POST)) {
 	<hr size="4px" color="#b8b4b4">
 
 	<form class="form-horizontal" action="create.php" method="post">
-
 
 		<table align="center" width="100%">
 
@@ -208,8 +206,6 @@ if (!empty($_POST)) {
 				</td>
 				<td style="width: 33.33%;"></td>
 			</tr>
-
-
 
 			<tr>
 				<td style="height: 15px;">

@@ -1,8 +1,8 @@
 <?php
 $dbhost = "localhost";
-$dbuser = "TC2005B_401_3";
-$dbpass = "4#_aWRLFo!5=Te6P";
-$dbname = "TC2005B_401_3";
+$dbuser = "root";
+$dbpass = "password";
+$dbname = "expo_ingenierias";
 
 $conexion = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 if (!$conexion) {

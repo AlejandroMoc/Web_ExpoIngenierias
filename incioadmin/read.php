@@ -5,7 +5,6 @@ if (!empty($_GET['id'])) {
 	$id = $_REQUEST['id'];
 }
 
-
 if ($id[0] == "A") {
 	$xd = " Estudiante";
 } elseif ($id[0] == "L") {
@@ -43,7 +42,6 @@ if ($id == null) {
 		$q5->execute(array($id));
 		$data = $q5->fetch(PDO::FETCH_ASSOC);
 	}
-
 	Database::disconnect();
 }
 ?>
@@ -81,8 +79,8 @@ if ($id == null) {
 
 		<div class="span10 offset1">
 			<div class="form-horizontal">
+				
 				<!-- MATRICULA-->
-
 				<?php
 
 				if ($id[0] == "A") {
@@ -94,6 +92,7 @@ if ($id == null) {
 					echo '</label>';
 					echo '</div>';
 					echo '</div>';
+
 				} elseif ($id[0] == "L" and $cont == 0) {
 					echo '<div class="control-group">';
 					echo '<label class="control-label">Matricula</label>';
@@ -103,6 +102,7 @@ if ($id == null) {
 					echo '</label>';
 					echo '</div>';
 					echo '</div>';
+
 				} elseif ($cont == 1) {
 					//$id = ltrim($id, 'X');
 					echo '<div class="control-group">';
@@ -159,7 +159,7 @@ if ($id == null) {
 
 			</div>
 		</div>
-	</div> <!-- /container -->
+	</div>
 </body>
 
 </html>

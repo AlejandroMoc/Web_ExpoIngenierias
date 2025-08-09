@@ -20,13 +20,13 @@ if ($id[0] == "A") {
 }
 
 if (!empty($_POST)) {
+
 	// Keep track of validation errors
 	$idError = null; // id as id_estudiante
 	$nombreError = null;
 	$apellidoPError = null;
 	$apellidoMError = null;
 	$correoError = null;
-
 
 	// Keep track of post values
 	$id = $_POST['id'];
@@ -161,7 +161,6 @@ if (!empty($_POST)) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -268,7 +267,7 @@ if (!empty($_POST)) {
 			</form>
 		</div>
 
-	</div> <!-- /container -->
+	</div>
 </body>
 
 </html>

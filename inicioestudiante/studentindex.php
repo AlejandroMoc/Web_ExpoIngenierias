@@ -535,9 +535,6 @@ if ($id == null) {
 
 					</table>
 
-
-
-
 			<tr>
 				<td class="celdacolor">
 
@@ -550,14 +547,10 @@ if ($id == null) {
 					$pdo3 = Database::connect();
 					$sql3 = 'SELECT categoria.nombre AS cat2 FROM categoria, proyecto  WHERE  proyecto.id_categoria = categoria.id_categoria  AND proyecto.id_proyecto="' . $id . '"';
 
-
 					foreach ($pdo3->query($sql3) as $rows) {
-
 						echo $rows['cat2'];
-
-
-
 					}
+
 					Database::disconnect();
 
 					?>
@@ -572,11 +565,7 @@ if ($id == null) {
 
 
 					foreach ($pdo3->query($sql3) as $rows) {
-
 						echo $rows['name'] . ' ' . $rows['apellPl'] . ' ' . $rows['apellMl'];
-
-
-
 					}
 					Database::disconnect();
 

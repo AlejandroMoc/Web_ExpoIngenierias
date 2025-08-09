@@ -27,27 +27,27 @@ if (!empty($_POST)) {
 	$valid = true;
 
 	if (empty($nombre)) {
-		$nombreError = 'Ingrese un nombre para continuar';
+		$nombreError = 'Ingresa un nombre para continuar';
 		$valid = false;
 	}
 	if (empty($apellidoP)) {
-		$apellidoPError = 'Ingrese un apellido paterno para continuar';
+		$apellidoPError = 'Ingresa un apellido paterno para continuar';
 		$valid = false;
 	}
 	if (empty($apellidoM)) {
-		$apellidoMError = 'Ingrese un apellido materno para continuar';
+		$apellidoMError = 'Ingresa un apellido materno para continuar';
 		$valid = false;
 	}
 	if (empty($correo)) {
-		$correoError = 'Ingrese un correo para continuar';
+		$correoError = 'Ingresa un correo para continuar';
 		$valid = false;
 	}
 	if (empty($matricula)) {
-		$matriculaError = 'Ingrese una matrícula para continuar';
+		$matriculaError = 'Ingresa una matrícula para continuar';
 		$valid = false;
 	}
 	if (empty($pass)) {
-		$passError = 'Ingrese una contraseña para continuar';
+		$passError = 'Ingresa una contraseña para continuar';
 		$valid = false;
 	}
 	if (empty($confircontra)) {
@@ -80,13 +80,13 @@ if (!empty($_POST)) {
 			return false;
 		}
 
-		//minimum password length validation  
+		// Minimum password length validation  
 		if (pw.length < 8) {
 			document.getElementById("message").innerHTML = "La contraseña debe tener mas de 8 caracteres";
 			return false;
 		}
 
-		//maximum length of password validation  
+		// Maximum length of password validation  
 		if (pw.length > 50) {
 			document.getElementById("message").innerHTML = "La contraseña no puede tener mas de 50 caracteres";
 			return false;

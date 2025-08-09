@@ -32,23 +32,23 @@ if (!empty($_POST)) {
 	$valid = true;
 
 	if (empty($nombreProyecto)) {
-		$nombreProyectoError = 'Ingrese un nombre de proyecto';
+		$nombreProyectoError = 'Ingresa un nombre de proyecto';
 		$valid = false;
 	}
 	if (empty($descripcion)) {
-		$descripcionError = 'Ingrese una descripción del proyecto';
+		$descripcionError = 'Ingresa una descripción del proyecto';
 		$valid = false;
 	}
 	if (empty($categoria)) {
-		$categoria = 'Seleccione una categoría';
+		$categoria = 'Selecciona una categoría';
 		$valid = false;
 	}
 	if (empty($unidadFormacion)) {
-		$unidadFormacion = 'Seleccione una categoría';
+		$unidadFormacion = 'Selecciona una categoría';
 		$valid = false;
 	}
 	if (empty($linkarchivo)) {
-		$linkarchivo = 'Seleccione una categoría';
+		$linkarchivo = 'Selecciona una categoría';
 		$valid = false;
 	}
 	if (empty($lider)) {
@@ -71,7 +71,6 @@ if (!empty($_POST)) {
 		$_SESSION["proyectomat"] = $idproyecto;
 		header("Location: indexEst.php?id=$color");
 	}
-
 }
 ?>
 

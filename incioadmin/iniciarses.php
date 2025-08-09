@@ -4,7 +4,6 @@ include('conexioninicio.php');
 
 if (isset($_POST['correo']) && isset($_POST['password'])) {
 
-
 	$correo = $_POST['correo'];
 	$password = $_POST['password'];
 
@@ -29,6 +28,7 @@ if (isset($_POST['correo']) && isset($_POST['password'])) {
 				header("Location:index.php?error=El usuario o la contraseña son incorrectos ");
 				exit();
 			}
+
 		} else {
 			echo "dentro if inicial";
 			header("Location:index.php?error=El usuario o la contraseña son incorrectos ");
@@ -36,6 +36,7 @@ if (isset($_POST['correo']) && isset($_POST['password'])) {
 		}
 
 	}
+	
 } else {
 	header("Location:index.php");
 	exit();

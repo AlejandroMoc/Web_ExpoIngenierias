@@ -20,7 +20,7 @@ if (!empty($_POST)) {
 	// Validate input
 	$valid = true;
 	if (empty($proyecto)) {
-		$proyectoError = 'Ingrese una matrícula para continuar';
+		$proyectoError = 'Ingresa una matrícula para continuar';
 		$valid = false;
 	}
 

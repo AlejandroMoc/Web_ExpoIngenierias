@@ -114,30 +114,28 @@ CREATE TABLE `status` (
   FOREIGN KEY (`id_profesor`) REFERENCES `profesor`(`id_profesor`) ON DELETE CASCADE
 );
 
-
-
 -- Registros de la base de datos
 
 INSERT INTO `administrador` (`id_admin`, `correo`, `Nombre`, `Apellido`, `contraseña`) VALUES
-(1, 'rodrigo_hernadez@tec.mx', 'Rodrigo', 'Hernandez', '123abc'),
-(2, 'fernanda_ortiz@tec.mx', 'Fernanda', 'Ortiz', '123def'),
-(3, 'martin_fernandez@tec.mx', 'Martin', 'Fernandez', '123ghi');
+(1, 'rodrigo_perez@mail.com', 'Rodrigo', 'Pérez', '123abc'),
+(2, 'fernanda_ortiz@mail.com', 'Fernanda', 'Ortiz', '123def'),
+(3, 'martin_fernandez@mail.com', 'Martin', 'Fernandez', '123ghi');
 
 INSERT INTO `estudiante` (`id_estudiante`, `nombre`, `apellidoPaterno`, `apellidoMaterno`, `correo`,`contraseña`) VALUES
-('A01322234', 'Joaquin', 'Gomez', 'Sanchez', 'joaquin_gomez_sanche@tec.mx', '123a'),
-('A01327397', 'Sofia', 'Lara', 'Nieves', 'sofia_lara_nieves@tec.mx', '123b'),
-('A01722234', 'Clara', 'Mendez', 'Ortega', 'clara_mendez_ortega@tec.mx', '123c'),
-('A017253466', 'Sara', 'Hernandez', 'Freyre', 'sara_her_fre@tec.mx', '456a'),
-('A017253766', 'Juan', 'Osorio', 'Marquez', 'juan_oso_mar@tec.mx', '456a'),
-('A01738265', 'Raul', 'Dominguez', 'Perez', 'raul_dom_per@tec.mx', '456b'),
-('A01759241', 'Miguel', 'Camacho', 'Linares', 'miguel_cam_lin@tec.mx', '456c'),
-('A01791207', 'Ximena', 'Fregoso', 'Maurer', 'Ximena_fre_mau@tec.mx', '789a'),
-('A018263867', 'Alfredo', 'Rosas', 'Estrada', 'alfredo_rosas_estrada@tec.mx', '789b');
+('A01322234', 'Joaquin', 'Gomez', 'Sanchez', 'joaquin_gomez@mail.com', '123a'),
+('A01327397', 'Sofia', 'Lara', 'Nieves', 'sofia_lara_nieves@mail.com', '123b'),
+('A01722234', 'Clara', 'Mendez', 'Ortega', 'clara_mendez_ortega@mail.com', '123c'),
+('A017253466', 'Sara', 'Hernández', 'Freyre', 'sara_her_fre@mail.com', '456a'),
+('A017253766', 'Juan', 'Osorio', 'Marquez', 'juan_oso@mail.com', '456a'),
+('A01738265', 'Raul', 'Dominguez', 'Perez', 'raul_dom@mail.com', '456b'),
+('A01759241', 'Miguel', 'Camacho', 'Linares', 'miguel_cam@mail.com', '456c'),
+('A01791207', 'Ximena', 'Fregoso', 'Maurer', 'ximena_f@mail.com', '789a'),
+('A018263867', 'Alfredo', 'Rosas', 'Estrada', 'alfredo_rosas_estrada@mail.com', '789b');
 
 INSERT INTO `profesor` (`id_profesor`, `nombre`, `apellidoPaterno`, `apellidoMaterno`, `correo`, `contraseña`) VALUES
-('L01274996', 'Daniel', 'Ramirez', 'Rojas', 'dan_ramirez_turbas@tec.mx', '111abc'),
-('L0138456', 'Monica', 'Galindo', 'Turbas', 'monica_galindo_turbas@tec.mx', '111def'),
-('L01492499', 'Sadam', 'Husein', 'Nassar', 'husein_sadam@tec.mx', '111ghi');
+('L01274996', 'Daniel', 'Ramirez', 'Rojas', 'dan_ramirez@mail.com', '111abc'),
+('L0138456', 'Monica', 'Galindo', 'Sánchez', 'monica_galindo@mail.com', '111def'),
+('L01492499', 'Pedro', 'Carlos', 'Corazón', 'pedro_carlos@mail.com', '111ghi');
 
 INSERT INTO `uf` (`id_uf`, `nombre`) VALUES
 ('TC2005B', 'Construccion de Software'), 
@@ -158,10 +156,10 @@ INSERT INTO `categoria` (`id_categoria`, `nombre`) VALUES
 ('5', 'Medio ambiente');
 
 INSERT INTO `juez` (`id_juez`, `nombre`, `apellidoPaterno`, `apellidoMaterno`, `correo`, `contraseña`) VALUES
-('1', 'Daniel', 'Ramirez', 'Rojas', '@tec.mx', '222abc'),
-('L0138456', 'Monica', 'Galindo', 'Turbas', 'monica_galindo_turbas@tec.mx', '111def'),
-('3', 'Oscar', 'Estrada', 'Cortinez', 'estrada@tec.mx', '222efg'),
-('4', 'Gustavo', 'Fring', 'Ordaz', 'fring@tec.mx', '222dhi');
+('1', 'Daniel', 'Ramirez', 'Rojas', '@mail.com', '222abc'),
+('L0138456', 'Monica', 'Galindo', 'Sánchez', 'monica_galindo@mail.com', '111def'),
+('3', 'Oscar', 'Estrada', 'Cortinez', 'estrada@mail.com', '222efg'),
+('4', 'Gustavo', 'Fring', 'Ordaz', 'fring@mail.com', '222dhi');
 
 INSERT INTO `ufprof` (`id_ufprof`, `id_uf`, `id_profesor`) VALUES
 ('u1', 'TC2005B', 'L01274996'), 
@@ -169,7 +167,6 @@ INSERT INTO `ufprof` (`id_ufprof`, `id_uf`, `id_profesor`) VALUES
 ('u3', 'TC2037', 'L0138456'),
 ('u4', 'EH1012', 'L01492499');
 
- 
 INSERT INTO `proyecto` (`id_proyecto`, `nombre`, `lider`, `id_ufprof`, `id_categoria`, `id_edicion`, `linkArchivo`, `descripcion`) VALUES ('CU0201', 'CryptoUniversidad', 'A01327397', 'u1', '2', 1, "https://drive.google.com/drive/folders/12fwYQ9zkEkErfab-Eql4xtQx6msPQ3-p?usp=share_link", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.");
 INSERT INTO `proyecto` (`id_proyecto`, `nombre`, `lider`, `id_ufprof`, `id_categoria`, `id_edicion`, `linkArchivo`, `descripcion`) VALUES ('FDA0501', 'FIltro de agua', 'A01722234', 'u4', '5', 1, "https://drive.google.com/drive/folders/12fwYQ9zkEkErfab-Eql4xtQx6msPQ3-p?usp=share_link", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.");
 INSERT INTO `proyecto` (`id_proyecto`, `nombre`, `lider`, `id_ufprof`, `id_categoria`, `id_edicion`, `linkArchivo`, `descripcion`) VALUES ('MGNE0201', 'Motor Grafico no euclideano', 'A01722234', 'u2', '2', 2, "https://drive.google.com/drive/folders/12fwYQ9zkEkErfab-Eql4xtQx6msPQ3-p?usp=share_link", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.");

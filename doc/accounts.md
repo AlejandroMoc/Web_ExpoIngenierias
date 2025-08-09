@@ -1,23 +1,29 @@
-URL del proyecto
+# Datos sobre el Proyecto
+
+## URL del proyecto
+
 http://lab403azms01.itesm.mx/TC2005B_401_3/Gerry/
 
+## Credenciales de usuarios
+
 Estudiante:
-sofia_lara_nieves@tec.mx
+sofia_lara_nieves@mail.com
 123b
 
 Profesor:
-husein_sadam@tec.mx
+pedro_carlos@mail.com
 111ghi
 
 Juez:
-monica_galindo_turbas@tec.mx
+monica_galindo@mail.com
 111def
 
 Admin:
-rodrigo_hernadez@tec.mx
+rodrigo_perez@mail.com
 123abc
 
-Enlace de video final:
+## Video de sitio web
+
 https://www.youtube.com/watch?v=8ItQELpJwsY&t=211s
 
 Mi Admin
