@@ -4,9 +4,14 @@ Computer simulator with the aim of solving project management of entries at Expo
 
 Original version developed from February 7 to April 14, 2023.
 
+## Website Videos
+
+You can find a behavior test in [YouTube](https://www.youtube.com/watch?v=8ItQELpJwsY&t=211s).
+
 ## Instructions
 
-You can find the set-up guide in [INSTRUCTIONS.md](INSTRUCTIONS.md).
+You can find the set-up guide in [INSTRUCTIONS.md](doc/INSTRUCTIONS.md).
+You can find the credentials to test the website in [accounts.md](doc/accounts.md).
 
 ## Developers
 

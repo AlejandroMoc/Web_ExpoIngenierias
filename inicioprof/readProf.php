@@ -42,7 +42,7 @@ if ($id == null) {
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo-expo.svg">
+			<img src="img/logo_expo.svg">
 			<a href="indexProf.php?id=<?php echo $data['id_profesor']; ?>"><span
 					class="material-symbols-outlined">home</span>MiProfesor</a>
 		</div>
@@ -64,11 +64,11 @@ if ($id == null) {
 			</tr>
 			<tr>
 				<th class="tabh">&nbsp Apellido Paterno: &nbsp</th>
-				<td class="tabd">&nbsp <?php echo $data['apellidoPaterno']; ?> &nbsp</td>
+				<td class="tabd">&nbsp <?php echo $data['apellido_paterno']; ?> &nbsp</td>
 			</tr>
 			<tr>
 				<th class="tabh">&nbsp Apellido Materno: &nbsp</th>
-				<td class="tabd">&nbsp <?php echo $data['apellidoMaterno']; ?> &nbsp</td>
+				<td class="tabd">&nbsp <?php echo $data['apellido_materno']; ?> &nbsp</td>
 			</tr>
 			<tr>
 				<th class="tabh">&nbsp Correo Electronico: &nbsp</th>

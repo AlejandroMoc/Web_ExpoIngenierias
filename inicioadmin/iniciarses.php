@@ -15,12 +15,12 @@ if (isset($_POST['correo']) && isset($_POST['password'])) {
 		exit();
 	} else {
 
-		$sql = "SELECT * FROM administrador WHERE correo = '$correo' AND contraseña = '$password'";
+		$sql = "SELECT * FROM administrador WHERE correo = '$correo' AND contrasena = '$password'";
 		$result = mysqli_query($conexion, $sql);
 
 		if (mysqli_num_rows($result) == 1) {
 			$row = mysqli_fetch_assoc($result);
-			if ($row['correo'] == $correo && $row['contraseña'] == $password) {
+			if ($row['correo'] == $correo && $row['contrasena'] == $password) {
 				$_SESSION['correo'] = $row['correo'];
 				header("Location: admin.php");
 				exit();

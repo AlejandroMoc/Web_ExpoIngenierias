@@ -73,7 +73,7 @@ if (!empty($_POST)) {
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo-expo.svg">
+			<img src="img/logo_expo.svg">
 			<a href=""><?php echo "Eliminar" . $xd ?></a>
 			<a href="admin.php"><span class="material-symbols-outlined">home</span>MiAdmin</a>
 		</div>

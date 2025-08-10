@@ -51,7 +51,7 @@ if (!empty($_POST)) {
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo-expo.svg">
+			<img src="img/logo_expo.svg">
 			<a href="indexProf.php?id=<?php echo $color; ?>"><span
 					class="material-symbols-outlined">home</span>MiProfesor</a>
 		</div>

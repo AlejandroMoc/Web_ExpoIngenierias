@@ -38,7 +38,7 @@ session_start();
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo-expo.svg">
+			<img src="img/logo_expo.svg">
 			<a href="admin.php"><span class="material-symbols-outlined">home</span>MiAdmin</a>
 		</div>
 	</navbar>
@@ -78,7 +78,7 @@ session_start();
 						echo '<span>' . $row['id_estudiante'] . '</span>';
 						echo '</div>';
 						echo '<div id="nombre">';
-						echo '<span>' . $row['nombre'] . ' ' . $row['apellidoPaterno'] . ' ' . $row['apellidoMaterno'] . '</span>';
+						echo '<span>' . $row['nombre'] . ' ' . $row['apellido_paterno'] . ' ' . $row['apellido_materno'] . '</span>';
 						echo '</div>';
 						echo '<span>' . $row['correo'] . '</span>';
 						echo '<div class="botonesRenglonListaUsuarios">';
@@ -117,7 +117,7 @@ session_start();
 						echo '<span>' . $row['id_juez'] . '</span>';
 						echo '</div>';
 						echo '<div id="nombre">';
-						echo '<span>' . $row['nombre'] . ' ' . $row['apellidoPaterno'] . ' ' . $row['apellidoMaterno'] . '</span>';
+						echo '<span>' . $row['nombre'] . ' ' . $row['apellido_paterno'] . ' ' . $row['apellido_materno'] . '</span>';
 						echo '</div>';
 						echo '<span>' . $row['correo'] . '</span>';
 						//echo '<span>'. 'Edición: ' . $row['id_edicion'] .'</span>';
@@ -158,7 +158,7 @@ session_start();
 						echo '<span>' . $row['id_profesor'] . '</span>';
 						echo '</div>';
 						echo '<div id="nombre">';
-						echo '<span>' . $row['nombre'] . ' ' . $row['apellidoPaterno'] . ' ' . $row['apellidoMaterno'] . '</span>';
+						echo '<span>' . $row['nombre'] . ' ' . $row['apellido_paterno'] . ' ' . $row['apellido_materno'] . '</span>';
 						echo '</div>';
 						echo '<span>' . $row['correo'] . '</span>';
 						//echo '<span>'. 'Edición: ' . $row['id_edicion'] .'</span>';

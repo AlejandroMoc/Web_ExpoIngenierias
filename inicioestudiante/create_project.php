@@ -64,7 +64,7 @@ if (!empty($_POST)) {
 	if ($valid) {
 		$pdo = Database::connect();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$sql = 'INSERT INTO proyecto (id_proyecto, nombre, lider, id_ufprof, id_categoria, id_edicion, linkArchivo, descripcion) values(?, ?, ?, ?, ?, ?, ?, ?)';
+		$sql = 'INSERT INTO proyecto (id_proyecto, nombre, lider, id_ufprof, id_categoria, id_edicion, link_archivo, descripcion) values(?, ?, ?, ?, ?, ?, ?, ?)';
 		$q = $pdo->prepare($sql);
 		$q->execute(array($idproyecto, $nombreProyecto, $lider, $unidadFormacion, $categoria, $edicion, $linkarchivo, $descripcion));
 		Database::disconnect();
@@ -82,7 +82,7 @@ if (!empty($_POST)) {
 
 <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="icon" href="http://lab403azms01.itesm.mx/TC2005B_401_3/RETOFINAL/img/miniicon.png">
+	<link rel="icon" href="img/miniicon.png">
 	<title>Registrar Proyecto</title>
 	<meta charset="utf-8" />
 </head>
@@ -96,7 +96,7 @@ if (!empty($_POST)) {
 					<h1 style="font-size: 35px;"><strong>Registrar Proyecto</strong></h1>
 				</td>
 				<td align="center" style="width: 33.33%;" class="logo"> <img
-						src="https://admision.tec.mx/expo-ingenierias/images/logo-expo.svg" style="width: 45%;"></td>
+						src="img/logo_expo.svg" style="width: 45%;"></td>
 				<td align="center" style="width: 33.33%;"> <img
 						src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-blue.png"
 						style="width: 45%;"></td>
@@ -202,10 +202,10 @@ if (!empty($_POST)) {
 								<?php
 								//$pdo = Database::connect();
 								$query = 'SELECT * FROM profesor
-													INNER JOIN ufprof ON ufprof.id_profesor = profesor.id_profesor';
+													INNER JOIN ufProf ON ufProf.id_profesor = profesor.id_profesor';
 
 								foreach ($pdo->query($query) as $row) {
-									echo '<option value=' . $row['id_ufprof'] . '>' . $row['id_uf'] . ' - ' . $row['nombre'] . ' ' . $row['apellidoPaterno'] . ' ' . $row['apellidoMaterno'] . '</option>';
+									echo '<option value=' . $row['id_ufprof'] . '>' . $row['id_uf'] . ' - ' . $row['nombre'] . ' ' . $row['apellido_paterno'] . ' ' . $row['apellido_materno'] . '</option>';
 								}
 								//Database::disconnect();
 								?>
@@ -237,7 +237,7 @@ if (!empty($_POST)) {
 								//$pdo = Database::connect();
 								$query = 'SELECT * FROM estudiante';
 								foreach ($pdo->query($query) as $row) {
-									echo '<option value=' . $row['id_estudiante'] . '>' . $row['nombre'] . ' ' . $row['apellidoPaterno'] . ' ' . $row['apellidoMaterno'] . '</option>';
+									echo '<option value=' . $row['id_estudiante'] . '>' . $row['nombre'] . ' ' . $row['apellido_paterno'] . ' ' . $row['apellido_materno'] . '</option>';
 								}
 								//Database::disconnect();
 								?>

@@ -83,9 +83,12 @@ Once the files are in place and the database is configured, you can access the s
 1. Open your web browser.
 2. Navigate to the project's URL on your local server. These are the following portals:
 
-    * **Admin**: `http://localhost/Web_ExpoIngenierias/incioadmin/`
+    * **Main Page**: `http://localhost/Web_ExpoIngenierias/`
+    * **Admin**: `http://localhost/Web_ExpoIngenierias/inicioadmin/`
     * **Student**: `http://localhost/Web_ExpoIngenierias/inicioestudiante/`
     * **Judge**: `http://localhost/Web_ExpoIngenierias/iniciojuez/`
     * **Professor**: `http://localhost/Web_ExpoIngenierias/inicioprof/`
 
 You should now see the login page for the respective section of the website.
+
+You can test the site with the credentials located on [accounts.md](doc/accounts.md).

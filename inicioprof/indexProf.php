@@ -36,7 +36,7 @@ if ($id == null) {
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo-expo.svg">
+			<img src="img/logo_expo.svg">
 			<h2 style="color: #FFFFFF">MiProfesor &nbsp &nbsp</h2>
 		</div>
 	</navbar>
@@ -61,7 +61,7 @@ if ($id == null) {
 
 					include 'database.php';
 					$pdo = Database::connect();
-					$sql = 'SELECT estudiante.nombre AS est, estudiante.apellidoPaterno, estudiante.apellidoMaterno, proyecto.id_proyecto, proyecto.nombre, categoria.nombre As cat, status.status 
+					$sql = 'SELECT estudiante.nombre AS est, estudiante.apellido_paterno, estudiante.apellido_materno, proyecto.id_proyecto, proyecto.nombre, categoria.nombre As cat, status.status 
                           FROM estudiante, proyecto, categoria,status  
                           WHERE proyecto.lider = estudiante.id_estudiante 
                             And proyecto.id_categoria = categoria.id_categoria AND status.id_proyecto = proyecto.id_proyecto AND status.status !="Corregir" AND status.status !="Rechazado" AND status.status !="Aceptado" AND status.id_profesor="' . $id . '"';
@@ -73,7 +73,7 @@ if ($id == null) {
 						echo '<td align="center" class="proyectoV">' . $row['nombre'] . '<br></br>  </td>';
 						echo '<td align="center" class="proyectoV">' . $row['cat'] . '<br></br>  </td>';
 						echo '<td align="center" class="proyectoV">' . $row['status'] . '<br></br> </td>';
-						echo '<td align="center" class="proyectoV">' . $row['est'] . ' ' . $row['apellidoPaterno'] . ' ' . $row['apellidoMaterno'] . '<br></br> </td>';
+						echo '<td align="center" class="proyectoV">' . $row['est'] . ' ' . $row['apellido_paterno'] . ' ' . $row['apellido_materno'] . '<br></br> </td>';
 						echo '<td align="center" width=250>';
 						echo '<a class="material-icons" href="vistaProf.php?id=' . $row['id_proyecto'] . '" style="color: white; text-decoration:none;">visibility</a>';
 						echo '</td>';

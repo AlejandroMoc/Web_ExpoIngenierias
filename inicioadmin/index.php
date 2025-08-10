@@ -14,7 +14,7 @@
 <body>
 	<table>
 		<tr>
-			<td align="left" style="width: 33.33%;"><img src="img/logo-tec.png" style="width: 35%;height: 15%;"
+			<td align="left" style="width: 33.33%;"><img src="img/logo_tecpng" style="width: 35%;height: 15%;"
 					id="logo-tec"></td>
 			<td align="right" style="width: 33.33%;" class="texto2">MiAdmin</td>
 		</tr>
@@ -27,7 +27,7 @@
 	<table>
 		<tr>
 			<td style="width: 33.33%;"></td>
-			<td align="center" style="width: 33.33%;" class="logo"><img src="img/logo-expo2.svg"
+			<td align="center" style="width: 33.33%;" class="logo"><img src="img/logo_expo2.svg"
 					style="width: 100%;height: 100%;" id="logo-tec"></td>
 			<td style="width: 33.33%;"></td>
 		</tr>

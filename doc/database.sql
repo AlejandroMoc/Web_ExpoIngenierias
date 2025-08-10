@@ -2,20 +2,20 @@
 CREATE TABLE `juez` (
   `id_juez` VARCHAR(50),
   `nombre` VARCHAR(50),
-  `apellidoPaterno` VARCHAR(50),
-  `apellidoMaterno` VARCHAR(50),
+  `apellido_paterno` VARCHAR(50),
+  `apellido_materno` VARCHAR(50),
   `correo` VARCHAR(50),
-  `contraseña` VARCHAR(50),
+  `contrasena` VARCHAR(50),
   PRIMARY KEY (`id_juez`)
 );
 
 CREATE TABLE `estudiante` (
   `id_estudiante` VARCHAR(10),
   `nombre` VARCHAR(50),
-  `apellidoPaterno` VARCHAR(50),
-  `apellidoMaterno` VARCHAR(50),
+  `apellido_paterno` VARCHAR(50),
+  `apellido_materno` VARCHAR(50),
   `correo` VARCHAR(50),
-  `contraseña` VARCHAR(50),
+  `contrasena` VARCHAR(50),
   PRIMARY KEY (`id_estudiante`)
 );
 
@@ -31,7 +31,7 @@ CREATE TABLE `categoria` (
   PRIMARY KEY (`id_categoria`)
 );
 
-CREATE TABLE `uf` (
+CREATE TABLE `ufEstudiante` (
   `id_uf` VARCHAR(50),
   `nombre` VARCHAR(50),
   PRIMARY KEY (`id_uf`)
@@ -40,19 +40,19 @@ CREATE TABLE `uf` (
 CREATE TABLE `profesor` (
   `id_profesor` VARCHAR(50),
   `nombre` VARCHAR(50),
-  `apellidoPaterno` VARCHAR(50),
-  `apellidoMaterno` VARCHAR(50),
+  `apellido_paterno` VARCHAR(50),
+  `apellido_materno` VARCHAR(50),
   `correo` VARCHAR(50),
-  `contraseña` VARCHAR(50),
+  `contrasena` VARCHAR(50),
   PRIMARY KEY (`id_profesor`)
 );
 
-CREATE TABLE `ufprof` (
+CREATE TABLE `ufProf` (
   `id_ufprof` VARCHAR(50),
   `id_uf` VARCHAR(50),
   `id_profesor` VARCHAR(50),
   PRIMARY KEY (`id_ufprof`),
-  FOREIGN KEY (`id_uf`) REFERENCES `uf`(`id_uf`) ON DELETE CASCADE,
+  FOREIGN KEY (`id_uf`) REFERENCES `ufEstudiante`(`id_uf`) ON DELETE CASCADE,
   FOREIGN KEY (`id_profesor`) REFERENCES `profesor`(`id_profesor`) ON DELETE CASCADE,
   KEY `Fk` (`id_uf`, `id_profesor`)
 );
@@ -64,13 +64,13 @@ CREATE TABLE `proyecto` (
   `id_ufprof` VARCHAR(50),
   `id_categoria` VARCHAR(50),
   `id_edicion` INT,
-  `linkArchivo` VARCHAR(150),
+  `link_archivo` VARCHAR(150),
   `descripcion` VARCHAR (400),
   PRIMARY KEY (`id_proyecto`),
   FOREIGN KEY (`lider`) REFERENCES `estudiante`(`id_estudiante`) ON DELETE CASCADE,
   FOREIGN KEY (`id_edicion`) REFERENCES `edicion`(`id_edicion`) ON DELETE CASCADE,
   FOREIGN KEY (`id_categoria`) REFERENCES `categoria`(`id_categoria`) ON DELETE CASCADE,
-  FOREIGN KEY (`id_ufprof`) REFERENCES `ufprof`(`id_ufprof`) ON DELETE CASCADE
+  FOREIGN KEY (`id_ufprof`) REFERENCES `ufProf`(`id_ufprof`) ON DELETE CASCADE
 );
 
 CREATE TABLE `califica` (
@@ -85,16 +85,16 @@ CREATE TABLE `califica` (
 CREATE TABLE `administrador` (
   `id_admin` INT,
   `correo` VARCHAR(50),
-  `Nombre` VARCHAR(50),
-  `Apellido` VARCHAR(50),
-  `contraseña` VARCHAR(50),
+  `nombre` VARCHAR(50),
+  `apellido` VARCHAR(50),
+  `contrasena` VARCHAR(50),
   PRIMARY KEY (`id_admin`)
 );
 
-CREATE TABLE `rubricaestudi` (
+CREATE TABLE `rubricaEstudiantes` (
   `parametro` VARCHAR(3),
   `calificacion` INT,
-  `descripción` VARCHAR(1000),
+  `descripcion` VARCHAR(1000),
   PRIMARY KEY (`parametro`)
 );
 
@@ -116,12 +116,12 @@ CREATE TABLE `status` (
 
 -- Registros de la base de datos
 
-INSERT INTO `administrador` (`id_admin`, `correo`, `Nombre`, `Apellido`, `contraseña`) VALUES
+INSERT INTO `administrador` (`id_admin`, `correo`, `nombre`, `apellido`, `contrasena`) VALUES
 (1, 'rodrigo_perez@mail.com', 'Rodrigo', 'Pérez', '123abc'),
 (2, 'fernanda_ortiz@mail.com', 'Fernanda', 'Ortiz', '123def'),
 (3, 'martin_fernandez@mail.com', 'Martin', 'Fernandez', '123ghi');
 
-INSERT INTO `estudiante` (`id_estudiante`, `nombre`, `apellidoPaterno`, `apellidoMaterno`, `correo`,`contraseña`) VALUES
+INSERT INTO `estudiante` (`id_estudiante`, `nombre`, `apellido_paterno`, `apellido_materno`, `correo`,`contrasena`) VALUES
 ('A01322234', 'Joaquin', 'Gomez', 'Sanchez', 'joaquin_gomez@mail.com', '123a'),
 ('A01327397', 'Sofia', 'Lara', 'Nieves', 'sofia_lara_nieves@mail.com', '123b'),
 ('A01722234', 'Clara', 'Mendez', 'Ortega', 'clara_mendez_ortega@mail.com', '123c'),
@@ -132,12 +132,12 @@ INSERT INTO `estudiante` (`id_estudiante`, `nombre`, `apellidoPaterno`, `apellid
 ('A01791207', 'Ximena', 'Fregoso', 'Maurer', 'ximena_f@mail.com', '789a'),
 ('A018263867', 'Alfredo', 'Rosas', 'Estrada', 'alfredo_rosas_estrada@mail.com', '789b');
 
-INSERT INTO `profesor` (`id_profesor`, `nombre`, `apellidoPaterno`, `apellidoMaterno`, `correo`, `contraseña`) VALUES
+INSERT INTO `profesor` (`id_profesor`, `nombre`, `apellido_paterno`, `apellido_materno`, `correo`, `contrasena`) VALUES
 ('L01274996', 'Daniel', 'Ramirez', 'Rojas', 'dan_ramirez@mail.com', '111abc'),
 ('L0138456', 'Monica', 'Galindo', 'Sánchez', 'monica_galindo@mail.com', '111def'),
 ('L01492499', 'Pedro', 'Carlos', 'Corazón', 'pedro_carlos@mail.com', '111ghi');
 
-INSERT INTO `uf` (`id_uf`, `nombre`) VALUES
+INSERT INTO `ufEstudiante` (`id_uf`, `nombre`) VALUES
 ('TC2005B', 'Construccion de Software'), 
 ('TC2037', 'Implementacion de Metodos Computacionales'),
 ('EH1012', 'Ética, sostenibilidad y responsabilidad social');
@@ -149,30 +149,30 @@ INSERT INTO `edicion` (`id_edicion`, `edicion`) VALUES
 (4, 'AD 24');
 
 INSERT INTO `categoria` (`id_categoria`, `nombre`) VALUES
-('1', 'Robotica'),
+('1', 'Robótica'),
 ('2', 'Software'),
 ('3', 'Nanotecnologia'),
 ('4', 'Comunicacion'),
 ('5', 'Medio ambiente');
 
-INSERT INTO `juez` (`id_juez`, `nombre`, `apellidoPaterno`, `apellidoMaterno`, `correo`, `contraseña`) VALUES
+INSERT INTO `juez` (`id_juez`, `nombre`, `apellido_paterno`, `apellido_materno`, `correo`, `contrasena`) VALUES
 ('1', 'Daniel', 'Ramirez', 'Rojas', '@mail.com', '222abc'),
 ('L0138456', 'Monica', 'Galindo', 'Sánchez', 'monica_galindo@mail.com', '111def'),
 ('3', 'Oscar', 'Estrada', 'Cortinez', 'estrada@mail.com', '222efg'),
 ('4', 'Gustavo', 'Fring', 'Ordaz', 'fring@mail.com', '222dhi');
 
-INSERT INTO `ufprof` (`id_ufprof`, `id_uf`, `id_profesor`) VALUES
+INSERT INTO `ufProf` (`id_ufprof`, `id_uf`, `id_profesor`) VALUES
 ('u1', 'TC2005B', 'L01274996'), 
 ('u2', 'TC2005B', 'L0138456'),
 ('u3', 'TC2037', 'L0138456'),
 ('u4', 'EH1012', 'L01492499');
 
-INSERT INTO `proyecto` (`id_proyecto`, `nombre`, `lider`, `id_ufprof`, `id_categoria`, `id_edicion`, `linkArchivo`, `descripcion`) VALUES ('CU0201', 'CryptoUniversidad', 'A01327397', 'u1', '2', 1, "https://drive.google.com/drive/folders/12fwYQ9zkEkErfab-Eql4xtQx6msPQ3-p?usp=share_link", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.");
-INSERT INTO `proyecto` (`id_proyecto`, `nombre`, `lider`, `id_ufprof`, `id_categoria`, `id_edicion`, `linkArchivo`, `descripcion`) VALUES ('FDA0501', 'FIltro de agua', 'A01722234', 'u4', '5', 1, "https://drive.google.com/drive/folders/12fwYQ9zkEkErfab-Eql4xtQx6msPQ3-p?usp=share_link", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.");
-INSERT INTO `proyecto` (`id_proyecto`, `nombre`, `lider`, `id_ufprof`, `id_categoria`, `id_edicion`, `linkArchivo`, `descripcion`) VALUES ('MGNE0201', 'Motor Grafico no euclideano', 'A01722234', 'u2', '2', 2, "https://drive.google.com/drive/folders/12fwYQ9zkEkErfab-Eql4xtQx6msPQ3-p?usp=share_link", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.");
-INSERT INTO `proyecto` (`id_proyecto`, `nombre`, `lider`, `id_ufprof`, `id_categoria`, `id_edicion`, `linkArchivo`, `descripcion`) VALUES ('NRM0301', 'NanoRobot medico', 'A017253766', 'u4', '3', 2, "https://drive.google.com/drive/folders/12fwYQ9zkEkErfab-Eql4xtQx6msPQ3-p?usp=share_link", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.");
-INSERT INTO `proyecto` (`id_proyecto`, `nombre`, `lider`, `id_ufprof`, `id_categoria`, `id_edicion`, `linkArchivo`, `descripcion`) VALUES ('PDM0301', 'Placas de microfluidos', 'A01722234', 'u4', '3', 3, "https://drive.google.com/drive/folders/12fwYQ9zkEkErfab-Eql4xtQx6msPQ3-p?usp=share_link", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.");
-INSERT INTO `proyecto` (`id_proyecto`, `nombre`, `lider`, `id_ufprof`, `id_categoria`, `id_edicion`, `linkArchivo`, `descripcion`) VALUES ('RA0101', 'Robot Automata', 'A01322234', 'u3', '1', 4, "https://drive.google.com/drive/folders/12fwYQ9zkEkErfab-Eql4xtQx6msPQ3-p?usp=share_link", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.");
+INSERT INTO `proyecto` (`id_proyecto`, `nombre`, `lider`, `id_ufprof`, `id_categoria`, `id_edicion`, `link_archivo`, `descripcion`) VALUES ('CU0201', 'CryptoUniversidad', 'A01327397', 'u1', '2', 1, "https://drive.google.com/drive/folders/12fwYQ9zkEkErfab-Eql4xtQx6msPQ3-p?usp=share_link", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.");
+INSERT INTO `proyecto` (`id_proyecto`, `nombre`, `lider`, `id_ufprof`, `id_categoria`, `id_edicion`, `link_archivo`, `descripcion`) VALUES ('FDA0501', 'FIltro de agua', 'A01722234', 'u4', '5', 1, "https://drive.google.com/drive/folders/12fwYQ9zkEkErfab-Eql4xtQx6msPQ3-p?usp=share_link", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.");
+INSERT INTO `proyecto` (`id_proyecto`, `nombre`, `lider`, `id_ufprof`, `id_categoria`, `id_edicion`, `link_archivo`, `descripcion`) VALUES ('MGNE0201', 'Motor Grafico no euclideano', 'A01722234', 'u2', '2', 2, "https://drive.google.com/drive/folders/12fwYQ9zkEkErfab-Eql4xtQx6msPQ3-p?usp=share_link", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.");
+INSERT INTO `proyecto` (`id_proyecto`, `nombre`, `lider`, `id_ufprof`, `id_categoria`, `id_edicion`, `link_archivo`, `descripcion`) VALUES ('NRM0301', 'NanoRobot medico', 'A017253766', 'u4', '3', 2, "https://drive.google.com/drive/folders/12fwYQ9zkEkErfab-Eql4xtQx6msPQ3-p?usp=share_link", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.");
+INSERT INTO `proyecto` (`id_proyecto`, `nombre`, `lider`, `id_ufprof`, `id_categoria`, `id_edicion`, `link_archivo`, `descripcion`) VALUES ('PDM0301', 'Placas de microfluidos', 'A01722234', 'u4', '3', 3, "https://drive.google.com/drive/folders/12fwYQ9zkEkErfab-Eql4xtQx6msPQ3-p?usp=share_link", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.");
+INSERT INTO `proyecto` (`id_proyecto`, `nombre`, `lider`, `id_ufprof`, `id_categoria`, `id_edicion`, `link_archivo`, `descripcion`) VALUES ('RA0101', 'Robot Automata', 'A01322234', 'u3', '1', 4, "https://drive.google.com/drive/folders/12fwYQ9zkEkErfab-Eql4xtQx6msPQ3-p?usp=share_link", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.");
 
 INSERT INTO `status` (`id_proyecto`, `id_profesor`, `status`, `retroprof`) VALUES ('CU0201', 'L01274996', 'Corregir', 'Buen Proyecto, mejora la descripcion');
 INSERT INTO `status` (`id_proyecto`, `id_profesor`, `status`, `retroprof`) VALUES ('CU0201', 'L01274996', 'Corregir', 'Buen Proyecto, mejora la descripcion');
@@ -180,7 +180,7 @@ INSERT INTO `status` (`id_proyecto`, `id_profesor`, `status`, `retroprof`) VALUE
 INSERT INTO `status` (`id_proyecto`, `id_profesor`, `status`, `retroprof`) VALUES ('MGNE0201', '4L0138456', 'Rechazado', 'No aprobaron la materia');
 INSERT INTO `status` (`id_proyecto`, `id_profesor`, `status`, `retroprof`) VALUES ('NRM0301', 'L01492499', 'Corregir', 'Mal uso de la edicion');
 INSERT INTO `status` (`id_proyecto`, `id_profesor`, `status`, `retroprof`) VALUES ('PDM0301', 'L01492499', 'Corregir', 'No te preocupes');
-INSERT INTO `status` (`id_proyecto`, `id_profesor`, `status`, `retroprof`) VALUES ('RA0101', 'L0138456', 'Aceptado', 'me encanto la idea, tienen gran posibilidades de ganar');
+INSERT INTO `status` (`id_proyecto`, `id_profesor`, `status`, `retroprof`) VALUES ('RA0101', 'L0138456', 'Aceptado', 'me encanto la idea. Tienen gran posibilidades de ganar');
 
 INSERT INTO `califica` (`id_proyecto`, `id_juez`, `calificacion`, `retrojuez`) VALUES
 ('CU0201', '1', 9, "Buen Trabajo"),
@@ -201,8 +201,8 @@ INSERT INTO `miembrosProyecto` (`id_proyecto`, `id_estudiante`) VALUES
 ('FDA0501', 'A018263867'),
 ('CU0201', 'A017253466');
 
-INSERT INTO `rubricaestudi`(`parametro`, `calificacion`, `descripción`) VALUES ('1', 20, 'Utilidad: El proyecto resuelve un problema actual en el área de interpes y/o el proyecto da alta prioridad al cleinte quien queda ampliamente satisfecho');
-INSERT INTO `rubricaestudi`(`parametro`, `calificacion`, `descripción`) VALUES ('2', 20, 'Impacto e innovación: El proyecto presenta una idea nueva e impacta positivamente en el área de interés y/o el producto presenta una idea nueva e incrementa la productividad');
-INSERT INTO `rubricaestudi`(`parametro`, `calificacion`, `descripción`) VALUES ('3', 20, 'Desarrollo experimental o técnico y/o resultados o producto final: Ausiencia de errores técnicos los resultados y/o producto resuelven el problema propuestos');
-INSERT INTO `rubricaestudi`(`parametro`, `calificacion`, `descripción`) VALUES ('4', 20, 'Impacto e innovación: Claridad y precisión de ideas: La presentación es concreta y clara');
-INSERT INTO `rubricaestudi`(`parametro`, `calificacion`, `descripción`) VALUES ('5', 20, 'Respuestas a preguntas: Respuestas precisas de acuerdo al diseño, al estado de avance del proyecto, al impactoy a los resultados obtenidos');
+INSERT INTO `rubricaEstudiantes`(`parametro`, `calificacion`, `descripcion`) VALUES ('1', 20, 'Utilidad: El proyecto resuelve un problema actual en el área de interpes y/o el proyecto da alta prioridad al cleinte quien queda ampliamente satisfecho');
+INSERT INTO `rubricaEstudiantes`(`parametro`, `calificacion`, `descripcion`) VALUES ('2', 20, 'Impacto e innovación: El proyecto presenta una idea nueva e impacta positivamente en el área de interés y/o el producto presenta una idea nueva e incrementa la productividad');
+INSERT INTO `rubricaEstudiantes`(`parametro`, `calificacion`, `descripcion`) VALUES ('3', 20, 'Desarrollo experimental o técnico y/o resultados o producto final: Ausiencia de errores técnicos los resultados y/o producto resuelven el problema propuestos');
+INSERT INTO `rubricaEstudiantes`(`parametro`, `calificacion`, `descripcion`) VALUES ('4', 20, 'Impacto e innovación: Claridad y precisión de ideas: La presentación es concreta y clara');
+INSERT INTO `rubricaEstudiantes`(`parametro`, `calificacion`, `descripcion`) VALUES ('5', 20, 'Respuestas a preguntas: Respuestas precisas de acuerdo al diseño, al estado de avance del proyecto, al impactoy a los resultados obtenidos');

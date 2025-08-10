@@ -32,7 +32,7 @@
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo-expo.svg">
+			<img src="img/logo_expo.svg">
 			<a href="">ASIGNAR PROYECTOS</a>
 			<a href="admin.php"><span class="material-symbols-outlined">home</span>MiAdmin</a>
 		</div>
@@ -95,7 +95,7 @@
 							echo '<select id="menuProfes" name="menuJuez">';
 							echo '<option value="" disable selected>Jueces Disponibles</option>';
 							foreach ($pdo->query($sql4) as $jueze) {
-								echo '<option value=' . $proyecto['id_proyecto'] . '|' . $jueze['id_juez'] . '>' . $jueze['nombre'] . ' ' . $jueze['apellidoPaterno'] . '</option>';
+								echo '<option value=' . $proyecto['id_proyecto'] . '|' . $jueze['id_juez'] . '>' . $jueze['nombre'] . ' ' . $jueze['apellido_paterno'] . '</option>';
 							}
 							echo '</select>';
 							echo '<button type="submit" id="botonSubm" class="material-icons">save_as</button>';
@@ -141,7 +141,7 @@
 							echo '<select id="menuProfes" name="menuJuez">';
 							echo '<option value="" disable selected>Jueces Disponibles</option>';
 							foreach ($pdo->query($sql4) as $jueze) {
-								echo '<option value=' . $proyecto['id_proyecto'] . '|' . $jueze['id_juez'] . '>' . $jueze['nombre'] . ' ' . $jueze['apellidoPaterno'] . '</option>';
+								echo '<option value=' . $proyecto['id_proyecto'] . '|' . $jueze['id_juez'] . '>' . $jueze['nombre'] . ' ' . $jueze['apellido_paterno'] . '</option>';
 							}
 							echo '</select>';
 							echo '<button type="submit" id="botonSubm" class="material-icons">save_as</button>';
@@ -187,7 +187,7 @@
 							echo '<select id="menuProfes" name="menuJuez">';
 							echo '<option value="" disable selected>Jueces Disponibles</option>';
 							foreach ($pdo->query($sql4) as $jueze) {
-								echo '<option value=' . $proyecto['id_proyecto'] . '|' . $jueze['id_juez'] . '>' . $jueze['nombre'] . ' ' . $jueze['apellidoPaterno'] . '</option>';
+								echo '<option value=' . $proyecto['id_proyecto'] . '|' . $jueze['id_juez'] . '>' . $jueze['nombre'] . ' ' . $jueze['apellido_paterno'] . '</option>';
 							}
 							echo '</select>';
 							echo '<button type="submit" id="botonSubm" class="material-icons">save_as</button>';
@@ -233,7 +233,7 @@
 							echo '<select id="menuProfes" name="menuJuez">';
 							echo '<option value="" disable selected>Jueces Disponibles</option>';
 							foreach ($pdo->query($sql4) as $jueze) {
-								echo '<option value=' . $proyecto['id_proyecto'] . '|' . $jueze['id_juez'] . '>' . $jueze['nombre'] . ' ' . $jueze['apellidoPaterno'] . '</option>';
+								echo '<option value=' . $proyecto['id_proyecto'] . '|' . $jueze['id_juez'] . '>' . $jueze['nombre'] . ' ' . $jueze['apellido_paterno'] . '</option>';
 							}
 							echo '</select>';
 							echo '<button type="submit" id="botonSubm" class="material-icons">save_as</button>';
@@ -279,7 +279,7 @@
 							echo '<select id="menuProfes" name="menuJuez">';
 							echo '<option value="" disable selected>Jueces Disponibles</option>';
 							foreach ($pdo->query($sql4) as $jueze) {
-								echo '<option value=' . $proyecto['id_proyecto'] . '|' . $jueze['id_juez'] . '>' . $jueze['nombre'] . ' ' . $jueze['apellidoPaterno'] . '</option>';
+								echo '<option value=' . $proyecto['id_proyecto'] . '|' . $jueze['id_juez'] . '>' . $jueze['nombre'] . ' ' . $jueze['apellido_paterno'] . '</option>';
 							}
 							echo '</select>';
 							echo '<button type="submit" id="botonSubm" class="material-icons">save_as</button>';

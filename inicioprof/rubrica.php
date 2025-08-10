@@ -105,9 +105,9 @@ if (!empty($_POST)) {
 
 	<table align="center" width="100%" class="logos">
 		<tr>
-			<td align="center" style="width: 50%;" class="logo"> <img src="img/logo-expo.png"
+			<td align="center" style="width: 50%;" class="logo"> <img src="img/logo_expo.png"
 					style="width: 45%;height: 20%;"></td>
-			<td align="center" style="width: 50%;" class="logo"> <img src="img/logotec.png"
+			<td align="center" style="width: 50%;" class="logo"> <img src="img/logo_tecpng"
 					style="width: 45%;height: 80%;"></td>
 
 		</tr>

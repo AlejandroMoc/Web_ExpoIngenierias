@@ -62,7 +62,7 @@ if (!empty($_POST)) {
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo-expo.svg">
+			<img src="img/logo_expo.svg">
 			<a href="indexEst.php?id=<?php echo $color; ?>"><span
 					class="material-symbols-outlined">home</span>MiEstudiante</a>
 		</div>
@@ -73,7 +73,6 @@ if (!empty($_POST)) {
 	</h1>
 	<br>
 	<form class="form-horizontal" action="unirEst.php?id=<?php echo $id ?>" method="post">
-
 
 		<table align="center" style="width: 23%;">
 			<tr style="width: 33.33%;">

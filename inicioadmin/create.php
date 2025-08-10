@@ -62,32 +62,32 @@ if (!empty($_POST)) {
 
 		if ($matricula[0] == "A" and strlen($matricula) == 9) {
 			// Delete data
-			$sql2 = 'INSERT INTO estudiante (id_estudiante, nombre, apellidoPaterno, apellidoMaterno, correo) values(?, ?, ?, ?, ?)';
+			$sql2 = 'INSERT INTO estudiante (id_estudiante, nombre, apellido_paterno, apellido_materno, correo) values(?, ?, ?, ?, ?)';
 			$q2 = $pdo->prepare($sql2);
 			$q2->execute(array($matricula, $nombre, $apellidoP, $apellidoM, $correo));
 			Database::disconnect();
-			header("Location: http://lab403azms01.itesm.mx/TC2005B_401_3/Gerry/incioadmin/admin.php");
+			header("Location: http://localhost/Web_ExpoIngenierias/inicioadmin/admin.php");
 
 		} elseif ($matricula[0] == "L") {
 			// Delete data
-			$sql4 = 'INSERT INTO profesor (id_profesor, nombre, apellidoPaterno, apellidoMaterno, correo) values(?, ?, ?, ?, ?)';
+			$sql4 = 'INSERT INTO profesor (id_profesor, nombre, apellido_paterno, apellido_materno, correo) values(?, ?, ?, ?, ?)';
 			$q4 = $pdo->prepare($sql4);
 			$q4->execute(array($matricula, $nombre, $apellidoP, $apellidoM, $correo));
 			Database::disconnect();
-			header("Location: http://lab403azms01.itesm.mx/TC2005B_401_3/Gerry/incioadmin/admin.php");
+			header("Location: http://localhost/Web_ExpoIngenierias/inicioadmin/admin.php");
 		
 		} elseif ($matricula[0] == "X") {
 			// Delete data
-			$sql5 = 'INSERT INTO juez (id_juez, nombre, apellidoPaterno, apellidoMaterno, correo) values(?, ?, ?, ?, ?)';
+			$sql5 = 'INSERT INTO juez (id_juez, nombre, apellido_paterno, apellido_materno, correo) values(?, ?, ?, ?, ?)';
 			$q5 = $pdo->prepare($sql5);
 			$q5->execute(array($matricula, $nombre, $apellidoP, $apellidoM, $correo));
 			Database::disconnect();
-			header("Location: http://lab403azms01.itesm.mx/TC2005B_401_3/Gerry/incioadmin/admin.php");
+			header("Location: http://localhost/Web_ExpoIngenierias/inicioadmin/admin.php");
 		}
 
 		/*$pdo = Database::connect();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$sql = 'INSERT INTO estudiante (id_estudiante, nombre, apellidoPaterno, apellidoMaterno, correo) values(?, ?, ?, ?, ?)';
+		$sql = 'INSERT INTO estudiante (id_estudiante, nombre, apellido_paterno, apellido_materno, correo) values(?, ?, ?, ?, ?)';
 		$q = $pdo->prepare($sql);
 
 		$q->execute(array($matricula, $nombre ,$apellidoP, $apellidoM, $correo));
@@ -121,7 +121,7 @@ if (!empty($_POST)) {
 				<h1 style="font-size: 35px;"><strong><?php echo "Añadir " . $id ?></strong></h1>
 			</td>
 			<td align="center" style="width: 33.33%;" class="logo"> <img
-					src="https://admision.tec.mx/expo-ingenierias/images/logo-expo.svg" style="width: 45%;height: 20%;">
+					src="img/logo_expo.svg" style="width: 45%;height: 20%;">
 			</td>
 			<td align="center" style="width: 33.33%;"> <img
 					src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-blue.png"

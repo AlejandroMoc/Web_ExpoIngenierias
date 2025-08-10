@@ -21,7 +21,7 @@ if (!empty($_POST)) {
 	$correo = $_POST['correo'];
 	$matricula = $_POST['matricula'];
 	$pass = $_POST['pass'];
-	$confircontra = $_POST['confircontra'];
+	$confirmPassword = $_POST['confirmPassword'];
 
 	// Validate input
 	$valid = true;
@@ -50,8 +50,8 @@ if (!empty($_POST)) {
 		$passError = 'Ingresa una contraseña para continuar';
 		$valid = false;
 	}
-	if (empty($confircontra)) {
-		$confircontraError = 'Vuelva a ingresar su contraseña para continuar';
+	if (empty($confirmPassword)) {
+		$confircontraError = 'Vuelve a ingresar tu contraseña para continuar';
 		$valid = false;
 	}
 
@@ -59,7 +59,7 @@ if (!empty($_POST)) {
 	if ($valid) {
 		$pdo = Database::connect();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$sql = 'INSERT INTO juez (id_juez, nombre, apellidoPaterno, apellidoMaterno, correo, contraseña) values(?, ?, ?, ?, ?, ?)';
+		$sql = 'INSERT INTO juez (id_juez, nombre, apellido_paterno, apellido_materno, correo, contrasena) values(?, ?, ?, ?, ?, ?)';
 		$q = $pdo->prepare($sql);
 
 		$q->execute(array($matricula, $nombre, $apellidoP, $apellidoM, $correo, $pass));
@@ -73,7 +73,7 @@ if (!empty($_POST)) {
 <script>
 	function verifyPassword() {
 		var pw = document.getElementById("pass").value;
-		var vpw = document.getElementById("confircontra").value;
+		var vpw = document.getElementById("confirmPassword").value;
 		//check empty password field  
 		if (pw != vpw) {
 			document.getElementById("message").innerHTML = "Las contraseñas no coinciden";
@@ -118,7 +118,7 @@ if (!empty($_POST)) {
 					<h1 style="font-size: 35px;"><strong>Registrar Juez</strong></h1>
 				</td>
 				<td align="center" style="width: 33.33%;" class="logo"> <img
-						src="https://admision.tec.mx/expo-ingenierias/images/logo-expo.svg" style="width: 45%;"></td>
+						src="img/logo_expo.svg" style="width: 45%;"></td>
 				<td align="center" style="width: 33.33%;"> <img
 						src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-blue.png"
 						style="width: 45%;"></td>
@@ -221,7 +221,7 @@ if (!empty($_POST)) {
 
 		<center>
 			<div align="center">
-				<input type="password" id="pass" name="pass" required maxlength="30" placeholder="  contraseña"
+				<input type="password" id="pass" name="pass" required maxlength="30" placeholder="  contrasena"
 					size="70" class="input" value="<?php echo !empty($pass) ? $pass : ''; ?>">
 				<?php if (($passError != null)) ?>
 				<span class="help-inline"><?php echo $passError; ?></span>
@@ -237,9 +237,9 @@ if (!empty($_POST)) {
 
 		<center>
 			<div align="center">
-				<input type="password" id="confircontra" name="confircontra" required maxlength="30"
+				<input type="password" id="confirmPassword" name="confirmPassword" required maxlength="30"
 					placeholder="  Vuelve a escribir tu clave" size="70" class="input"
-					value="<?php echo !empty($confircontra) ? $confircontra : ''; ?>">
+					value="<?php echo !empty($confirmPassword) ? $confirmPassword : ''; ?>">
 				<?php if (($confircontraError != null)) ?>
 				<span class="help-inline"><?php echo $confircontraError; ?></span>
 			</div>

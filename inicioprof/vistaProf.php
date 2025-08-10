@@ -12,12 +12,12 @@ if ($id == null) {
 } else {
 	$pdo = Database::connect();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$sql = "SELECT estudiante.nombre AS nombrelider,  estudiante.apellidoPaterno, estudiante.apellidoMaterno, proyecto.id_proyecto, proyecto.linkArchivo, proyecto.nombre, status.id_profesor  FROM proyecto,status, estudiante where proyecto.id_proyecto=status.id_proyecto AND proyecto.lider = estudiante.id_estudiante AND proyecto.id_proyecto=?";
+	$sql = "SELECT estudiante.nombre AS nombrelider,  estudiante.apellido_paterno, estudiante.apellido_materno, proyecto.id_proyecto, proyecto.link_archivo, proyecto.nombre, status.id_profesor  FROM proyecto,status, estudiante where proyecto.id_proyecto=status.id_proyecto AND proyecto.lider = estudiante.id_estudiante AND proyecto.id_proyecto=?";
 	$q = $pdo->prepare($sql);
 	$q->execute(array($id));
 	$data = $q->fetch(PDO::FETCH_ASSOC);
 	$idP = $data['id_proyecto'];
-	$sql2 = 'SELECT  estudiante.nombre AS nom, estudiante.apellidoPaterno AS APM from estudiante, miembrosProyecto WHERE  estudiante.id_estudiante = miembrosProyecto.id_estudiante AND miembrosProyecto.id_proyecto="' . $idP . '"';
+	$sql2 = 'SELECT  estudiante.nombre AS nom, estudiante.apellido_paterno AS APM from estudiante, miembrosProyecto WHERE  estudiante.id_estudiante = miembrosProyecto.id_estudiante AND miembrosProyecto.id_proyecto="' . $idP . '"';
 
 	Database::disconnect();
 }
@@ -50,7 +50,7 @@ $_SESSION['color'] = $data['id_profesor'];
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo-expo.svg">
+			<img src="img/logo_expo.svg">
 			<a href="indexProf.php?id=<?php echo $data['id_profesor']; ?>"><span
 					class="material-symbols-outlined">home</span>MiProfesor</a>
 		</div>
@@ -83,7 +83,7 @@ $_SESSION['color'] = $data['id_profesor'];
 				<th class="titulotabla">
 					Lider del Proyecto
 				</th>
-				<th><?php echo $data['nombrelider'] . " " . $data['apellidoPaterno'] . " " . $data['apellidoMaterno']; ?>
+				<th><?php echo $data['nombrelider'] . " " . $data['apellido_paterno'] . " " . $data['apellido_materno']; ?>
 				</th>
 
 			</tr>
@@ -121,7 +121,7 @@ $_SESSION['color'] = $data['id_profesor'];
 
 		<script>
 			function openWindow() {
-				window.open("<?php echo $data['linkArchivo']; ?>");
+				window.open("<?php echo $data['link_archivo']; ?>");
 			}
 
 		</script>

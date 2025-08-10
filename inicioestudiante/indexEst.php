@@ -42,7 +42,7 @@ $_SESSION['pro'] = "CU0201";
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo-expo.svg">
+			<img src="img/logo_expo.svg">
 			<h2 style="color: #FFFFFF">MiEstudiante &nbsp &nbsp</h2>
 		</div>
 	</navbar>

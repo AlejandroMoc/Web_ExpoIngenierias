@@ -73,18 +73,18 @@ if (!empty($_POST)) {
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		if ($id[0] == "A") {
-			$sql2 = "UPDATE estudiante  set nombre = ?, apellidoPaterno = ?, apellidoMaterno = ?, correo= ? WHERE id_estudiante = ?";
+			$sql2 = "UPDATE estudiante  set nombre = ?, apellido_paterno = ?, apellido_materno = ?, correo= ? WHERE id_estudiante = ?";
 			$q2 = $pdo->prepare($sql2);
 			$q2->execute(array($nombre, $apellidoP, $apellidoM, $correo, $id));
 		} elseif ($id[0] == "L") {
 
-			$sql4 = "UPDATE profesor set nombre = ?, apellidoPaterno = ?, apellidoMaterno = ?, correo= ? WHERE id_profesor = ?";
+			$sql4 = "UPDATE profesor set nombre = ?, apellido_paterno = ?, apellido_materno = ?, correo= ? WHERE id_profesor = ?";
 			$q4 = $pdo->prepare($sql4);
 			$q4->execute(array($nombre, $apellidoP, $apellidoM, $correo, $id));
 		} elseif ($id[0] == "X") {
 			//$id = ltrim($id, 'X');
 
-			$sql5 = "UPDATE juez set nombre = ?, apellidoPaterno = ?, apellidoMaterno = ?, correo= ? WHERE id_juez = ?";
+			$sql5 = "UPDATE juez set nombre = ?, apellido_paterno = ?, apellido_materno = ?, correo= ? WHERE id_juez = ?";
 			$q5 = $pdo->prepare($sql5);
 			$q5->execute(array($nombre, $apellidoP, $apellidoM, $correo, $id));
 		}
@@ -94,7 +94,7 @@ if (!empty($_POST)) {
 
 		/*$pdo = Database::connect();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$sql = "UPDATE estudiante  set nombre = ?, apellidoPaterno = ?, apellidoMaterno = ?, correo= ? WHERE id_estudiante = ?";
+		$sql = "UPDATE estudiante  set nombre = ?, apellido_paterno = ?, apellido_materno = ?, correo= ? WHERE id_estudiante = ?";
 		$q = $pdo->prepare($sql);
 		$q->execute(array($nombre,$apellidoP,$apellidoM,$correo, $id));
 		Database::disconnect();
@@ -113,8 +113,8 @@ if (!empty($_POST)) {
 		$data = $q2->fetch(PDO::FETCH_ASSOC);
 		$id = $data['id_estudiante'];
 		$nombre = $data['nombre'];
-		$apellidoP = $data['apellidoPaterno'];
-		$apellidoM = $data['apellidoMaterno'];
+		$apellidoP = $data['apellido_paterno'];
+		$apellidoM = $data['apellido_materno'];
 		$correo = $data['correo'];
 
 	} elseif ($id[0] == "L") {
@@ -124,8 +124,8 @@ if (!empty($_POST)) {
 		$data = $q4->fetch(PDO::FETCH_ASSOC);
 		$id = $data['id_profesor'];
 		$nombre = $data['nombre'];
-		$apellidoP = $data['apellidoPaterno'];
-		$apellidoM = $data['apellidoMaterno'];
+		$apellidoP = $data['apellido_paterno'];
+		$apellidoM = $data['apellido_materno'];
 		$correo = $data['correo'];
 
 	} elseif ($id[0] == "X") {
@@ -136,8 +136,8 @@ if (!empty($_POST)) {
 		$data = $q5->fetch(PDO::FETCH_ASSOC);
 		$id = $data['id_juez'];
 		$nombre = $data['nombre'];
-		$apellidoP = $data['apellidoPaterno'];
-		$apellidoM = $data['apellidoMaterno'];
+		$apellidoP = $data['apellido_paterno'];
+		$apellidoM = $data['apellido_materno'];
 		$correo = $data['correo'];
 		//$id = 'X'.$id;
 	}
@@ -154,8 +154,8 @@ if (!empty($_POST)) {
 	$data = $q->fetch(PDO::FETCH_ASSOC);
 	$id 	= $data['id_estudiante'];
 	$nombre = $data['nombre'];
-	$apellidoP = $data['apellidoPaterno'];
-	$apellidoM = $data['apellidoMaterno'];
+	$apellidoP = $data['apellido_paterno'];
+	$apellidoM = $data['apellido_materno'];
 	$correo = $data['correo'];
 	Database::disconnect();*/
 }
@@ -184,7 +184,7 @@ if (!empty($_POST)) {
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo-expo.svg">
+			<img src="img/logo_expo.svg">
 			<a href=""><?php echo "Modificar" . $xd ?></a>
 			<a href="admin.php"><span class="material-symbols-outlined">home</span>MiAdmin</a>
 		</div>

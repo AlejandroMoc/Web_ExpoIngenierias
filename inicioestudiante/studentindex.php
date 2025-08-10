@@ -347,7 +347,7 @@ if ($id == null) {
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo-expo.svg">
+			<img src="img/logo_expo.svg">
 		</div>
 	</navbar>
 
@@ -456,7 +456,7 @@ if ($id == null) {
 						<?php
 
 						$pdo3 = Database::connect();
-						$sql3 = 'SELECT juez.nombre AS nomj, juez.apellidoPaterno AS apellPj, juez.apellidoMaterno AS apellMj FROM   juez,califica WHERE juez.id_juez = califica.id_juez AND califica.id_proyecto="' . $id . '"';
+						$sql3 = 'SELECT juez.nombre AS nomj, juez.apellido_paterno AS apellPj, juez.apellido_materno AS apellMj FROM   juez,califica WHERE juez.id_juez = califica.id_juez AND califica.id_proyecto="' . $id . '"';
 
 						foreach ($pdo3->query($sql3) as $rows) {
 
@@ -561,7 +561,7 @@ if ($id == null) {
 					<?php
 
 					$pdo3 = Database::connect();
-					$sql3 = 'SELECT estudiante.nombre AS name, estudiante.apellidoPaterno AS apellPl, estudiante.apellidoMaterno AS apellMl FROM proyecto, estudiante  WHERE  proyecto.lider = estudiante.id_estudiante  AND proyecto.id_proyecto="' . $id . '"';
+					$sql3 = 'SELECT estudiante.nombre AS name, estudiante.apellido_paterno AS apellPl, estudiante.apellido_materno AS apellMl FROM proyecto, estudiante  WHERE  proyecto.lider = estudiante.id_estudiante  AND proyecto.id_proyecto="' . $id . '"';
 
 
 					foreach ($pdo3->query($sql3) as $rows) {
@@ -577,7 +577,7 @@ if ($id == null) {
 						<?php
 
 						$pdo3 = Database::connect();
-						$sql3 = 'SELECT estudiante.nombre AS nom, estudiante.apellidoPaterno AS apell, estudiante.apellidoMaterno AS apell2 from estudiante, miembrosProyecto WHERE estudiante.id_estudiante = miembrosProyecto.id_estudiante AND miembrosProyecto.id_proyecto="' . $id . '"';
+						$sql3 = 'SELECT estudiante.nombre AS nom, estudiante.apellido_paterno AS apell, estudiante.apellido_materno AS apell2 from estudiante, miembrosProyecto WHERE estudiante.id_estudiante = miembrosProyecto.id_estudiante AND miembrosProyecto.id_proyecto="' . $id . '"';
 
 						foreach ($pdo3->query($sql3) as $rows) {
 
@@ -619,7 +619,6 @@ if ($id == null) {
 
 					?>
 
-
 					<p class="expotexto7">Juez</p>
 
 					<p class="expotexto10">
@@ -628,7 +627,6 @@ if ($id == null) {
 
 					$pdo3 = Database::connect();
 					$sql3 = 'SELECT califica.retrojuez FROM califica WHERE  califica.id_proyecto="' . $id . '"';
-
 
 					foreach ($pdo3->query($sql3) as $rows) {
 						if ($rows['retrojuez'] == NULL) {
@@ -674,7 +672,6 @@ if ($id == null) {
 		<p class="footerderecho">©2023 Tecnológico de Monterrey. Todos los derechos reservados.</p>
 		<div style="clear: both"></div>
 	</div>
-
 
 </body>
 

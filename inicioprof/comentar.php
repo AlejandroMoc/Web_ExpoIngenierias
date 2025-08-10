@@ -29,7 +29,6 @@ if (!empty($_POST)) {
 			$result1 = "Sin comentarios";
 		}
 
-
 		$pdo = Database::connect();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$sql1 = "UPDATE status set retroprof = ?  WHERE id_proyecto = ?";
@@ -39,7 +38,6 @@ if (!empty($_POST)) {
 		header("Location: vistaProf.php?id=$id");
 	}
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -66,7 +64,7 @@ if (!empty($_POST)) {
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo-expo.svg">
+			<img src="img/logo_expo.svg">
 			<a href="indexProf.php?id=<?php echo $color; ?>"><span
 					class="material-symbols-outlined">home</span>MiProfesor</a>
 		</div>

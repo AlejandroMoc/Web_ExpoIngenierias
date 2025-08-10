@@ -69,7 +69,7 @@ if ($id == null) {
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo-expo.svg">
+			<img src="img/logo_expo.svg">
 			<a href=""><?php echo "Detalles del" . $xd ?></a>
 			<a href="admin.php"><span class="material-symbols-outlined">home</span>MiAdmin</a>
 		</div>
@@ -130,7 +130,7 @@ if ($id == null) {
 					<label class="control-label">Apellido Paterno</label>
 					<div class="controls">
 						<label class="checkbox">
-							<?php echo $data['apellidoPaterno']; ?>
+							<?php echo $data['apellido_paterno']; ?>
 						</label>
 					</div>
 				</div>
@@ -139,7 +139,7 @@ if ($id == null) {
 					<label class="control-label">Apellido Materno</label>
 					<div class="controls">
 						<label class="checkbox">
-							<?php echo $data['apellidoMaterno']; ?>
+							<?php echo $data['apellido_materno']; ?>
 						</label>
 					</div>
 				</div>

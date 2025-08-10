@@ -19,7 +19,7 @@
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo-expo.svg">
+			<img src="img/logo_expo.svg">
 			<a href="calif.html">PROYECTOS CALIFICADOS</a>
 			<a href="admin.php"><span class="material-symbols-outlined">home</span>MiAdmin</a>
 		</div>
@@ -33,7 +33,7 @@
 		</thead>
 		<tbody>
 			<tr style="height:85%">
-				<th scope="row">Robotica</th>
+				<th scope="row">Robótica</th>
 				<td><span>85%</span></td>
 			</tr>
 			<tr style="height:23%">
