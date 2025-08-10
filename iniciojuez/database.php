@@ -1,10 +1,10 @@
 <?php
 class Database
 {
-	private static $dbName = 'TC2005B_401_3';
+	private static $dbName = 'expo_ingenierias';
 	private static $dbHost = 'localhost';
-	private static $dbUsername = 'TC2005B_401_3';
-	private static $dbUserPassword = '4#_aWRLFo!5=Te6P';
+	private static $dbUsername = 'root';
+	private static $dbUserPassword = '';
 
 	private static $cont = null;
 

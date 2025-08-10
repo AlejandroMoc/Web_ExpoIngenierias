@@ -5,16 +5,16 @@
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="css/iniciosesion.css">
-	<title>ExpoIngenieria</title>
+	<meta charset="utf-8"/>
+	<title>MiAdmin</title>
+	<link rel="stylesheet" type="text/css" href="css/admin_login.css">
 	<link rel="icon" href="img/miniicon.png">
-	<meta charset="utf-8" />
 </head>
 
 <body>
 	<table>
 		<tr>
-			<td align="left" style="width: 33.33%;"><img src="img/logo_tecpng" style="width: 35%;height: 15%;"
+			<td align="left" style="width: 33.33%;"><img src="img/logo_tec.png" style="width: 35%;height: 15%;"
 					id="logo-tec"></td>
 			<td align="right" style="width: 33.33%;" class="texto2">MiAdmin</td>
 		</tr>
@@ -35,7 +35,7 @@
 
 	<br id="logo-input">
 
-	<form class="form-horizontal" action="iniciarses.php" method="POST">
+	<form class="form-horizontal" action="db_connection.php" method="POST">
 
 		<table align="center" width="100%">
 			<tr>

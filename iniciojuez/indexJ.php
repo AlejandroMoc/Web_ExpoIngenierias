@@ -5,13 +5,12 @@ session_start();
 <html>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--Paquete de íconos usado-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
-
 <head>
-	<title>Calificar Proyecto Juez</title>
+	<meta charset="utf-8"/>
+	<title>MiJuez</title>
 	<link rel="stylesheet" type="text/css" href="css/style2.css">
 	<link rel="icon" href="img/miniicon.png">
 </head>
@@ -22,7 +21,7 @@ session_start();
 		<tr>
 			<td align="center" style="width: 46%;" class="logo"> <img src="img/logo_expo.png"
 					style="width: 45%;height: 20%;"></td>
-			<td align="center" style="width: 46%;" class="logo"> <img src="img/logo_tecpng"
+			<td align="center" style="width: 46%;" class="logo"> <img src="img/logo_tec.png"
 					style="width: 45%;height: 80%;"></td>
 			<td align="center" style="width: 8%;"><a href="cerrarsesion.php"><img
 						src="https://static-00.iconduck.com/assets.00/logout-icon-512x512-2x08s84n.png"
@@ -30,13 +29,7 @@ session_start();
 		</tr>
 	</table>
 
-	<hr size="4px" color=#b8b4b4>
-
-	<h2 style="color:#082460">
-
-
-
-
+	<div style="color:#082460">
 		<?php
 		$id = null;
 		$id = $_REQUEST['id'];
@@ -71,7 +64,7 @@ session_start();
 			echo '<div class="botones">';
 			echo '<a href="' . $row['link_archivo'] . '" style="color:#FFFFFF" id="text1">Visualizar proyecto</a>';
 			echo '<a href="rubrica.php?id=' . $row['id_proyecto'] . '" style="color:#FFFFFF" id="text1">Rubrica</a>';
-			echo '<a href="Comentarios.php?id=' . $row['id_proyecto'] . '" style="color:#FFFFFF" id="text1">C/R</a>';
+			echo '<a href="comentarios.php?id=' . $row['id_proyecto'] . '" style="color:#FFFFFF" id="text1">C/R</a>';
 			echo '</div>';
 			echo '  </div>';
 			$idNegro = $idNegro + 1;
@@ -85,7 +78,7 @@ session_start();
 		Database::disconnect();
 
 		?>
-
+	</div>
 </body>
 
 

@@ -5,16 +5,16 @@
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="css/iniciosesion.css">
+	<link rel="stylesheet" type="text/css" href="css/prof_login.css">
 	<title>ExpoIngenieria</title>
 	<link rel="icon" href="img/miniicon.png">
-	<meta charset="utf-8" />
+	<meta charset="utf-8"/>
 </head>
 
 <body>
 	<table>
 		<tr>
-			<td align="left" style="width: 33.33%;"><img src="img/logo_tecpng" style="width: 35%;height: 15%;"
+			<td align="left" style="width: 33.33%;"><img src="img/logo_tec.png" style="width: 35%;height: 15%;"
 					id="logo-tec"></td>
 			<td align="right" style="width: 33.33%;" class="texto2">MiProfesor</td>
 		</tr>
@@ -33,7 +33,7 @@
 
 	<br id="logo-input">
 
-	<form class="form-horizontal" action="iniciarses.php" method="POST">
+	<form class="form-horizontal" action="db_connection.php" method="POST">
 
 		<table align="center" width="100%">
 			<tr>
@@ -111,13 +111,13 @@
 	<table align="center" width="100%">
 		<tr>
 			<td style="width: 33.33%;"></td>
-			<td align="center" style="width: 33.33%;" class="texto"><strong>¿OLVIDASTE TU CONTRASEÑA?</strong></td>
+			<td align="center" style="width: 33.33%;" class="texto"><strong>¿Olvidaste tu contraseña?</strong></td>
 			<td style="width: 33.33%;"></td>
 		</tr>
 
 		<tr>
 			<td style="width: 33.33%;"></td>
-			<td align="center" style="width: 33.33%;" class="texto"><strong>¿NECESITAS AYUDA? CONTÁCTANOS</strong></td>
+			<td align="center" style="width: 33.33%;" class="texto"><strong>¿Necesitas ayuda? Contáctanos</strong></td>
 			<td style="width: 33.33%;"></td>
 		</tr>
 

@@ -27,7 +27,7 @@ if ($id == null) {
 	<title>MiProfesor</title>
 	<link rel="stylesheet" href="css/dani.css">
 	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="icon" href="img/miniicon.png">
 </head>
@@ -48,14 +48,13 @@ if ($id == null) {
 		</div>
 	</navbar>
 	<br>
-	<hr style="color: #082460;">
-	<H1 align="center" style="color: #082460">MIS DATOS</H1>
-	<hr style="color: #082460;">
+	<h1 align="center" style="color: #082460">Mis datos</h1>
+
 	<br>
 	<center>
 		<table>
 			<tr>
-				<th class="tabh">&nbsp Nomina: &nbsp</th>
+				<th class="tabh">&nbsp Nómina: &nbsp</th>
 				<td class="tabd">&nbsp <?php echo $data['id_profesor']; ?> &nbsp</td>
 			</tr>
 			<tr>

@@ -166,9 +166,9 @@ if (!empty($_POST)) {
 
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/estilazo.css">
+	<link rel="stylesheet" href="css/admin_main.css">
 	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 	<link href="css/diseno.css" rel="stylesheet">
 	<script src="js/bootstrap.min.js"></script>
 	<title><?php echo "Modificar" . $xd ?></title>
@@ -198,7 +198,7 @@ if (!empty($_POST)) {
 
 					<label class="subtitulo1">ID</label>
 					<div class="padding2">
-						<input class="input" name="id" type="text" readonly placeholder="id"
+						<input class="input" name="id" type="text" readonly
 							value="<?php echo !empty($id) ? $id : ''; ?>">
 						<?php if (!empty($f_idError)): ?>
 							<span><?php echo $f_idError; ?></span>
@@ -209,10 +209,10 @@ if (!empty($_POST)) {
 				<!-- NOMBRE -->
 				<div class="padding" <?php echo !empty($nombreError) ? 'error' : ''; ?>>
 
-					<label class="subtitulo1">NOMBRE</label>
+					<label class="subtitulo1">Nombre</label>
 
 					<div class="padding2">
-						<input class="input" name="nombre" type="text" placeholder="nombre"
+						<input class="input" name="nombre" type="text"
 							value="<?php echo !empty($nombre) ? $nombre : ''; ?>">
 						<?php if (!empty($nombreError)): ?>
 							<span><?php echo $nombreError; ?></span>
@@ -223,9 +223,9 @@ if (!empty($_POST)) {
 				<!-- APELLIDO PATERNO -->
 				<div class="padding" <?php echo !empty($apellidoPError) ? 'error' : ''; ?>>
 
-					<label class="subtitulo1">PATERNO</label>
+					<label class="subtitulo1">Apellido paterno</label>
 					<div class="padding2">
-						<input class="input" name="apellidoP" type="text" placeholder="apellidoP"
+						<input class="input" name="apellidoP" type="text"
 							value="<?php echo !empty($apellidoP) ? $apellidoP : ''; ?>">
 						<?php if (!empty($apellidoPError)): ?>
 							<span><?php echo $apellidoPError; ?></span>
@@ -236,9 +236,9 @@ if (!empty($_POST)) {
 				<!-- APELLIDO MATERNO -->
 				<div class="padding" <?php echo !empty($apellidoMError) ? 'error' : ''; ?>>
 
-					<label class="subtitulo1">MATERNO</label>
+					<label class="subtitulo1">Apellido materno</label>
 					<div class="padding2">
-						<input class="input" name="apellidoM" type="text" placeholder="apellidoM"
+						<input class="input" name="apellidoM" type="text"
 							value="<?php echo !empty($apellidoM) ? $apellidoM : ''; ?>">
 						<?php if (!empty($apellidoMError)): ?>
 							<span><?php echo $apellidoMError; ?></span>
@@ -248,10 +248,9 @@ if (!empty($_POST)) {
 
 				<!-- CORREO -->
 				<div class="padding" <?php echo !empty($correoError) ? 'error' : ''; ?>>
-
-					<label class="subtitulo1">CORREO ELECTRONICO</label>
+					<label class="subtitulo1">Correo electrónico</label>
 					<div class="padding2">
-						<input class="input" name="correo" type="text" placeholder="correo"
+						<input class="input" name="correo" type="text"
 							value="<?php echo !empty($correo) ? $correo : ''; ?>">
 						<?php if (!empty($correoError)): ?>
 							<span><?php echo $correoError; ?></span>
@@ -261,8 +260,8 @@ if (!empty($_POST)) {
 
 				<br>
 				<div class="center2">
-					<button type="submit" class="boton">Actualizar</button>
 					<a style="text-decoration:none;" class="boton" href="admin.php">Regresar</a>
+					<button type="submit" class="boton">Actualizar</button>
 				</div>
 			</form>
 		</div>

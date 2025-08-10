@@ -106,10 +106,10 @@ if (!empty($_POST)) {
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<meta charset="utf-8"/>
+	<title>MiAdmin</title>
+	<link rel="stylesheet" type="text/css" href="css/admin_create">
 	<link rel="icon" href="img/miniicon.png">
-	<title><?php echo "Añadir " . $id ?></title>
-	<meta charset="utf-8" />
 </head>
 
 <body>

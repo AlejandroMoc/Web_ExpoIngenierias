@@ -56,18 +56,30 @@ The PHP application needs to know how to connect to the database. Therefore, it 
     * `iniciojuez/conexioninicio.php`
     * `inicioprof/conexioninicio.php`
 
+    * `inicioadmin/database.php`
+    * `inicioestudiante/database.php`
+    * `iniciojuez/database.php`
+    * `inicioprof/database.php`
+
 2. Open these file in a code editor. You will see code like this:
 
     ```php
     <?php
     $dbhost = "localhost";
     $dbuser = "root";
-    $dbpass = "password";
+    $dbpass = "";
     $dbname = "expo_ingenierias";
     
     $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
     // ...
     ?>
+    ```
+
+    ```php
+    private static $dbName = 'expo_ingenierias';
+    private static $dbHost = 'localhost';
+    private static $dbUsername = 'root';
+    private static $dbUserPassword = '';
     ```
 
 3. **Edit the variables** to match your local database setup:

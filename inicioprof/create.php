@@ -101,10 +101,10 @@ if (!empty($_POST)) {
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8"/>
+	<title>MiProfesor</title>
+	<link rel="stylesheet" type="text/css" href="css/student_main">
 	<link rel="icon" href="img/miniicon.png">
-	<title>Registrar Profesor</title>
-	<meta charset="utf-8" />
 </head>
 
 <body>

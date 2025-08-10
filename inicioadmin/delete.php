@@ -55,12 +55,12 @@ if (!empty($_POST)) {
 
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/estilazo.css">
+	<title>MiAdmin</title>
+	<link rel="stylesheet" href="css/admin_main.css">
 	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 	<link href="css/diseno.css" rel="stylesheet">
 	<script src="js/bootstrap.min.js"></script>
-	<title><?php echo "Eliminar" . $xd ?></title>
 	<link rel="icon" href="img/miniicon.png">
 </head>
 

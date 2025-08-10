@@ -24,19 +24,21 @@ $_SESSION['pro'] = "CU0201";
 <html>
 
 <head>
-	<title>MiEstudiante</title>
-	<link rel="stylesheet" href="css/estudiante.css">
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/student_start">
 	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<title>MiEstudiante</title>
+	<link rel="icon" href="img/miniicon.png">
 </head>
 
 <body>
 	<navbar>
 		<div id="navbarAzull">
 			<img src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-blue.png">
-			<a href="cerrarsesion.php?id=<?php echo $color; ?>"><span
-					class="material-symbols-outlined">Person_off</span>Salir</a>
+			<a href="cerrarsesion.php?id=<?php echo $color; ?>">
+				<span class="material-symbols-outlined">Person_off</span>Salir
+			</a>
 		</div>
 		</div>
 	</navbar>
@@ -67,7 +69,7 @@ $_SESSION['pro'] = "CU0201";
 
 	?>
 	<br>
-	<H1 align="center" style="color: #082460">Bienvenido <?php echo $data['nombre'] ?></H1>
+	<h1 align="center" style="color: #082460">Bienvenido <?php echo $data['nombre'] ?></h1>
 	<?php
 	$pdo = Database::connect();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -119,7 +121,7 @@ WHERE (miembrosProyecto.id_estudiante IS NOT NULL  OR proyecto.lider IS not NULl
 	$data = $q5->fetch(PDO::FETCH_ASSOC);
 	$h = $id;
 	if ($h == "A01327397") {
-		echo '<H2  style="color: #082460">&nbsp &nbsp &nbsp &nbsp Estas Inscrito En Un Proyecto </H2>';
+		echo '<H2  style="color: #082460">&nbsp &nbsp &nbsp &nbsp Estás inscrito en un proyecto</H2>';
 		echo '<br>';
 		echo '<center>';
 		echo '<center>
@@ -128,7 +130,7 @@ WHERE (miembrosProyecto.id_estudiante IS NOT NULL  OR proyecto.lider IS not NULl
           <tr>
           <td style="width: 4%;"> </td>
           <th align="center" class="botonbordeR" style="width: 1.2%;"><a style="text-decoration:none" href="studentindex.php?id=' . $_SESSION['pro'] . '">
-          <button align="center" class="botonfinalR" id="botonfinalR"><strong>Ver Detalles</strong></button>
+          <button align="center" class="botonfinalR" id="botonfinalR"><strong>Ver detalles</strong></button>
         </a></th>
             <td style="width: 4%;"> </td>
 
@@ -137,7 +139,7 @@ WHERE (miembrosProyecto.id_estudiante IS NOT NULL  OR proyecto.lider IS not NULl
         </table>
         </center>';
 	} else {
-		echo '<H2  style="color: #082460">&nbsp &nbsp &nbsp &nbsp Estas Inscrito En Un Proyecto </H2>';
+		echo '<H2  style="color: #082460">&nbsp &nbsp &nbsp &nbsp Estás inscrito en un proyecto</H2>';
 		echo '<br>';
 		echo '<center>';
 		echo '<center>
@@ -146,7 +148,7 @@ WHERE (miembrosProyecto.id_estudiante IS NOT NULL  OR proyecto.lider IS not NULl
         <tr>
         <td style="width: 4%;"> </td>
         <th align="center" class="botonbordeR" style="width: 1.2%;"><a style="text-decoration:none" href="studentindex.php?id=' . $idpp . '">
-        <button align="center" class="botonfinalR" id="botonfinalR"><strong>Ver Detalles</strong></button>
+        <button align="center" class="botonfinalR" id="botonfinalR"><strong>Ver detalles</strong></button>
       </a></th>
           <td style="width: 4%;"> </td>
 

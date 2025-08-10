@@ -81,14 +81,13 @@ if (!empty($_POST)) {
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/student_main">
+	<title>MiEstudiante</title>
 	<link rel="icon" href="img/miniicon.png">
-	<title>Registrar Proyecto</title>
-	<meta charset="utf-8" />
 </head>
 
 <body>
-
 	<div class="scrollogo">
 		<table align="center">
 			<tr>
@@ -105,13 +104,8 @@ if (!empty($_POST)) {
 		<hr size="4px" color="#b8b4b4">
 	</div>
 
-
-
 	<form class="form-horizontal" action="create_project.php" method="post">
-
 		<table align="center" width="100%">
-
-
 			<tr>
 				<td style="width: 33.33%;"></td>
 				<td align="left">
@@ -130,7 +124,6 @@ if (!empty($_POST)) {
 				</td>
 				<td style="width: 33.33%;"></td>
 			</tr>
-
 
 			<tr>
 				<td style="width: 33.33%;"></td>

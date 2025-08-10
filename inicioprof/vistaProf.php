@@ -33,7 +33,7 @@ $_SESSION['color'] = $data['id_profesor'];
 	<title>MiProfesor</title>
 	<link rel="stylesheet" href="css/dani.css">
 	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="icon" href="img/miniicon.png">
 </head>
@@ -94,18 +94,12 @@ $_SESSION['color'] = $data['id_profesor'];
 				<th>
 					<?php
 					foreach ($pdo->query($sql2) as $row) {
-
 						echo $row['nom'] . " " . $row['APM'] . ', ';
-
-
-
 					}
 					Database::disconnect();
 					?>
 
 				</th>
-
-
 			</tr>
 		</table>
 
@@ -157,7 +151,6 @@ $_SESSION['color'] = $data['id_profesor'];
 			</th>
 			<td style="width: 7%;"> </td>
 
-
 			<th align="center" class="botonbordeC" style="width: 23.33%;">
 				<form action="corregir.php" method="post">
 					<input type="hidden" name="id" value="<?php echo $id; ?>" />
@@ -165,7 +158,6 @@ $_SESSION['color'] = $data['id_profesor'];
 				</form>
 			</th>
 			<td style="width: 7%;"> </td>
-
 
 			<th align="center" class="botonbordeR" style="width: 23.33%;"><a style="text-decoration:none"
 					href="rechazar.php?id=<?php echo $data['id_proyecto']; ?>">

@@ -21,7 +21,7 @@ if ($id == null) {
 	<title>MiProfesor</title>
 	<link rel="stylesheet" href="css/dani.css">
 	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="icon" href="img/miniicon.png">
 </head>
@@ -41,7 +41,7 @@ if ($id == null) {
 		</div>
 	</navbar>
 	<br>
-	<H1 align="center" style="color: #082460">PROYECTOS</H1>
+	<h1 align="center" style="color: #082460">PROYECTOS</h1>
 	<br>
 
 	<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">

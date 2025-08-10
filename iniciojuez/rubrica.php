@@ -20,7 +20,6 @@ $q3Error = NULL;
 $q4Error = NULL;
 $q5Error = NULL;
 
-
 if (!empty($_POST)) {
 
 	$q0 = $_POST['q0'];
@@ -29,7 +28,6 @@ if (!empty($_POST)) {
 	$q3 = $_POST['q3'];
 	$q4 = $_POST['q4'];
 	$q5 = $_POST['q5'];
-
 
 	$valid = true;
 
@@ -54,12 +52,9 @@ if (!empty($_POST)) {
 		$valid = false;
 	}
 
-
-
 	if ($valid) {
 
 		$result = ($q0 + $q1 + $q2 + $q3 + $q4) / 5;
-
 
 		$pdo = Database::connect();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -79,7 +74,6 @@ if (!empty($_POST)) {
 		$id = $data['id_proyecto'];
 		Database::disconnect();
 	}
-
 }
 
 ?>
@@ -87,22 +81,21 @@ if (!empty($_POST)) {
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--Paquete de íconos usado-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
-	<title>Calificar Proyecto.Juez</title>
+	<title>MiJuez</title>
 	<link rel="stylesheet" type="text/css" href="css/style2.css">
 	<link rel="icon" href="img/miniicon.png">
 </head>
 
 <header>
-
-	<section class="w3-threequarter w3-padding-large w3-right"> <!--NO FUNCIONA BIEN EL SIDEBAR-->
-		<!--DESKTOP NAVIGATION-->
+	<section class="w3-threequarter w3-padding-large w3-right">
 		<div class="w3-container w3-padding-large w3-border-bottom w3-hide-small">
-
+			<link rel="icon" href="img/miniicon.png">
+		</div>
+	</section>
 </header>
 
 <body>
@@ -111,9 +104,8 @@ if (!empty($_POST)) {
 		<tr>
 			<td align="center" style="width: 50%;" class="logo"> <img src="img/logo_expo.png"
 					style="width: 45%;height: 20%;"></td>
-			<td align="center" style="width: 50%;" class="logo"> <img src="img/logo_tecpng"
+			<td align="center" style="width: 50%;" class="logo"> <img src="img/logo_tec.png"
 					style="width: 45%;height: 80%;"></td>
-
 		</tr>
 	</table>
 
@@ -141,7 +133,6 @@ if (!empty($_POST)) {
 				</tr>
 				<li>
 					<ul class="choices">
-
 						<tr>
 							<div class="control-group <?php echo !empty($q0Error) ? 'error' : ''; ?>">
 								<td>Utilidad: El proyecto resuelve un problema actual en el área de
@@ -174,11 +165,9 @@ if (!empty($_POST)) {
 								</div>
 							</div>
 						</tr>
-
 					</ul>
 
 					<ul class="choices">
-
 						<tr>
 							<div class="control-group <?php echo !empty($q1Error) ? 'error' : ''; ?>">
 								<td>Impacto e innovación: El proyecto presenta una idea nueva e impacta positivamente en
@@ -211,11 +200,9 @@ if (!empty($_POST)) {
 								</div>
 							</div>
 						</tr>
-
 					</ul>
 
 					<ul class="choices">
-
 						<tr>
 							<div class="control-group <?php echo !empty($q2Error) ? 'error' : ''; ?>">
 								<td>Desarrollo experimental o técnico y/o resultados o producto final: Ausiencia de
@@ -249,11 +236,9 @@ if (!empty($_POST)) {
 								</div>
 							</div>
 						</tr>
-
 					</ul>
 
 					<ul class="choices">
-
 						<tr>
 							<div class="control-group <?php echo !empty($q3Error) ? 'error' : ''; ?>">
 								<td>Impacto e innovación: Claridad y precisión de ideas: La presentación es concreta y
@@ -289,7 +274,6 @@ if (!empty($_POST)) {
 					</ul>
 
 					<ul class="choices">
-
 						<tr>
 							<div class="control-group <?php echo !empty($q4Error) ? 'error' : ''; ?>">
 								<td>Respuestas a preguntas: Respuestas precisas de acuerdo al diseño, al estado de
@@ -323,9 +307,7 @@ if (!empty($_POST)) {
 								</div>
 							</div>
 						</tr>
-
 					</ul>
-
 			</table>
 
 			<center>
@@ -339,10 +321,11 @@ if (!empty($_POST)) {
 
 			<tr>
 				<a href="indexJ.php?id=<?php echo $color; ?>" style="color:#FFFFFF" class="btn"
-					id="text1"><strong>Back</strong></a>
+					id="text1"><strong>Atrás</strong>
+				</a>
 			</tr>
-		</form>
 
+		</form>
 </body>
 
 </html>

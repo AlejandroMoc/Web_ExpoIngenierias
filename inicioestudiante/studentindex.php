@@ -26,6 +26,11 @@ if ($id == null) {
 <html>
 
 <head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/student_start">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<title>MiEstudiante</title>
 	<link rel="icon" href="img/miniicon.png">
 </head>
 
@@ -33,7 +38,7 @@ if ($id == null) {
 <!--íconos y tipografías usadas-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet"
-	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
@@ -46,18 +51,6 @@ if ($id == null) {
 		font-family: 'Inter';
 		margin: 0;
 		padding: 0;
-	}
-
-	.paddinglogo {
-		/* Padding del logo de Tec de Monterrey */
-		/* Top Right Bottom Left*/
-		padding: 7px 0px 5px 50px;
-	}
-
-	.paddingexpologo {
-		/* Padding del logo Expoingenierías*/
-		/* Top Right Bottom Left*/
-		padding: 5px 0px 0px 50px;
 	}
 
 	.expobanner22 {
@@ -96,18 +89,10 @@ if ($id == null) {
 
 	}
 
-	.tablainfo2 {
-		width: 100%;
-		position: relative;
-		background-color: #DAEFFF;
-		border-collapse: separate;
-		border-spacing: 50px;
-	}
-
 	/* Mi estudiante */
 	.expotexto {
 		color: #f9f9f9;
-		/* Top Right Bottom Left*/
+		
 		padding: 25px 75px 25px 25px;
 		text-align: right;
 		font-size: 45px;
@@ -116,7 +101,7 @@ if ($id == null) {
 	/* Tipo de proyecto */
 	.expotexto2 {
 		color: #f9f9f9;
-		/* Top Right Bottom Left*/
+		
 		padding: 0px 60px 0px 40px;
 		text-align: left;
 		font-size: 25px;
@@ -125,7 +110,7 @@ if ($id == null) {
 	/* Campus */
 	.expotexto3 {
 		color: #f9f9f9;
-		/* Top Right Bottom Left*/
+		
 		padding: 0px 60px 0px 40px;
 		text-align: right;
 		font-size: 25px;
@@ -134,7 +119,7 @@ if ($id == null) {
 	/* Descripción del proyecto */
 	.expotexto4 {
 		color: #f9f9f9;
-		/* Top Right Bottom Left*/
+		
 		padding: 15px 0px 40px 40px;
 
 		text-align: justify;
@@ -147,7 +132,7 @@ if ($id == null) {
 	/* Nombre del proyecto */
 	.expotexto5 {
 		color: #f9f9f9;
-		/* Top Right Bottom Left*/
+		
 		padding: 0px 60px 10px 30px;
 		text-align: right;
 		vertical-align: bottom;
@@ -157,10 +142,7 @@ if ($id == null) {
 	/* Subtitulo; Horario de revisión, Info y Rúbrica */
 	.expotexto6 {
 		color: #11476F;
-		/* Top Right Bottom Left*/
-
 		vertical-align: middle;
-		/* text-align: justify; */
 		font-size: 25px;
 		font-weight: bold;
 
@@ -169,18 +151,13 @@ if ($id == null) {
 	/* Texto informativo */
 	.expotexto7 {
 		color: #11476F;
-		/* Top Right Bottom Left*/
-
 		vertical-align: middle;
-		text-align: justify;
 		font-size: 20px;
 		font-weight: bold;
 	}
 
 	/* Texto normal de tablas */
 	.expotexto8 {
-
-		/* Top Right Bottom Left*/
 		vertical-align: middle;
 		text-align: justify;
 		font-size: 18px;
@@ -204,54 +181,9 @@ if ($id == null) {
 		font-weight: normal;
 	}
 
-	.navbar1 {
-		position: relative;
-		width: 100%;
-		background-color: #f9f9f9;
-		overflow: auto;
-		z-index: 1;
-		width: 100%;
-		top: 0;
-		left: 0;
-	}
-
-	/* Parámetros de la navbar1 */
-	.navbar1 a {
-		float: right;
-		/* Top Right Bottom Left*/
-		padding: 20px 20px 18px 20px;
-		color: black;
-		text-decoration: none;
-		font-size: 15px;
-	}
-
-	.navbar2 {
-		position: absolute;
-		z-index: 2;
-		width: 150px;
-		top: 0;
-		left: 0;
-	}
-
-	/* Hover de la barra de navegación */
-	.navbar1 a:hover {
-		background-color: #003366;
-		color: #f9f9f9;
-	}
-
-	/* Color de la pestaña activa */
-	.active {
-		background-color: #003366;
-	}
-
-	.columna1 {
-		/* Top Right Bottom Left*/
-		padding: 5px 0px 0px 50px;
-	}
-
 	.paddingcontenedor {
 		/* Padding del contenedor de objetos*/
-		/* Top Right Bottom Left*/
+		
 		padding: 40px 45px 0px 45px;
 	}
 
@@ -265,7 +197,7 @@ if ($id == null) {
 		float: right;
 		font-size: 15px;
 		color: #000;
-		/* Top Right Bottom Left*/
+		
 		padding: 0px 25px 0px 25px;
 	}
 
@@ -327,11 +259,8 @@ if ($id == null) {
 		font-size: 30px;
 		vertical-align: -3px;
 	}
-</style>
 
-<title>
-	Mi Estudiante | ExpoIngenierías | Tecnológico de Monterrey
-</title>
+</style>
 
 <body>
 
@@ -339,7 +268,6 @@ if ($id == null) {
 	<navbar>
 		<div id="navbar">
 			<img src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-blue.png">
-
 
 			<a href="cerrarsesion.php"><img src="https://icons.veryicon.com/png/o/miscellaneous/utility/logout-24.png"
 					style="width:42px;height:42px;"></a>
@@ -350,8 +278,6 @@ if ($id == null) {
 			<img src="img/logo_expo.svg">
 		</div>
 	</navbar>
-
-
 
 	<!--Información proyecto-->
 	<div>
@@ -412,8 +338,6 @@ if ($id == null) {
 					</td>
 				</tr>
 			</table>
-
-
 		</form>
 
 		<!--Info detallada-->
@@ -434,7 +358,6 @@ if ($id == null) {
 						$pdo3 = Database::connect();
 						$sql3 = 'SELECT califica.calificacion FROM califica WHERE  califica.id_proyecto="' . $id . '"';
 
-
 						foreach ($pdo3->query($sql3) as $rows) {
 							if ($rows['calificacion'] == NULL) {
 								echo 'PENDIENTE';
@@ -442,7 +365,6 @@ if ($id == null) {
 								echo '<td>' . $rows['calificacion'] . '</td>';
 								echo '</tr>';
 							}
-
 						}
 						Database::disconnect();
 
@@ -467,9 +389,7 @@ if ($id == null) {
 
 						?>
 					</table>
-
 				</td>
-
 
 				<td rowspan="2" colspan="2" style="width:50%" class="celdacolor">
 					<h class="expotexto6"> Rúbrica de evaluación </h>
@@ -487,15 +407,14 @@ if ($id == null) {
 						</tr>
 
 						<tr>
-
 							<th align=center>1</th>
 							<th class="expotexto9" style="width:70%">
 								Utilidad: El proyecto resuelve un problema actual en el área de
 								interpes y/o el proyecto da alta prioridad al cleinte quien queda ampliamente satisfecho
 							</th>
 						</tr>
-						<tr>
 
+						<tr>
 							<th align=center>2</th>
 							<th class="expotexto9">
 								Impacto e innovación: El proyecto presenta una idea nueva e impacta positivamente en el
@@ -503,8 +422,8 @@ if ($id == null) {
 								el producto presenta una idea nueva e incrementa la productividad
 							</th>
 						</tr>
-						<tr>
 
+						<tr>
 							<th align=center>3</th>
 							<th class="expotexto9">
 								Desarrollo experimental o técnico y/o resultados o producto final: Ausiencia de errores
@@ -513,15 +432,15 @@ if ($id == null) {
 								y/o producto resuelven el problema propuestos
 							</th>
 						</tr>
-						<tr>
 
+						<tr>
 							<th align=center>4</th>
 							<th class="expotexto9">
 								Impacto e innovación: Claridad y precisión de ideas: La presentación es concreta y clara
 							</th>
 						</tr>
-						<tr>
 
+						<tr>
 							<th align=center>5</th>
 							<th class="expotexto9">
 								Respuestas a preguntas: Respuestas precisas de acuerdo al diseño, al estado de avance
@@ -530,9 +449,6 @@ if ($id == null) {
 								a los resultados obtenidos
 							</th>
 						</tr>
-
-
-
 					</table>
 
 			<tr>
@@ -552,23 +468,20 @@ if ($id == null) {
 					}
 
 					Database::disconnect();
-
 					?>
 
 					<p class="expotexto7">Líder del proyecto</p>
-
 					<p class="expotexto10"></p>
+
 					<?php
 
 					$pdo3 = Database::connect();
 					$sql3 = 'SELECT estudiante.nombre AS name, estudiante.apellido_paterno AS apellPl, estudiante.apellido_materno AS apellMl FROM proyecto, estudiante  WHERE  proyecto.lider = estudiante.id_estudiante  AND proyecto.id_proyecto="' . $id . '"';
 
-
 					foreach ($pdo3->query($sql3) as $rows) {
 						echo $rows['name'] . ' ' . $rows['apellPl'] . ' ' . $rows['apellMl'];
 					}
 					Database::disconnect();
-
 					?>
 
 					<p class="expotexto7">Integrantes del equipo</p>
@@ -596,46 +509,39 @@ if ($id == null) {
 				<td class="celdacolor" colspan="2">
 
 					<h class="expotexto6"> Comentarios y retroalimentación </h>
-
 					<p class="expotexto7">Profesor</p>
-
 					<p class="expotexto10"></p>
+					
 					<?php
 
 					$pdo3 = Database::connect();
 					$sql3 = 'SELECT status.retroprof FROM status WHERE  status.id_proyecto="' . $id . '"';
-
 
 					foreach ($pdo3->query($sql3) as $rows) {
 						if ($rows['retroprof'] == NULL) {
 							echo 'SIN COMENTARIOS';
 						} else {
 							echo $rows['retroprof'];
-
+							echo "<br>";
 						}
-
 					}
 					Database::disconnect();
-
 					?>
 
 					<p class="expotexto7">Juez</p>
-
-					<p class="expotexto10">
-					</p>
+					
 					<?php
 
 					$pdo3 = Database::connect();
-					$sql3 = 'SELECT califica.retrojuez FROM califica WHERE  califica.id_proyecto="' . $id . '"';
+					$sql3 = 'SELECT califica.retro_juez FROM califica WHERE  califica.id_proyecto="' . $id . '"';
 
 					foreach ($pdo3->query($sql3) as $rows) {
-						if ($rows['retrojuez'] == NULL) {
+						if ($rows['retro_juez'] == NULL) {
 							echo 'EN ESPERA';
 						} else {
-							echo $rows['retrojuez'];
+							echo $rows['retro_juez'];
 							echo '</tr>';
 						}
-
 					}
 					Database::disconnect();
 
@@ -644,7 +550,6 @@ if ($id == null) {
 			</tr>
 		</table>
 	</div>
-
 
 	<!--
 		<div class="expobanner22">
@@ -664,7 +569,6 @@ if ($id == null) {
 	</div>
 	<!--Footer-->
 	<div id="footer">
-
 		<!--Footer izquierdo-->
 		<!-- <h3 class="footerizquierdo">Copyright Stuff.</h3> -->
 

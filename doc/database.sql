@@ -77,7 +77,7 @@ CREATE TABLE `califica` (
   `id_proyecto` VARCHAR(50),
   `id_juez` VARCHAR(50),
   `calificacion` INT,
-  `retrojuez` VARCHAR(1000),
+  `retro_juez` VARCHAR(1000),
   FOREIGN KEY (`id_juez`) REFERENCES `juez`(`id_juez`) ON DELETE CASCADE,
   FOREIGN KEY (`id_proyecto`) REFERENCES `proyecto`(`id_proyecto`) ON DELETE CASCADE
 );
@@ -156,7 +156,7 @@ INSERT INTO `categoria` (`id_categoria`, `nombre`) VALUES
 ('5', 'Medio ambiente');
 
 INSERT INTO `juez` (`id_juez`, `nombre`, `apellido_paterno`, `apellido_materno`, `correo`, `contrasena`) VALUES
-('1', 'Daniel', 'Ramirez', 'Rojas', '@mail.com', '222abc'),
+('1', 'Daniel', 'Ramirez', 'Rojas', 'daniel_ramirez@mail.com', '222abc'),
 ('L0138456', 'Monica', 'Galindo', 'Sánchez', 'monica_galindo@mail.com', '111def'),
 ('3', 'Oscar', 'Estrada', 'Cortinez', 'estrada@mail.com', '222efg'),
 ('4', 'Gustavo', 'Fring', 'Ordaz', 'fring@mail.com', '222dhi');
@@ -177,12 +177,12 @@ INSERT INTO `proyecto` (`id_proyecto`, `nombre`, `lider`, `id_ufprof`, `id_categ
 INSERT INTO `status` (`id_proyecto`, `id_profesor`, `status`, `retroprof`) VALUES ('CU0201', 'L01274996', 'Corregir', 'Buen Proyecto, mejora la descripcion');
 INSERT INTO `status` (`id_proyecto`, `id_profesor`, `status`, `retroprof`) VALUES ('CU0201', 'L01274996', 'Corregir', 'Buen Proyecto, mejora la descripcion');
 INSERT INTO `status` (`id_proyecto`, `id_profesor`, `status`, `retroprof`) VALUES ('FDA0501', 'L01492499', 'Aceptado', 'Excelente proyecto, buena suerte');
-INSERT INTO `status` (`id_proyecto`, `id_profesor`, `status`, `retroprof`) VALUES ('MGNE0201', '4L0138456', 'Rechazado', 'No aprobaron la materia');
+INSERT INTO `status` (`id_proyecto`, `id_profesor`, `status`, `retroprof`) VALUES ('MGNE0201', 'L0138456', 'Rechazado', 'No aprobaron la materia');
 INSERT INTO `status` (`id_proyecto`, `id_profesor`, `status`, `retroprof`) VALUES ('NRM0301', 'L01492499', 'Corregir', 'Mal uso de la edicion');
 INSERT INTO `status` (`id_proyecto`, `id_profesor`, `status`, `retroprof`) VALUES ('PDM0301', 'L01492499', 'Corregir', 'No te preocupes');
 INSERT INTO `status` (`id_proyecto`, `id_profesor`, `status`, `retroprof`) VALUES ('RA0101', 'L0138456', 'Aceptado', 'me encanto la idea. Tienen gran posibilidades de ganar');
 
-INSERT INTO `califica` (`id_proyecto`, `id_juez`, `calificacion`, `retrojuez`) VALUES
+INSERT INTO `califica` (`id_proyecto`, `id_juez`, `calificacion`, `retro_juez`) VALUES
 ('CU0201', '1', 9, "Buen Trabajo"),
 ('FDA0501', 'L0138456', NULL, NULL),
 ('NRM0301', '3', NULL,  NULL),

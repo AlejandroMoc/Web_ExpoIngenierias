@@ -69,8 +69,13 @@ body {
   font-size: 30px;
   vertical-align: -3px;
 }
+
 .material-symbols-outlined {
-  font-variation-settings: "FILL" 100, "wght" 1000, "GRAD" 100, "opsz" 155;
+  font-variation-settings:
+    "FILL" 100,
+    "wght" 400,
+    "GRAD" 100,
+    "opsz" 155;
 }
 
 .proyectoV {

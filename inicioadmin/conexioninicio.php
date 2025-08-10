@@ -1,7 +1,7 @@
 <?php
 $dbhost = "localhost";
 $dbuser = "root";
-$dbpass = "password";
+$dbpass = "";
 $dbname = "expo_ingenierias";
 
 $conexion = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);

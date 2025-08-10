@@ -1,6 +1,7 @@
 body {
   font-family: inter;
 }
+
 #navbar {
   background-color: white;
   height: 70px;
@@ -9,6 +10,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 #navbarAzull {
   background-color: #ffffff;
   height: 70px;
@@ -63,14 +65,20 @@ body {
   font-size: 30px;
   margin-right: 15px;
 }
+
 #navbarAzul span {
   text-decoration: none;
   color: white;
   font-size: 30px;
   vertical-align: -3px;
 }
+
 .material-symbols-outlined {
-  font-variation-settings: "FILL" 100, "wght" 1000, "GRAD" 100, "opsz" 155;
+  font-variation-settings:
+    "FILL" 100,
+    "wght" 400,
+    "GRAD" 100,
+    "opsz" 155;
 }
 
 .proyectoV {
@@ -105,6 +113,7 @@ body {
   color: aliceblue;
   font-size: 200%;
 }
+
 #botonfinalA:hover {
   border-radius: 10px;
   background: #006028;
@@ -114,6 +123,7 @@ body {
 .botonbordeA:hover {
   background: #006028;
 }
+
 .botonbordeC {
   margin: auto;
   padding: 0;
@@ -132,6 +142,7 @@ body {
   color: aliceblue;
   font-size: 200%;
 }
+
 #botonfinalC:hover {
   background: #1d1d1d;
   color: white;
@@ -189,6 +200,7 @@ body {
   color: aliceblue;
   font-size: 150%;
 }
+
 #botonfinalV:hover {
   border-radius: 10px;
   background: #082460;
@@ -213,6 +225,7 @@ body {
   font-size: 150%;
   text-decoration: none;
 }
+
 #botonfinalD:hover {
   background: #600000;
   color: white;
@@ -222,6 +235,7 @@ body {
 .botonbordeD:hover {
   background: #600000;
 }
+
 .tabh {
   padding: 0;
   border-radius: 10px;
@@ -235,6 +249,7 @@ body {
   font-size: 150%;
   text-decoration: none;
 }
+
 .tabd {
   padding: 0;
   border-radius: 10px;
