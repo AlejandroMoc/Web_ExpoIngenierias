@@ -100,31 +100,34 @@ if (!empty($_POST)) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/min.css">
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<title>MiAdmin</title>
+	<link rel="icon" href="../src/img/miniicon.png">
+	
 	<link rel="stylesheet" type="text/css" href="css/admin_create">
-	<link rel="icon" href="img/miniicon.png">
 </head>
 
 <body>
 
 	<table align="center">
-
 		<tr>
 			<td align="center" style="width: 33.33%;">
 				<h1 style="font-size: 35px;"><strong><?php echo "Añadir " . $id ?></strong></h1>
 			</td>
 			<td align="center" style="width: 33.33%;" class="logo"> <img
-					src="img/logo_expo.svg" style="width: 45%;height: 20%;">
+					src="../src/img/logo_expo_admin.svg" style="width: 45%;height: 20%;">
 			</td>
 			<td align="center" style="width: 33.33%;"> <img
-					src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-blue.png"
+					src="../src/img/logo_tec_blue.png"
 					style="width: 45%;height: 20%;"></td>
 		</tr>
 

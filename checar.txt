@@ -1,0 +1,43 @@
+logout
+<!-- Barra de navegación -->
+<!-- Barra de navegación antigua -->
+<!-- Barra de navegación nueva -->
+
+//Convertir a esto
+    https://i.imgur.com/UcHOarZ.png
+    <span class="material-symbols-outlined">person</span>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+//Esto o esto
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    material-symbols-outlined
+
+studentindex.php
+indexEst.php
+
+miniicon.png -> Dividir en pngs
+
+	<link rel="stylesheet" type="text/css" href="css/student_start">
+
+iconos logout y home (importar fuentes)
+
+common
+    /* Common */
+    .material-symbols-outlined {
+    font-variation-settings:
+        "FILL" 100,
+        "wght" 400,
+        "GRAD" 100,
+        "opsz" 155;
+    }
+
+    body {
+    font-family: "Inter";
+    margin: 0;
+    }
+
+
+/* Site */

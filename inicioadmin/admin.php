@@ -1,47 +1,47 @@
 <?php
 session_start();
-
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>MiAdmin</title>
+	<link rel="icon" href="../src/img/miniicon.png">
+
+	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" href="css/admin_main.css">
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-	<link
-		href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
-		rel="stylesheet">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-	<link rel="icon" href="img/miniicon.png">
+		
 </head>
 
 <body id="cuerpazo">
+	<!-- Barra de navegación -->
 	<navbar>
 		<div id="navbar">
-			<img src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-blue.png">
-			<!--<img src="https://i.imgur.com/UcHOarZ.png">-->
-			<div id="iconosNavBar">
-				<a id="iconosNavBar1" href="asigna.php" class="material-icons">rate_review</a>
-				<a id="iconosNavBar1" href="cerrarsesion.php" class="material-icons">logout</a>
+			<img src="../src/img/logo_tec_blue.png">
+			<div id="navbarIconsContainer">
+				<a id="navbarIcon" href="asigna.php" class="material-icons">rate_review</a>
+				<a id="navbarIcon" href="cerrarsesion.php" class="material-icons">logout</a>
 			</div>
 		</div>
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo_expo.svg">
+			<img src="../src/img/logo_expo_admin.svg">
 			<a href="admin.php"><span class="material-symbols-outlined">home</span>MiAdmin</a>
 		</div>
 	</navbar>
+
 	<div class="input-group mb-3" id="buscador">
 		<input type="text" class="form-control" placeholder="Buscar...">
 		<span class="input-group-text material-symbols-outlined">tune</span>
@@ -83,7 +83,7 @@ session_start();
 						echo '<span>' . $row['correo'] . '</span>';
 						echo '<div class="botonesRenglonListaUsuarios">';
 						echo '<a class="material-icons" href="read.php?id=' . $row['id_estudiante'] . '">visibility</a>';
-						echo '<a class="material-icons" href="update.php?id=' . $row['id_estudiante'] . '">edit</a>';
+						echo '<a class="material-icons" href="admin_edit.php?id=' . $row['id_estudiante'] . '">edit</a>';
 						echo '<a class="material-icons" href="delete.php?id=' . $row['id_estudiante'] . '">delete</a>';
 						echo '</div>';
 						echo '</div>';
@@ -123,7 +123,7 @@ session_start();
 						//echo '<span>'. 'Edición: ' . $row['id_edicion'] .'</span>';
 						echo '<div class="botonesRenglonListaUsuarios">';
 						echo '<a class="material-icons" href="read.php?id=' . $row['id_juez'] . '">visibility</a>';
-						echo '<a class="material-icons" href="update.php?id=' . $row['id_juez'] . '">edit</a>';
+						echo '<a class="material-icons" href="admin_edit.php?id=' . $row['id_juez'] . '">edit</a>';
 						echo '<a class="material-icons" href="delete.php?id=' . $row['id_juez'] . '">delete</a>';
 						echo '</div>';
 						echo '</div>';
@@ -164,7 +164,7 @@ session_start();
 						//echo '<span>'. 'Edición: ' . $row['id_edicion'] .'</span>';
 						echo '<div class="botonesRenglonListaUsuarios">';
 						echo '<a class="material-icons" href="read.php?id=' . $row['id_profesor'] . '">visibility</a>';
-						echo '<a class="material-icons" href="update.php?id=' . $row['id_profesor'] . '">edit</a>';
+						echo '<a class="material-icons" href="admin_edit.php?id=' . $row['id_profesor'] . '">edit</a>';
 						echo '<a class="material-icons" href="delete.php?id=' . $row['id_profesor'] . '">delete</a>';
 						echo '</div>';
 						echo '</div>';

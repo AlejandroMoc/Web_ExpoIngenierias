@@ -1,0 +1,166 @@
+/* Common */
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 100,
+    "wght" 400,
+    "GRAD" 100,
+    "opsz" 155;
+}
+
+body {
+  font-family: "Inter";
+  margin: 0;
+}
+
+/* Site */
+.expobanner22 {
+  position: relative;
+  background-color: #11476f;
+  font-weight: bold;
+}
+
+.expobanner1 {
+  position: relative;
+  background-color: #11476f;
+  font-weight: bold;
+  float: left;
+}
+
+.celdacolor {
+  background-color: #daefff;
+  border-spacing: 30px;
+  padding: 40px 60px 40px 60px;
+}
+
+.expobanner2 {
+  width: 100%;
+  position: relative;
+  background-color: #3173af;
+  font-weight: bold;
+}
+
+/* Tabla de datos */
+.tablainfo1 {
+  width: 100%;
+  position: relative;
+  border-collapse: separate;
+  border-spacing: 45px;
+}
+
+/* Mi estudiante */
+.expotexto {
+  color: #f9f9f9;
+
+  padding: 25px 75px 25px 25px;
+  text-align: right;
+  font-size: 45px;
+}
+
+/* Tipo de proyecto */
+.expotexto2 {
+  color: #f9f9f9;
+
+  padding: 0px 60px 0px 40px;
+  text-align: left;
+  font-size: 25px;
+}
+
+/* Campus */
+.expotexto3 {
+  color: #f9f9f9;
+
+  padding: 0px 60px 0px 40px;
+  text-align: right;
+  font-size: 25px;
+}
+
+/* Descripción del proyecto */
+.expotexto4 {
+  color: #f9f9f9;
+
+  padding: 15px 0px 40px 40px;
+
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 20px;
+  font-weight: 100;
+  vertical-align: top;
+}
+
+/* Nombre del proyecto */
+.expotexto5 {
+  color: #f9f9f9;
+
+  padding: 0px 60px 10px 30px;
+  text-align: right;
+  vertical-align: bottom;
+  font-size: 60px;
+}
+
+/* Subtitulo; Horario de revisión, Info y Rúbrica */
+.expotexto6 {
+  color: #11476f;
+  vertical-align: middle;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Texto informativo */
+.expotexto7 {
+  color: #11476f;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Texto normal de tablas */
+.expotexto8 {
+  vertical-align: middle;
+  text-align: justify;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+/* Texto normal de tablas */
+.expotexto9 {
+  padding: 10px;
+  vertical-align: middle;
+  text-align: justify;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* Expotexto9 sin padding */
+.expotexto10 {
+  vertical-align: middle;
+  text-align: justify;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* Padding del contenedor de objetos*/
+.paddingcontenedor {
+  padding: 40px 45px 0px 45px;
+}
+
+/* Footer izquierdo */
+.footerizquierdo {
+  float: left;
+}
+
+/* Footer derecho */
+.footerderecho {
+  float: right;
+  font-size: 15px;
+  color: #000;
+
+  padding: 0px 25px 0px 25px;
+}
+
+/* Barra de navegación */
+@media screen and (max-width: 500px) {
+  .navbar1 a {
+    float: none;
+    display: block;
+  }
+}

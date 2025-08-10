@@ -1,0 +1,59 @@
+/* Barra de navegación blanca */
+#navbar {
+  background-color: white;
+  height: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar img {
+  height: 80%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Íconos de barra blanca */
+#navbarIconsContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#navbarIcon {
+  font-size: 40px;
+  text-decoration: none;
+  color: black;
+  margin-right: 10px;
+}
+
+/* Barra de navegación azul */
+#navbarAzul {
+  background-color: #004d5b;
+  height: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbarAzul img {
+  height: 80%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#navbarAzul a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+#navbarAzul span {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  vertical-align: -3px;
+}

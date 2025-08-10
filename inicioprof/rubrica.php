@@ -80,36 +80,40 @@ if (!empty($_POST)) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>MiJuez</title>
+
+	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" type="text/css" href="css/style2.css">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<header>
-	<section class="w3-threequarter w3-padding-large w3-right">
-		<div class="w3-container w3-padding-large w3-border-bottom w3-hide-small">
-			<link rel="icon" href="img/miniicon.png">
-		</div>
-	</section>
-</header>
-
 <body>
-
-	<table align="center" width="100%" class="logos">
-		<tr>
-			<td align="center" style="width: 50%;" class="logo"> <img src="img/logo_expo.png"
-					style="width: 45%;height: 20%;"></td>
-			<td align="center" style="width: 50%;" class="logo"> <img src="img/logo_tec.png"
-					style="width: 45%;height: 80%;"></td>
-		</tr>
-	</table>
-
-	<hr size="4px" color=#b8b4b4>
+	<!--Nueva barra de navegación-->
+	<navbar>
+		<div id="navbar">
+			<img src="../src/img/logo_tec_blue.png">
+			<div id="navbarIconsContainer">
+				<a id="navbarIcon" href="cerrarsesion.php" class="material-icons">logout</a>
+			</div>
+		</div>
+	</navbar>
+	<navbar>
+		<div id="navbarAzul">
+			<img src="../src/img/logo_expo_prof.svg">
+			<a href="indexProf.php"><span class="material-symbols-outlined"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></span>MiProfesor</a>
+		</div>
+	</navbar>
 
 	<h2 style="color:#082460">
 		<td style="width: 45%;">

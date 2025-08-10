@@ -21,21 +21,29 @@ $_SESSION['pro'] = "CU0201";
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
-	<meta charset="utf-8"/>
-	<link rel="stylesheet" type="text/css" href="css/student_start">
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>MiEstudiante</title>
-	<link rel="icon" href="img/miniicon.png">
+	<link rel="icon" href="../src/img/miniicon.png">
+	
+	<link rel="stylesheet" href="../src/css/common_navbar.css">
+	<link rel="stylesheet" type="text/css" href="css/student_start">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
+	<!-- Barra de navegación -->
 	<navbar>
-		<div id="navbarAzull">
-			<img src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-blue.png">
+		<div id="navbar">
+			<img src="../src/img/logo_tec_blue.png">
 			<a href="cerrarsesion.php?id=<?php echo $color; ?>">
 				<span class="material-symbols-outlined">Person_off</span>Salir
 			</a>
@@ -44,8 +52,8 @@ $_SESSION['pro'] = "CU0201";
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo_expo.svg">
-			<h2 style="color: #FFFFFF">MiEstudiante &nbsp &nbsp</h2>
+			<img src="../src/img/logo_expo_student.svg">
+			<a href="studentindex.php"><span class="material-symbols-outlined">home</span>MiEstudiante</a>
 		</div>
 	</navbar>
 

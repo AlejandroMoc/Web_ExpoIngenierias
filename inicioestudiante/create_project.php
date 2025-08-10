@@ -75,19 +75,25 @@ if (!empty($_POST)) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
-	<meta charset="utf-8"/>
-	<link rel="stylesheet" type="text/css" href="css/student_main">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>MiEstudiante</title>
-	<link rel="icon" href="img/miniicon.png">
+	<link rel="icon" href="../src/img/miniicon.png">
+
+	<link rel="stylesheet" href="../src/css/common_navbar.css">
+	<link rel="stylesheet" type="text/css" href="css/student_main">
 </head>
 
 <body>
+	<!-- Barra de navegación antigua -->
 	<div class="scrollogo">
 		<table align="center">
 			<tr>
@@ -95,9 +101,9 @@ if (!empty($_POST)) {
 					<h1 style="font-size: 35px;"><strong>Registrar Proyecto</strong></h1>
 				</td>
 				<td align="center" style="width: 33.33%;" class="logo"> <img
-						src="img/logo_expo.svg" style="width: 45%;"></td>
+						src="../src/img/logo_expo_student.svg" style="width: 45%;"></td>
 				<td align="center" style="width: 33.33%;"> <img
-						src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-blue.png"
+						src="../src/img/logo_tec_blue.png"
 						style="width: 45%;"></td>
 			</tr>
 		</table>

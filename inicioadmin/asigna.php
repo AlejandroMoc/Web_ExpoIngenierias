@@ -1,39 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>MiAdmin</title>
+	<link rel="icon" href="../src/img/miniicon.png">
+
+	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" href="css/admin_assign.css">
-	<link rel="icon" href="img/miniicon.png">
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-	<link
-		href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
-		rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 </head>
 
 <body id="cuerpazo">
+	<!-- Barra de navegación -->
 	<navbar>
 		<div id="navbar">
-			<img src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-blue.png">
-			<!--<img src="https://i.imgur.com/UcHOarZ.png">-->
-			<div id="iconosNavBar">
-				<a id="iconosNavBar2" href="admin.php" class="material-icons">account_circle</a>
+			<img src="../src/img/logo_tec_blue.png">
+			<div id="navbarIconsContainer">
+				<a id="navbarIcon" href="admin.php" class="material-icons">account_circle</a>
 			</div>
 		</div>
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo_expo.svg">
-			<a href="">ASIGNAR PROYECTOS</a>
+			<img src="../src/img/logo_expo_admin.svg">
+			<a href="">Asignar proyectos</a>
 			<a href="admin.php"><span class="material-symbols-outlined">home</span>MiAdmin</a>
 		</div>
 	</navbar>

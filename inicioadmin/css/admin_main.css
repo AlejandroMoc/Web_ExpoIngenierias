@@ -1,69 +1,4 @@
-#cuerpazo {
-  background-image: url("../img/bg_admin.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  font-family: Inter;
-}
-
-#navbar {
-  background-color: white;
-  height: 70px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#navbar img {
-  height: 80%;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-#iconosNavBar {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-#iconosNavBar1 {
-  font-size: 40px;
-  text-decoration: none;
-  color: black;
-  margin-right: 10px;
-}
-
-#iconosNavBar2 {
-  font-size: 60px;
-  text-decoration: none;
-  color: black;
-  margin-right: 10px;
-}
-
-#navbarAzul {
-  background-color: #004d5b;
-  height: 60px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#navbarAzul img {
-  height: 80%;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-#navbarAzul a {
-  text-decoration: none;
-  color: white;
-  font-size: 30px;
-  margin-right: 15px;
-}
-
+/* Common */
 .material-symbols-outlined {
   font-variation-settings:
     "FILL" 100,
@@ -72,11 +7,18 @@
     "opsz" 155;
 }
 
-#navbarAzul span {
-  text-decoration: none;
-  color: white;
-  font-size: 30px;
-  vertical-align: -3px;
+body {
+  font-family: "Inter";
+  margin: 0;
+}
+
+#cuerpazo {
+  background-image: url("../../src/img/bg_admin.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: Inter;
 }
 
 #buscador {

@@ -27,38 +27,43 @@ if (!empty($_POST)) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
-	<title>Rechazar Proyecto</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>MiProfesor</title>
+	<link rel="icon" href="../src/img/miniicon.png">
+
+	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" href="css/dani.css">
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="icon" href="img/miniicon.png">
 </head>
 
 <body>
-	<!--INICIO DEL ENCABEZADO -->
+	<!-- Barra de navegación -->
 	<navbar>
-		<div id="navbarAzull">
-			<img src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-blue.png">
+		<div id="navbar">
+			<img src="../src/img/logo_tec_blue.png">
 			<a href="readProf.php?id=<?php echo $color; ?>"><span class="material-symbols-outlined">person</span></a>
 		</div>
 		</div>
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo_expo.svg">
+			<img src="../src/img/logo_expo_prof.svg">
 			<a href="indexProf.php?id=<?php echo $color; ?>"><span
-					class="material-symbols-outlined">home</span>MiProfesor</a>
+					class="material-symbols-outlined"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></span>MiProfesor</a>
 		</div>
 	</navbar>
+
 	<br>
 
-	<!--FIN DEL ENCABEZADO -->
 	<center>
 		<div class="center">
 			<div class="center2">

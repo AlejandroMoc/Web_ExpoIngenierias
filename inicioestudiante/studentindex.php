@@ -23,259 +23,42 @@ if ($id == null) {
 ?>
 
 <!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="utf-8"/>
-	<link rel="stylesheet" type="text/css" href="css/student_start">
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-	<title>MiEstudiante</title>
-	<link rel="icon" href="img/miniicon.png">
-</head>
-
+<html lang="es">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--íconos y tipografías usadas-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet"
-	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
-<style>
-	/* Fuentes usadas */
-	/* body {font-family: Arial, Helvetica, sans-serif;}*/
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="../src/img/miniicon.png">
 
-	body {
-		font-family: 'Inter';
-		margin: 0;
-		padding: 0;
-	}
+	<link rel="stylesheet" href="../src/css/common_navbar.css">
+	<link rel="stylesheet" type="text/css" href="css/student_start">
 
-	.expobanner22 {
-		position: relative;
-		background-color: #11476F;
-		font-weight: bold;
-	}
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<title>MiEstudiante</title>
+</head>
 
-	.expobanner1 {
-		position: relative;
-		background-color: #11476F;
-		font-weight: bold;
-		float: left;
 
-	}
-
-	.celdacolor {
-		background-color: #DAEFFF;
-		border-spacing: 30px;
-		padding: 40px 60px 40px 60px;
-	}
-
-	.expobanner2 {
-		width: 100%;
-		position: relative;
-		background-color: #3173AF;
-		font-weight: bold;
-	}
-
-	.tablainfo1 {
-		width: 100%;
-		position: relative;
-		/background-color: #e51616;/ border-collapse: separate;
-		/* Columnas filas probablemente*/
-		border-spacing: 45px;
-
-	}
-
-	/* Mi estudiante */
-	.expotexto {
-		color: #f9f9f9;
-		
-		padding: 25px 75px 25px 25px;
-		text-align: right;
-		font-size: 45px;
-	}
-
-	/* Tipo de proyecto */
-	.expotexto2 {
-		color: #f9f9f9;
-		
-		padding: 0px 60px 0px 40px;
-		text-align: left;
-		font-size: 25px;
-	}
-
-	/* Campus */
-	.expotexto3 {
-		color: #f9f9f9;
-		
-		padding: 0px 60px 0px 40px;
-		text-align: right;
-		font-size: 25px;
-	}
-
-	/* Descripción del proyecto */
-	.expotexto4 {
-		color: #f9f9f9;
-		
-		padding: 15px 0px 40px 40px;
-
-		text-align: justify;
-		text-justify: inter-word;
-		font-size: 20px;
-		font-weight: 100;
-		vertical-align: top;
-	}
-
-	/* Nombre del proyecto */
-	.expotexto5 {
-		color: #f9f9f9;
-		
-		padding: 0px 60px 10px 30px;
-		text-align: right;
-		vertical-align: bottom;
-		font-size: 60px;
-	}
-
-	/* Subtitulo; Horario de revisión, Info y Rúbrica */
-	.expotexto6 {
-		color: #11476F;
-		vertical-align: middle;
-		font-size: 25px;
-		font-weight: bold;
-
-	}
-
-	/* Texto informativo */
-	.expotexto7 {
-		color: #11476F;
-		vertical-align: middle;
-		font-size: 20px;
-		font-weight: bold;
-	}
-
-	/* Texto normal de tablas */
-	.expotexto8 {
-		vertical-align: middle;
-		text-align: justify;
-		font-size: 18px;
-		font-weight: bolder;
-	}
-
-	/* Texto normal de tablas */
-	.expotexto9 {
-		padding: 10px;
-		vertical-align: middle;
-		text-align: justify;
-		font-size: 18px;
-		font-weight: normal;
-	}
-
-	/* Expotexto9 sin padding */
-	.expotexto10 {
-		vertical-align: middle;
-		text-align: justify;
-		font-size: 18px;
-		font-weight: normal;
-	}
-
-	.paddingcontenedor {
-		/* Padding del contenedor de objetos*/
-		
-		padding: 40px 45px 0px 45px;
-	}
-
-	/* Footer izquierdo */
-	.footerizquierdo {
-		float: left;
-	}
-
-	/* Footer derecho */
-	.footerderecho {
-		float: right;
-		font-size: 15px;
-		color: #000;
-		
-		padding: 0px 25px 0px 25px;
-	}
-
-	@media screen and (max-width: 500px) {
-		.navbar1 a {
-			float: none;
-			display: block;
-		}
-	}
-
-	#navbar {
-		background-color: white;
-		height: 70px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	#navbar img {
-		height: 80%;
-		margin-left: 10px;
-		margin-right: 10px;
-	}
-
-	#navbarAzul {
-		background-color: #11476F;
-		height: 60px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	#navbarAzul img {
-		height: 80%;
-		margin-left: 10px;
-		margin-right: 10px;
-	}
-
-	#navbarAzul a {
-		text-decoration: none;
-		color: white;
-		font-size: 30px;
-		margin-right: 15px;
-	}
-
-	.material-symbols-outlined {
-		font-variation-settings:
-			'FILL' 0,
-			'wght' 400,
-			'GRAD' 100,
-			'opsz' 55;
-	}
-
-	#navbarAzul span {
-		text-decoration: none;
-		color: white;
-		font-size: 30px;
-		vertical-align: -3px;
-	}
-
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/student_index.css">
 
 <body>
-
 	<!--Nueva barra de navegación-->
 	<navbar>
 		<div id="navbar">
-			<img src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-blue.png">
-
-			<a href="cerrarsesion.php"><img src="https://icons.veryicon.com/png/o/miscellaneous/utility/logout-24.png"
-					style="width:42px;height:42px;"></a>
+			<img src="../src/img/logo_tec_blue.png">
+			<div id="navbarIconsContainer">
+				<a id="navbarIcon" href="cerrarsesion.php" class="material-icons">logout</a>
+			</div>
 		</div>
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo_expo.svg">
+			<img src="../src/img/logo_expo_student.svg">
+			<a href="studentindex.php"><span class="material-symbols-outlined">home</span>MiEstudiante</a>
 		</div>
 	</navbar>
 

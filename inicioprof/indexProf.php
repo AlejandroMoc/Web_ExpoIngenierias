@@ -12,36 +12,44 @@ if ($id == null) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>MiProfesor</title>
+	<link rel="icon" href="../src/img/miniicon.png">
+
+	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" href="css/dani.css">
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="icon" href="img/miniicon.png">
 </head>
 
 <body>
+	<!-- Barra de navegación -->
 	<navbar>
-		<div id="navbarAzull">
-			<img src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-blue.png">
+		<div id="navbar">
+			<img src="../src/img/logo_tec_blue.png">
 			<a href="readProf.php?id=<?php echo $id; ?>"><span class="material-symbols-outlined">person</span></a>
 		</div>
 		</div>
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo_expo.svg">
+			<img src="../src/img/logo_expo_prof.svg">
 			<h2 style="color: #FFFFFF">MiProfesor &nbsp &nbsp</h2>
 		</div>
 	</navbar>
+
 	<br>
-	<h1 align="center" style="color: #082460">PROYECTOS</h1>
+	<h1 align="center" style="color: #082460">Proyectos</h1>
 	<br>
 
 	<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
@@ -49,15 +57,14 @@ if ($id == null) {
 			<center>
 				<table style="background-color: #4B73C1; width: 70%;">
 					<tr style="background-color: #ffffff; color:#082460;">
-						<th>ID PROYECTO</th>
-						<th>NOMBRE</th>
-						<th>CATEGORIA</th>
-						<th>STATUS</th>
-						<th>LIDER</th>
-						<th>DETALLES</th>
+						<th>ID</th>
+						<th>Nombre</th>
+						<th>Categoría</th>
+						<th>Estado</th>
+						<th>Líder</th>
+						<th>Detalles</th>
 					</tr>
 					<?php
-
 
 					include 'database.php';
 					$pdo = Database::connect();

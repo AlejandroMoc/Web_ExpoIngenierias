@@ -54,11 +54,11 @@ if (!empty($_POST)) {
 		$valid = false;
 	}
 	if (empty($apellidoP)) {
-		$apellidoPError = 'Por favor escribe tu apellido Paterno';
+		$apellidoPError = 'Por favor escribe tu apellido paterno';
 		$valid = false;
 	}
 	if (empty($apellidoM)) {
-		$apellidoMError = 'Por favor escribe tu apellido Materno';
+		$apellidoMError = 'Por favor escribe tu apellido materno';
 		$valid = false;
 	}
 	if (empty($correo)) {
@@ -162,36 +162,45 @@ if (!empty($_POST)) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/admin_main.css">
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-	<link href="css/diseno.css" rel="stylesheet">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>MiAdmin</title>
+	<link rel="icon" href="../src/img/miniicon.png">
+
 	<script src="js/bootstrap.min.js"></script>
-	<title><?php echo "Modificar" . $xd ?></title>
-	<link rel="icon" href="img/miniicon.png">
+	<link rel="stylesheet" href="../src/css/common_navbar.css">
+	<link rel="stylesheet" href="css/admin_main.css">
+	<link rel="stylesheet" href="css/admin_edit.css">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
+	<!-- Barra de navegación -->
 	<navbar>
 		<div id="navbar">
-			<img src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-blue.png">
+			<img src="../src/img/logo_tec_blue.png">
 			<img src="https://i.imgur.com/UcHOarZ.png">
 		</div>
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo_expo.svg">
+			<img src="../src/img/logo_expo_admin.svg">
 			<a href=""><?php echo "Modificar" . $xd ?></a>
 			<a href="admin.php"><span class="material-symbols-outlined">home</span>MiAdmin</a>
 		</div>
 	</navbar>
+
 	<div class="center">
 		<div class="center2">
-			<form class="form" action="update.php?id=<?php echo $id ?>" method="post">
+			<form class="form" action="admin_edit.php?id=<?php echo $id ?>" method="post">
 
 				<!-- ID -->
 				<div class="padding" <?php echo !empty($f_idError) ? 'error' : ''; ?>>
@@ -206,7 +215,7 @@ if (!empty($_POST)) {
 					</div>
 				</div>
 
-				<!-- NOMBRE -->
+				<!-- Nombre -->
 				<div class="padding" <?php echo !empty($nombreError) ? 'error' : ''; ?>>
 
 					<label class="subtitulo1">Nombre</label>
@@ -220,7 +229,7 @@ if (!empty($_POST)) {
 					</div>
 				</div>
 
-				<!-- APELLIDO PATERNO -->
+				<!-- Apellido paterno -->
 				<div class="padding" <?php echo !empty($apellidoPError) ? 'error' : ''; ?>>
 
 					<label class="subtitulo1">Apellido paterno</label>
@@ -233,7 +242,7 @@ if (!empty($_POST)) {
 					</div>
 				</div>
 
-				<!-- APELLIDO MATERNO -->
+				<!-- Apellido materno -->
 				<div class="padding" <?php echo !empty($apellidoMError) ? 'error' : ''; ?>>
 
 					<label class="subtitulo1">Apellido materno</label>
@@ -246,7 +255,7 @@ if (!empty($_POST)) {
 					</div>
 				</div>
 
-				<!-- CORREO -->
+				<!-- Correo -->
 				<div class="padding" <?php echo !empty($correoError) ? 'error' : ''; ?>>
 					<label class="subtitulo1">Correo electrónico</label>
 					<div class="padding2">

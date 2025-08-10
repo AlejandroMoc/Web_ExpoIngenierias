@@ -2,32 +2,43 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>MiJuez</title>
+	<link rel="icon" href="../src/img/miniicon.png">
+
+	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" type="text/css" href="css/style2.css">
-	<link rel="icon" href="img/miniicon.png">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-
-	<table align="center" width="100%" class="logos">
-		<tr>
-			<td align="center" style="width: 46%;" class="logo"> <img src="img/logo_expo.png"
-					style="width: 45%;height: 20%;"></td>
-			<td align="center" style="width: 46%;" class="logo"> <img src="img/logo_tec.png"
-					style="width: 45%;height: 80%;"></td>
-			<td align="center" style="width: 8%;"><a href="cerrarsesion.php"><img
-						src="https://static-00.iconduck.com/assets.00/logout-icon-512x512-2x08s84n.png"
-						style="width: 45px;height: 45px;"></a></td>
-		</tr>
-	</table>
+	<!--Nueva barra de navegación-->
+	<navbar>
+		<div id="navbar">
+			<img src="../src/img/logo_tec_blue.png">
+			<div id="navbarIconsContainer">
+				<a id="navbarIcon" href="cerrarsesion.php" class="material-icons">logout</a>
+			</div>
+		</div>
+	</navbar>
+	<navbar>
+		<div id="navbarAzul">
+			<img src="../src/img/logo_expo_judge.svg">
+			<a href="indexJ.php"><span class="material-symbols-outlined"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></span>MiJuez</a>
+		</div>
+	</navbar>
 
 	<div style="color:#082460">
 		<?php

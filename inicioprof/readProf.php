@@ -18,35 +18,43 @@ if ($id == null) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<title>MiProfesor</title>
+	<link rel="icon" href="../src/img/miniicon.png">
+	
+	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" href="css/dani.css">
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="icon" href="img/miniicon.png">
 </head>
 
 <body>
+	<!--Nueva barra de navegación-->
 	<navbar>
 		<div id="navbar">
-			<img src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-blue.png">
-			<a href="cerrarsesion.php"><img src="https://icons.veryicon.com/png/o/miscellaneous/utility/logout-24.png"
-					style="width: 45px;height: 45px;"></a>
+			<img src="../src/img/logo_tec_blue.png">
+			<div id="navbarIconsContainer">
+				<a id="navbarIcon" href="cerrarsesion.php" class="material-icons">logout</a>
+			</div>
 		</div>
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
-			<img src="img/logo_expo.svg">
-			<a href="indexProf.php?id=<?php echo $data['id_profesor']; ?>"><span
-					class="material-symbols-outlined">home</span>MiProfesor</a>
+			<img src="../src/img/logo_expo_prof.svg">
+			<a href="indexProf.php"><span class="material-symbols-outlined"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></span>MiProfesor</a>
 		</div>
 	</navbar>
+
 	<br>
 	<h1 align="center" style="color: #082460">Mis datos</h1>
 
