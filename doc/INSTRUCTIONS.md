@@ -51,15 +51,12 @@ The PHP application needs to know how to connect to the database. Therefore, it 
 
 1. You must update the database connection credentials in the project's PHP files. Navigate to the following files:
 
-    * `inicioadmin/conexioninicio.php`
-    * `inicioestudiante/conexioninicio.php`
-    * `iniciojuez/conexioninicio.php`
-    * `inicioprof/conexioninicio.php`
+    * `src/php/db_credentials.php`
 
-    * `inicioadmin/database.php`
-    * `inicioestudiante/database.php`
-    * `iniciojuez/database.php`
-    * `inicioprof/database.php`
+    * `inicioadmin/../src/php/database.php`
+    * `inicioestudiante/../src/php/database.php`
+    * `iniciojuez/../src/php/database.php`
+    * `inicioprof/../src/php/database.php`
 
 2. Open these file in a code editor. You will see code like this:
 

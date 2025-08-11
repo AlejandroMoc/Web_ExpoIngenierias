@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('conexioninicio.php');
+include('../src/php/db_credentials.php');
 
 if (isset($_POST['correo']) && isset($_POST['password'])) {
 
@@ -23,7 +23,7 @@ if (isset($_POST['correo']) && isset($_POST['password'])) {
 			if ($row['correo'] == $correo && $row['contrasena'] == $password) {
 				$_SESSION['correo'] = $row['correo'];
 
-				require 'database.php';
+				require '../src/php/database.php';
 
 				$pdo = Database::connect();
 				$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -35,7 +35,7 @@ if (isset($_POST['correo']) && isset($_POST['password'])) {
 				$data = $q->fetch(PDO::FETCH_ASSOC);
 				Database::disconnect();
 
-				header("Location: indexProf.php?id=" . $data['matricula'] . "");
+				header("Location: prof_start.php?id=" . $data['matricula'] . "");
 				exit();
 			} else {
 				header("Location: index.php?error=El usuario o la contraseña son incorrectos1 ");

@@ -1,16 +1,4 @@
-/* Common */
-.material-symbols-outlined {
-  font-variation-settings:
-    "FILL" 100,
-    "wght" 400,
-    "GRAD" 100,
-    "opsz" 155;
-}
 
-body {
-  font-family: "Inter";
-  margin: 0;
-}
 
 /* Site */
 .space {

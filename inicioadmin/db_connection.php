@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('conexioninicio.php');
+include('../src/php/db_credentials.php');
 
 if (isset($_POST['correo']) && isset($_POST['password'])) {
 
@@ -22,7 +22,7 @@ if (isset($_POST['correo']) && isset($_POST['password'])) {
 			$row = mysqli_fetch_assoc($result);
 			if ($row['correo'] == $correo && $row['contrasena'] == $password) {
 				$_SESSION['correo'] = $row['correo'];
-				header("Location: admin.php");
+				header("Location: admin_start.php");
 				exit();
 			} else {
 				header("Location:index.php?error=El usuario o la contraseña son incorrectos ");

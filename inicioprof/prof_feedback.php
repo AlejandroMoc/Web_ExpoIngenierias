@@ -1,0 +1,109 @@
+<?php
+session_start();
+$_SESSION['color'];
+$color = $_SESSION['color'];
+require '../src/php/database.php';
+
+$id = null;
+if (!empty($_GET['id'])) {
+	$id = $_REQUEST['id'];
+}
+
+if ($id == null) {
+	header("Location: prof_start.php?id=$color");
+}
+
+$q5Error = NULL;
+
+
+if (!empty($_POST)) {
+
+	$q5 = $_POST['q5'];
+
+	$valid = true;
+
+	if ($valid) {
+		$result1 = $q5;
+
+		if ($result1 == NULL) {
+			$result1 = "Sin comentarios";
+		}
+
+		$pdo = Database::connect();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$sql1 = "UPDATE status set retroprof = ?  WHERE id_proyecto = ?";
+		$q1 = $pdo->prepare($sql1);
+		$q1->execute(array($result1, $id));
+		Database::disconnect();
+		header("Location: prof_view.php?id=$id");
+	}
+}
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>MiProfesor</title>
+	<link rel="icon" href="../src/img/icon_prof.png">
+
+	<link rel="stylesheet" href="../src/css/common_navbar.css">
+	<link rel="stylesheet" href="css/prof_common.css">
+
+	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Barra de navegación checar -->
+	<navbar>
+		<div id="navbar">
+			<img src="../src/img/logo_tec_blue.png">
+		</div>
+	</navbar>
+	<navbar>
+		<div id="navbarAzul">
+			<img src="../src/img/logo_expo_prof.svg">
+			<a href="prof_start.php?id=<?php echo $color; ?>"><span class="material-icons">home</span>MiProfesor</a>
+		</div>
+	</navbar>
+
+	<form class="form-horizontal" action="prof_feedback.php?id=<?php echo $id ?>" method="post">
+
+		<center>
+			<td style="width: 45%;">
+				<h2 style="color:#082460">
+					<center>
+						<br></br>
+						Comentarios y retroalimentación
+					</center>
+				</h2>
+			</td>
+			<tr>
+				<td>
+					<input class=" input2" name="q5" style="width: 100% height: 100% "></input>
+				</td>
+			</tr>
+		</center>
+		<br>
+
+		<br>
+		<center>
+			<table style="width: 10%;">
+				<th class="botonbordeV" style=" text-align: center;">
+
+					<button type="submit" class="botonfinalV" id="botonfinalV"><strong>Enviar</strong></button>
+				</th>
+			</table>
+		</center>
+
+	</form>
+
+</body>
+
+</html>

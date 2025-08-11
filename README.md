@@ -10,8 +10,8 @@ You can find a behavior test in [YouTube](https://www.youtube.com/watch?v=8ItQEL
 
 ## Instructions
 
-You can find the set-up guide in [INSTRUCTIONS.md](doc/INSTRUCTIONS.md).
-You can find the credentials to test the website in [accounts.md](doc/accounts.md).
+* You can find the set-up guide in [INSTRUCTIONS.md](doc/INSTRUCTIONS.md).
+* You can find the credentials to test the website in [accounts.md](doc/accounts.md).
 
 ## Developers
 

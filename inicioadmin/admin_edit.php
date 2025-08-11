@@ -1,6 +1,6 @@
 <?php
 
-require 'database.php';
+require '../src/php/database.php';
 
 $id = null;
 if (!empty($_GET['id'])) {
@@ -8,15 +8,15 @@ if (!empty($_GET['id'])) {
 }
 
 if ($id == null) {
-	header("Location: admin.php");
+	header("Location: admin_start.php");
 }
 
 if ($id[0] == "A") {
-	$xd = " Estudiante";
+	$user_type = " Estudiante";
 } elseif ($id[0] == "L") {
-	$xd = " Profesor";
+	$user_type = " Profesor";
 } elseif ($id[0] == "X") {
-	$xd = " Juez";
+	$user_type = " Juez";
 }
 
 if (!empty($_POST)) {
@@ -90,7 +90,7 @@ if (!empty($_POST)) {
 		}
 
 		Database::disconnect();
-		header("Location: admin.php");
+		header("Location: admin_start.php");
 
 		/*$pdo = Database::connect();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -98,7 +98,7 @@ if (!empty($_POST)) {
 		$q = $pdo->prepare($sql);
 		$q->execute(array($nombre,$apellidoP,$apellidoM,$correo, $id));
 		Database::disconnect();
-		header("Location: admin.php");*/
+		header("Location: admin_start.php");*/
 	}
 
 } else {
@@ -143,7 +143,7 @@ if (!empty($_POST)) {
 	}
 
 	Database::disconnect();
-	//header("Location: admin.php");
+	//header("Location: admin_start.php");
 
 	/*
 	$pdo = Database::connect();
@@ -171,30 +171,34 @@ if (!empty($_POST)) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>MiAdmin</title>
-	<link rel="icon" href="../src/img/miniicon.png">
+	<link rel="icon" href="../src/img/icon_admin.png">
 
 	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
-	<link rel="stylesheet" href="css/admin_main.css">
-	<link rel="stylesheet" href="css/admin_edit.css">
+	<link rel="stylesheet" href="css/admin_common.css">
+	<link rel="stylesheet" href="css/admin_common2.css">
 
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-	<!-- Barra de navegación -->
+	<!-- Barra de navegación lista -->
 	<navbar>
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
-			<img src="https://i.imgur.com/UcHOarZ.png">
+			<div id="navbarIconsContainer">
+				<a id="navbarIcon" href="" class="material-icons">person</a>
+				<a id="navbarIcon" href="admin_assign" class="material-icons">rate_review</a>
+				<a id="navbarIcon" href="admin_logout.php" class="material-icons">logout</a>
+			</div>
 		</div>
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
 			<img src="../src/img/logo_expo_admin.svg">
-			<a href=""><?php echo "Modificar" . $xd ?></a>
-			<a href="admin.php"><span class="material-symbols-outlined">home</span>MiAdmin</a>
+			<a href=""><?php echo "Modificar" . $user_type ?></a>
+			<a href="admin_start.php"><span class="material-icons">home</span>MiAdmin</a>
 		</div>
 	</navbar>
 
@@ -269,7 +273,7 @@ if (!empty($_POST)) {
 
 				<br>
 				<div class="center2">
-					<a style="text-decoration:none;" class="boton" href="admin.php">Regresar</a>
+					<a style="text-decoration:none;" class="boton" href="admin_start.php">Regresar</a>
 					<button type="submit" class="boton">Actualizar</button>
 				</div>
 			</form>

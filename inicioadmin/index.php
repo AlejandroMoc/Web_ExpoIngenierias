@@ -10,17 +10,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>MiAdmin</title>
-	<link rel="icon" href="../src/img/miniicon.png">
+	<link rel="icon" href="../src/img/icon_admin.png">
 
-	<link rel="stylesheet" type="text/css" href="css/admin_login.css">
+	<link rel="stylesheet" href="css/admin_login.css">
 </head>
 
 <body>
 	<!-- Barra de inicio de sesión -->
 	<table>
 		<tr>
-			<td align="left" style="width: 33.33%;"><img src="../src/img/logo_tec_login.png" style="width: 35%;height: 15%;"
-					id="logo-tec"></td>
+			<td align="left" style="width: 33.33%;"><img src="../src/img/logo_tec_login.png" style="width: 35%;height: 15%;" id="logo-tec"></td>
 			<td align="right" style="width: 33.33%;" class="texto2">MiAdmin</td>
 		</tr>
 	</table>

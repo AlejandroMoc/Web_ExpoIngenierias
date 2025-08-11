@@ -10,10 +10,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>MiProfesor</title>
-	<link rel="icon" href="../src/img/miniicon.png">
+	<link rel="icon" href="../src/img/icon_prof.png">
 
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
-	<link rel="stylesheet" type="text/css" href="css/prof_login.css">
+	<link rel="stylesheet" href="css/prof_login.css">
 	
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,8 +24,7 @@
 	<!-- Barra de inicio de sesión -->
 	<table>
 		<tr>
-			<td align="left" style="width: 33.33%;"><img src="../src/img/logo_tec_login.png" style="width: 35%;height: 15%;"
-					id="logo-tec"></td>
+			<td align="left" style="width: 33.33%;"><img src="../src/img/logo_tec_login.png" style="width: 35%;height: 15%;" id="logo-tec"></td>
 			<td align="right" style="width: 33.33%;" class="texto2">MiProfesor</td>
 		</tr>
 	</table>
@@ -110,7 +109,7 @@
 		<tr>
 			<td style="width: 46;"></td>
 			<td align="center" class="botonborde2" style="width: 20%;"><button align="center" class="botonfinal2"
-					id="botonfinal2" name="botonfinal2"><strong><a href="create.php" id="Crearcuenta">Crear
+					id="botonfinal2" name="botonfinal2"><strong><a href="prof_create.php" id="Crearcuenta">Crear
 							cuenta</a></strong></button></td>
 			<td style="width: 46;"></td>
 		</tr>
