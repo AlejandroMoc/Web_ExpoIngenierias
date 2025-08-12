@@ -1,6 +1,6 @@
 <?php
 
-//Declaracion de variables
+// Variables
 require '../src/php/database.php';
 
 $nombreError = null;
@@ -13,6 +13,7 @@ $confircontraError = null;
 
 if (!empty($_POST)) {
 
+	// Obtain data
 	$nombre = $_POST['nombre'];
 	$apellidoP = $_POST['apellidoP'];
 	$apellidoM = $_POST['apellidoM'];
@@ -97,7 +98,6 @@ if (!empty($_POST)) {
 <!DOCTYPE html>
 <html lang="es">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
@@ -106,151 +106,150 @@ if (!empty($_POST)) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>MiEstudiante</title>
-	<link rel="icon" href="../src/img/icon_student.png">
-	
+	<link rel="icon" href="../src/img/icon_admin.png">
+
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
+	<link rel="stylesheet" href="../src/css/common_create.css">
 	<link rel="stylesheet" href="css/student_common.css">
+	<link rel="stylesheet" href="css/student_create.css">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-	<!-- Barra de navegación antigua -->
-	<div class="scrollogo">
-		<table align="center">
+	<!-- Barra de navegación lista -->
+	<navbar>
+		<div id="navbar">
+			<img src="../src/img/logo_tec_blue.png">
+			<div id="navbarIconsContainer">
+				<a id="navbarIcon" href="" class="material-icons">person</a>
+				<!-- <a id="navbarIcon" href="" class="material-icons">rate_review</a> -->
+				<a id="navbarIcon" href="student_logout.php" class="material-icons">logout</a>
+			</div>
+		</div>
+	</navbar>
+	<navbar>
+		<div id="navbarAzul">
+			<img src="../src/img/logo_expo_student.svg">
+			<a href="student_project.php"><span class="material-icons">home</span>MiEstudiante</a>
+		</div>
+	</navbar>
+
+	<form class="divfix" action="student_create.php" method="post" onsubmit="return verifyPassword()">
+		<table  width="100%">
 			<tr>
-				<td align="center" style="width: 33.33%;">
-					<h1><strong>Registrar Estudiante</strong></h1>
+				<td>
+					<p class="create_paragraph"><strong> Nombre(s) y apellidos</strong>
 				</td>
-				<td align="center" style="width: 33.33%;" class="logo"> <img
-						src="../src/img/logo_expo_student.svg" style="width: 45%;"></td>
-				<td align="center" style="width: 33.33%;"> <img
-						src="../src/img/logo_tec_blue.png"
-						style="width: 45%;"></td>
+			</tr>
+
+			<tr>
+				<td>
+					<input type="text" id="nombre" name="nombre" required maxlength="30" placeholder="  Nombre(s)"
+						size="50" class="input" value="<?php echo !empty($nombre) ? $nombre : ''; ?>">
+					<?php if (($nombreError != null)) ?>
+					<span class="help-inline"><?php echo $nombreError; ?></span>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<input type="text" id="apellidoP" name="apellidoP" required maxlength="30"
+						placeholder="  Apellido Pat." size="50" class="input2"
+						value="<?php echo !empty($apellidoP) ? $apellidoP : ''; ?>"><input type="text" id="apellidoM"
+						name="apellidoM" required maxlength="30" placeholder="  Apellido Mat." size="50" class="input2"
+						value="<?php echo !empty($apellidoM) ? $apellidoM : ''; ?>">
+					<?php if (($apellidoPError != null)) ?>
+					<span class="help-inline"><?php echo $apellidoPError; ?></span>
+					<?php if (($apellidoPError != null)) ?>
+					<span class="help-inline"><?php echo $apellidoMError; ?></span>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<p class="create_paragraph"><strong> Correo electrónico</strong>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<input type="text" id="correo" name="correo" required maxlength="30" placeholder="  Identificador"
+						size="70" class="input" value="<?php echo !empty($correo) ? $correo : ''; ?>">
+					<?php if (($correoError != null)) ?>
+					<span class="help-inline"><?php echo $correoError; ?></span>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<p class="create_paragraph"><strong> Matrícula</strong>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<input type="text" id="matricula" name="matricula" required maxlength="30" placeholder="  XXXXXXXXX"
+						size="10" class="input" value="<?php echo !empty($matricula) ? $matricula : ''; ?>">
+					<?php if (($matriculaError != null)) ?>
+					<span class="help-inline"><?php echo $matriculaError; ?></span>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<p class="create_paragraph"><strong> Contraseña</strong>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<input type="password" id="pass" name="pass" required maxlength="30" placeholder="  Contraseña"
+						size="70" class="input" value="<?php echo !empty($pass) ? $pass : ''; ?>">
+					<?php if (($passError != null)) ?>
+					<span class="help-inline"><?php echo $passError; ?></span>
+				</td>
+			</tr>
+
+
+			<tr>
+				<td>
+					<p class="create_paragraph"><strong> Confirma tu contraseña</strong>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<input type="password" id="confirmPassword" name="confirmPassword" required maxlength="30"
+						placeholder="  Vuelve a escribir tu clave" size="70" class="input"
+						value="<?php echo !empty($confirmPassword) ? $confirmPassword : ''; ?>">
+					<?php if (($confircontraError != null)) ?>
+					<span class="help-inline"><?php echo $confircontraError; ?></span>
+				</td>
+			</tr>
+
+			<br>
+
+			<tr>
+				<td class="button_create" style="width: 33.33%;">
+					<button class="botonfinal" id="botonfinal" type="submit">
+						<strong>Crear cuenta</strong>
+					</button>
+				</td>
+			</tr>
+
+			<br>
+
+			<tr>
+				<td class="botonborde2">
+					<button  class="botonfinal2"><strong><a href="index.php"
+								class="alv">Regresar</a></strong></button>
+				</td>
 			</tr>
 		</table>
-		<hr size="4px" color="#b8b4b4">
-	</div>
-
-	<form class="form-horizontal" action="student_create.php" method="post" onsubmit="return verifyPassword()">
-
-		<center>
-			<div align="left">
-				<p style="color:#646464"><strong> Nombre(s) y apellidos</strong>
-			</div>
-		</center>
-
-		<center>
-			<div align="center">
-				<input type="text" id="nombre" name="nombre" required maxlength="30" placeholder="  Nombre(s)" size="50"
-					class="input" value="<?php echo !empty($nombre) ? $nombre : ''; ?>">
-				<?php if (($nombreError != null)) ?>
-				<span class="help-inline"><?php echo $nombreError; ?></span>
-			</div>
-		</center>
-
-		<center>
-			<div align="center">
-				<input type="text" id="apellidoP" name="apellidoP" required maxlength="30" placeholder="  Apellido Pat."
-					size="50" class="input2" value="<?php echo !empty($apellidoP) ? $apellidoP : ''; ?>"><input
-					type="text" id="apellidoM" name="apellidoM" required maxlength="30" placeholder="  Apellido Mat."
-					size="50" class="input2" value="<?php echo !empty($apellidoM) ? $apellidoM : ''; ?>">
-				<?php if (($apellidoPError != null)) ?>
-				<span class="help-inline"><?php echo $apellidoPError; ?></span>
-				<?php if (($apellidoPError != null)) ?>
-				<span class="help-inline"><?php echo $apellidoMError; ?></span>
-			</div>
-		</center>
-
-		<center>
-			<div align="left">
-				<p style="color:#646464"><strong> Correo electrónico</strong>
-			</div>
-
-		</center>
-
-		<center>
-			<div align="center">
-				<input type="text" id="correo" name="correo" required maxlength="30" placeholder="  Identificador"
-					size="70" class="input" value="<?php echo !empty($correo) ? $correo : ''; ?>">
-				<?php if (($correoError != null)) ?>
-				<span class="help-inline"><?php echo $correoError; ?></span>
-			</div>
-		</center>
-
-		<center>
-			<div align="left">
-				<p style="color:#646464"><strong> Matricula</strong>
-			</div>
-		</center>
-
-		<center>
-			<div align="center">
-				<input type="text" id="matricula" name="matricula" required maxlength="30" placeholder="  XXXXXXXXX"
-					size="10" class="input" value="<?php echo !empty($matricula) ? $matricula : ''; ?>">
-				<?php if (($matriculaError != null)) ?>
-				<span class="help-inline"><?php echo $matriculaError; ?></span>
-			</div>
-		</center>
-
-
-		<center>
-			<div align="left">
-				<p style="color:#646464"><strong> Contraseña</strong>
-			</div>
-		</center>
-
-		<center>
-			<div align="center">
-				<input type="password" id="pass" name="pass" required maxlength="30" placeholder="  contrasena"
-					size="70" class="input" value="<?php echo !empty($pass) ? $pass : ''; ?>">
-				<?php if (($passError != null)) ?>
-				<span class="help-inline"><?php echo $passError; ?></span>
-			</div>
-		</center>
-
-
-		<center>
-			<div align="left">
-				<p style="color:#646464"><strong> Confirma tu contraseña</strong>
-			</div>
-		</center>
-
-		<center>
-			<div align="center">
-				<input type="password" id="confirmPassword" name="confirmPassword" required maxlength="30"
-					placeholder="  Vuelve a escribir tu clave" size="70" class="input"
-					value="<?php echo !empty($confirmPassword) ? $confirmPassword : ''; ?>">
-				<?php if (($confircontraError != null)) ?>
-				<span class="help-inline"><?php echo $confircontraError; ?></span>
-			</div>
-		</center>
-
-		<center>
-			<div align="center">
-				<span id="message" style="color: #646464"><strong> </strong></span>
-			</div>
-		</center>
-
-		<br>
-
-		<center>
-			<div class="botonborde">
-				<button align="center" class="botonfinal" id="botonfinal" type="submit"><strong>Crear
-						cuenta</strong></button>
-			</div>
-		</center>
-
-		<br>
-
-		<center>
-			<div class="botonborde2">
-				<button align="center" class="botonfinal2"><strong><a href="index.php"
-							class="alv">Regresar</a></strong></button>
-			</div>
-		</center>
-
 	</form>
 
-	<p class="footer">@2023<a href="https://tec.mx/es">Tecnológico de Monterrey.</a></p>
+	<p class="footer">@2023 <a href="https://tec.mx/es"> Tecnológico de Monterrey.</a></p>
 
 </body>
 

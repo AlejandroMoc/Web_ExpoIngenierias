@@ -14,7 +14,6 @@ if ($id == null) {
 <!DOCTYPE html>
 <html lang="es">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
@@ -32,21 +31,22 @@ if ($id == null) {
 </head>
 
 <body>
-	<!-- Barra de navegación lista -->
+	<!-- Barra de navegación lista Prof -->
 	<navbar>
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
 
 			<div id="navbarIconsContainer">
-				<a id="navbarIcon" href="prof_read.php" class="material-icons">person</a>
-				<a id="navbarIcon" href="student_logout.php" class="material-icons">logout</a>
+				<a id="navbarIcon" href="prof_read.php?id=<?php echo $color; ?>" class="material-icons">person</a>
+				<!-- <a id="navbarIcon" href="" class="material-icons">rate_review</a> -->
+				<a id="navbarIcon" href="prof_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
 			<img src="../src/img/logo_expo_prof.svg">
-			<a href="admin_start.php"><span class="material-icons">home</span>Mi Profesor</a>
+			<a href="prof_start.php?id=<?php echo $color; ?>"><span class="material-icons">home</span>MiProfesor</a>
 		</div>
 	</navbar>
 

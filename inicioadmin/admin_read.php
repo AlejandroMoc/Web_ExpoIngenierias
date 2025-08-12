@@ -72,7 +72,7 @@ if ($id == null) {
 			<img src="../src/img/logo_tec_blue.png">
 			<div id="navbarIconsContainer">
 				<a id="navbarIcon" href="" class="material-icons">person</a>
-				<a id="navbarIcon" href="admin_assign" class="material-icons">rate_review</a>
+				<a id="navbarIcon" href="admin_assign.php" class="material-icons">rate_review</a>
 				<a id="navbarIcon" href="admin_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>
@@ -96,7 +96,7 @@ if ($id == null) {
 
 				if ($id[0] == "A") {
 					echo '<div class="control-group">';
-					echo '<label class="control-label">Matricula</label>';
+					echo '<label class="control-label">Matrícula</label>';
 					echo '<div class="controls">';
 					echo '<label class="checkbox">';
 					echo $data['id_estudiante'];
@@ -106,7 +106,7 @@ if ($id == null) {
 
 				} elseif ($id[0] == "L" and $cont == 0) {
 					echo '<div class="control-group">';
-					echo '<label class="control-label">Matricula</label>';
+					echo '<label class="control-label">Matrícula</label>';
 					echo '<div class="controls">';
 					echo '<label class="checkbox">';
 					echo $data['id_profesor'];

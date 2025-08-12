@@ -64,7 +64,7 @@ if (!empty($_POST)) {
 
 	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
-	<link rel="stylesheet" href="css/admin_common2.css">
+	<link rel="stylesheet" href="css/admin_common.css">
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -76,7 +76,7 @@ if (!empty($_POST)) {
 			<img src="../src/img/logo_tec_blue.png">
 			<div id="navbarIconsContainer">
 				<a id="navbarIcon" href="" class="material-icons">person</a>
-				<a id="navbarIcon" href="admin_assign" class="material-icons">rate_review</a>
+				<a id="navbarIcon" href="admin_assign.php" class="material-icons">rate_review</a>
 				<a id="navbarIcon" href="admin_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>

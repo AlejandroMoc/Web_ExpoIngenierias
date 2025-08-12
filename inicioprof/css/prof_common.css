@@ -1,3 +1,8 @@
+/* prof_reject.php */
+h3 {
+  font-weight: 800;
+  font-size: 30px;
+}
 
 /* Site */
 .proyectoV {
@@ -205,7 +210,5 @@
   border-radius: 10px;
   border: 0;
   background-color: #e6e6e6;
-  height: 300px;
-  width: 80%;
   font-size: 14px;
 }

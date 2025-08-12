@@ -1,9 +1,11 @@
 body {
   font-family: "Inter";
+  text-align: center;
   margin: 0;
 }
 
-div {
+.divfix {
+  align-items: center;
   width: 35%;
   min-width: 300px;
   padding: 3px;
@@ -19,6 +21,7 @@ div {
   width: 100%;
   font-size: 14px;
 }
+
 .input2 {
   margin: 0;
   padding: 0;
@@ -32,12 +35,16 @@ div {
   border-collapse: collapse;
 }
 
-.botonborde {
+.button_create {
   margin: auto;
   padding: 0;
   border-radius: 10px;
   border: 0;
   background-color: #00b1ff;
+}
+
+.button_create:hover {
+  background: #bb93d5ff;
 }
 
 .botonfinal {
@@ -63,7 +70,7 @@ div {
   color: white;
 }
 
-.botonborde:hover {
+.button_create:hover {
   background: #006590;
 }
 

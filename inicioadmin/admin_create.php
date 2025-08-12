@@ -1,6 +1,6 @@
 <?php
 
-//Declaracion de variables
+// Variables
 require '../src/php/database.php';
 
 $id = null;
@@ -24,6 +24,7 @@ $matriculaError = null;
 
 if (!empty($_POST)) {
 
+	// Obtain data
 	$nombre = $_POST['nombre'];
 	$apellidoP = $_POST['apellidoP'];
 	$apellidoM = $_POST['apellidoM'];
@@ -75,7 +76,7 @@ if (!empty($_POST)) {
 			$q4->execute(array($matricula, $nombre, $apellidoP, $apellidoM, $correo));
 			Database::disconnect();
 			header("Location: http://localhost/Web_ExpoIngenierias/inicioadmin/admin_start.php");
-		
+
 		} elseif ($matricula[0] == "X") {
 			// Delete data
 			$sql5 = 'INSERT INTO juez (id_juez, nombre, apellido_paterno, apellido_materno, correo) values(?, ?, ?, ?, ?)';
@@ -102,19 +103,18 @@ if (!empty($_POST)) {
 <!DOCTYPE html>
 <html lang="es">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/min.css">
 <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<title>MiAdmin</title>
 	<link rel="icon" href="../src/img/icon_admin.png">
 
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
-	<link rel="stylesheet" href="css/admin_create.css">
+	<link rel="stylesheet" href="../src/css/common_create.css">
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -126,7 +126,7 @@ if (!empty($_POST)) {
 			<img src="../src/img/logo_tec_blue.png">
 			<div id="navbarIconsContainer">
 				<a id="navbarIcon" href="" class="material-icons">person</a>
-				<a id="navbarIcon" href="admin_assign" class="material-icons">rate_review</a>
+				<a id="navbarIcon" href="admin_assign.php" class="material-icons">rate_review</a>
 				<a id="navbarIcon" href="admin_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>
@@ -134,36 +134,29 @@ if (!empty($_POST)) {
 	<navbar>
 		<div id="navbarAzul">
 			<img src="../src/img/logo_expo_admin.svg">
-			<a href="">Crear proyectos</a>
+			<!-- <a href="">Crear proyectos</a> -->
 			<a href="admin_start.php"><span class="material-icons">home</span>MiAdmin</a>
 		</div>
 	</navbar>
 
-	<form class="form-horizontal" action="admin_create.php" method="post">
-
-		<table align="center" width="100%">
+	<form class="divfix" action="admin_create.php" method="post">
+		<table width="100%">
 			<tr>
-				<td style="width: 33.33%;"></td>
-				<td align="left">
-					<p style="color:#646464"><strong> Nombre(s) y apellidos</strong>
+				<td>
+					<p class="create_paragraph"><strong> Nombre(s) y apellidos</strong>
 				</td>
-				<td style="width: 33.33%;"></td>
 			</tr>
 
 			<tr>
-				<td style="width: 33.33%;"></td>
-				<td align="left"><input type="text" id="nombre" name="nombre" required maxlength="30"
-						placeholder="  Nombre(s)" size="50" class="input"
-						value="<?php echo !empty($nombre) ? $nombre : ''; ?>">
+				<td><input type="text" id="nombre" name="nombre" required maxlength="30" placeholder="  Nombre(s)"
+						size="50" class="input" value="<?php echo !empty($nombre) ? $nombre : ''; ?>">
 					<?php if (($nombreError != null)) ?>
 					<span class="help-inline"><?php echo $nombreError; ?></span>
 				</td>
-				<td style="width: 33.33%;"></td>
 			</tr>
 
 			<tr>
-				<td style="width: 33.33%;"></td>
-				<td align="left"><input type="text" id="apellidoP" name="apellidoP" required maxlength="30"
+				<td><input type="text" id="apellidoP" name="apellidoP" required maxlength="30"
 						placeholder="  Apellido Pat." size="50" class="input2"
 						value="<?php echo !empty($apellidoP) ? $apellidoP : ''; ?>"><input type="text" id="apellidoM"
 						name="apellidoM" required maxlength="30" placeholder="  Apellido Mat." size="50" class="input2"
@@ -173,44 +166,48 @@ if (!empty($_POST)) {
 					<?php if (($apellidoPError != null)) ?>
 					<span class="help-inline"><?php echo $apellidoMError; ?></span>
 				</td>
-				<td style="width: 33.33%;"></td>
 			</tr>
 
 			<tr>
-				<td style="width: 33.33%;"></td>
-				<td align="left">
-					<p style="color:#646464"><strong> Correo electrónico</strong>
+				<td>
+					<p class="create_paragraph"><strong> Correo electrónico</strong>
 				</td>
-				<td style="width: 33.33%;"></td>
 			</tr>
 
 			<tr>
-				<td style="width: 33.33%;"></td>
-				<td align="left"><input type="text" id="correo" name="correo" required maxlength="30"
-						placeholder="  Correo" size="70" class="input">
+				<td><input type="text" id="correo" name="correo" required maxlength="30" placeholder="  Correo"
+						size="70" class="input">
 					<?php if (($correoError != null)) ?>
 					<span class="help-inline"><?php echo $correoError; ?></span>
 				</td>
-				<td style="width: 33.33%;"></td>
 			</tr>
 
 			<tr>
-				<td style="width: 33.33%;"></td>
-				<td align="left">
-					<p style="color:#646464"><strong> Matricula / Nómina / Identificador </strong>
+				<td>
+					<p class="create_paragraph"><strong> Matrícula</strong>
 				</td>
-				<td style="width: 33.33%;"></td>
 			</tr>
 
 			<tr>
-				<td style="width: 33.33%;"></td>
-				<td align="left"><input type="text" id="matricula" name="matricula" required maxlength="30"
+				<td><input type="text" id="matricula" name="matricula" required maxlength="30" placeholder="  XXXXXXXXX"
 						placeholder="<?php echo $id_description ?>" size="70" class="input"
 						value="<?php echo !empty($matricula) ? $matricula : ''; ?>">
 					<?php if (($matriculaError != null)) ?>
 					<span class="help-inline"><?php echo $matriculaError; ?></span>
 				</td>
-				<td style="width: 33.33%;"></td>
+			</tr>
+
+			<tr>
+				<td style="height: 15px;">
+				</td>
+			</tr>
+
+			<tr>
+				<td class="button_create" style="width: 33.33%;">
+					<button class="botonfinal" id="botonfinal" type="submit">
+						<strong>Crear cuenta</strong>
+					</button>
+				</td>
 			</tr>
 
 			<tr>
@@ -220,28 +217,15 @@ if (!empty($_POST)) {
 			</tr>
 
 			<tr>
-				<td style="width: 33.33%;"></td>
-				<td align="center" class="botonborde" style="width: 33.33%;"><button align="center" class="botonfinal"
-						id="botonfinal" type="submit"><strong>Añadir</strong></button></td>
-				<td style="width: 33.33%;"></td>
-			</tr>
-
-			<tr>
-				<td style="height: 15px;">
-
+				<td class="botonborde2" style="width: 33.33%;"><button class="botonfinal2"><strong><a
+								href="admin_start.php" class="alv">Regresar</a></strong></button>
 				</td>
-			</tr>
-
-			<tr>
-				<td style="width: 33.33%;"></td>
-				<td align="center" class="botonborde2" style="width: 33.33%;"><button align="center"
-						class="botonfinal2"><strong><a href="admin_start.php" class="alv">Regresar</a></strong></button></td>
-				<td style="width: 33.33%;"></td>
 			</tr>
 
 		</table>
 	</form>
-	<p class="footer">@2023<a href="https://tec.mx/es">Tecnológico de Monterrey.</a></p>
+
+	<p class="footer">@2023 <a href="https://tec.mx/es"> Tecnológico de Monterrey.</a></p>
 </body>
 
 </html>

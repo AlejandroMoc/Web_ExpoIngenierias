@@ -1,0 +1,49 @@
+.login_header {
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.input {
+  margin: 0;
+  padding-left: 20px;
+  border-radius: 30px;
+  border: 0;
+  background-color: #e6e6e6;
+  height: 40px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.login_text_create {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.login_text_help {
+  color: white;
+}
+
+.login_error_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: rgb(185, 80, 80);
+  width: 33.33%;
+  height: 50%;
+}
+
+.login_link_footer {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.login_text_footer {
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    text-align: right;
+  }

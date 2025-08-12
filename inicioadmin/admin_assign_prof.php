@@ -16,6 +16,6 @@ if (!empty($_POST['menuJuez'])) {
 
 }
 
-header("Location: admin_assign");
+header("Location: admin_assign.php");
 
 ?>

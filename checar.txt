@@ -8,14 +8,16 @@ student_start.php
 
 iconos logout y home (importar fuentes)
 
-Unir admin_common y admin_common2
-
 /* Site */
 
 font-size: large;
 font-size: 200%;
 
 .footer {
+
+style="width: 33.33%;
+
+<!-- <a href="">Crear proyectos</a> -->
 
 Unificar en inicioadmin
     <body id="cuerpazo">
@@ -32,3 +34,13 @@ Cambiar esto:
 a esto?
 
     <a href="student_start.php"><span class="material-icons">home</span>MiEstudiante</a>
+
+Unificar .botonfinal {
+
+Hover de botón de admin_login
+
+Unificar clases login
+
+prof_create.php
+
+En navbars checar navbarIcon (judge)

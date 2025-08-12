@@ -46,19 +46,22 @@ $_SESSION['color'] = $data['id_profesor'];
 
 
 <body>
-	<!-- Barra de navegación checar -->
+	<!-- Barra de navegación lista Prof -->
 	<navbar>
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
-			<a href="prof_read.php?id=<?php echo $data['id_profesor']; ?>"><span
-					class="material-icons">person</span></a>
-		</div>
+
+			<div id="navbarIconsContainer">
+				<a id="navbarIcon" href="prof_read.php?id=<?php echo $color; ?>" class="material-icons">person</a>
+				<!-- <a id="navbarIcon" href="" class="material-icons">rate_review</a> -->
+				<a id="navbarIcon" href="prof_logout.php" class="material-icons">logout</a>
+			</div>
 		</div>
 	</navbar>
 	<navbar>
 		<div id="navbarAzul">
 			<img src="../src/img/logo_expo_prof.svg">
-			<a href="prof_start.php?id=<?php echo $data['id_profesor']; ?>"><span class="material-icons">home</span>MiProfesor</a>
+			<a href="prof_start.php?id=<?php echo $color; ?>"><span class="material-icons">home</span>MiProfesor</a>
 		</div>
 	</navbar>
 

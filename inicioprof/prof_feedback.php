@@ -60,10 +60,16 @@ if (!empty($_POST)) {
 </head>
 
 <body>
-	<!-- Barra de navegación checar -->
+	<!-- Barra de navegación lista Prof -->
 	<navbar>
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
+
+			<div id="navbarIconsContainer">
+				<a id="navbarIcon" href="prof_read.php?id=<?php echo $color; ?>" class="material-icons">person</a>
+				<!-- <a id="navbarIcon" href="" class="material-icons">rate_review</a> -->
+				<a id="navbarIcon" href="prof_logout.php" class="material-icons">logout</a>
+			</div>
 		</div>
 	</navbar>
 	<navbar>
@@ -74,7 +80,6 @@ if (!empty($_POST)) {
 	</navbar>
 
 	<form class="form-horizontal" action="prof_feedback.php?id=<?php echo $id ?>" method="post">
-
 		<center>
 			<td style="width: 45%;">
 				<h2 style="color:#082460">

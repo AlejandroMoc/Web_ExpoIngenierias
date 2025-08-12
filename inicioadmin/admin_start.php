@@ -29,7 +29,7 @@ session_start();
 			<img src="../src/img/logo_tec_blue.png">
 			<div id="navbarIconsContainer">
 				<a id="navbarIcon" href="" class="material-icons">person</a>
-				<a id="navbarIcon" href="admin_assign" class="material-icons">rate_review</a>
+				<a id="navbarIcon" href="admin_assign.php" class="material-icons">rate_review</a>
 				<a id="navbarIcon" href="admin_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>

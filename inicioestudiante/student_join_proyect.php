@@ -81,12 +81,11 @@ if (!empty($_POST)) {
 	</h1>
 	<br>
 	<form class="form-horizontal" action="student_join_proyect.php?id=<?php echo $id ?>" method="post">
-
 		<table align="center" style="width: 23%;">
 			<tr style="width: 33.33%;">
 				<td style="width: 33.33%;"></td>
 				<td style="width: 33.33%;" class="tabh" align="center">
-					<p style="color:#ffffff"><strong> Tu Matricula</strong>
+					<p style="color:#ffffff"><strong> Tu Matrícula</strong>
 				</td>
 				<td style="width: 33.33%;"></td>
 			</tr>
@@ -131,7 +130,7 @@ if (!empty($_POST)) {
 			<tr>
 				<td style="width: 33.33%;"></td>
 				<td align="center" class="botonbordeC" style="width: 33.33%;"><button align="center" class="botonfinalC"
-						id="botonfinalC" type="submit"><strong>Añadir Estudiante</strong></button></td>
+						id="botonfinalC" type="submit"><strong>Crear cuenta</strong></button></td>
 				<td style="width: 33.33%;"></td>
 			</tr>
 
