@@ -148,7 +148,8 @@ if (!empty($_POST)) {
 			</tr>
 
 			<tr>
-				<td><input type="text" id="nombre" name="nombre" required maxlength="30" placeholder="  Nombre(s)"
+				<td>
+					<input type="text" id="nombre" name="nombre" required maxlength="30" placeholder="  Nombre(s)"
 						size="50" class="input" value="<?php echo !empty($nombre) ? $nombre : ''; ?>">
 					<?php if (($nombreError != null)) ?>
 					<span class="help-inline"><?php echo $nombreError; ?></span>
@@ -156,7 +157,8 @@ if (!empty($_POST)) {
 			</tr>
 
 			<tr>
-				<td><input type="text" id="apellidoP" name="apellidoP" required maxlength="30"
+				<td>
+					<input type="text" id="apellidoP" name="apellidoP" required maxlength="30"
 						placeholder="  Apellido Pat." size="50" class="input2"
 						value="<?php echo !empty($apellidoP) ? $apellidoP : ''; ?>"><input type="text" id="apellidoM"
 						name="apellidoM" required maxlength="30" placeholder="  Apellido Mat." size="50" class="input2"
@@ -175,7 +177,8 @@ if (!empty($_POST)) {
 			</tr>
 
 			<tr>
-				<td><input type="text" id="correo" name="correo" required maxlength="30" placeholder="  Correo"
+				<td>
+					<input type="text" id="correo" name="correo" required maxlength="30" placeholder="  Correo"
 						size="70" class="input">
 					<?php if (($correoError != null)) ?>
 					<span class="help-inline"><?php echo $correoError; ?></span>
@@ -189,7 +192,8 @@ if (!empty($_POST)) {
 			</tr>
 
 			<tr>
-				<td><input type="text" id="matricula" name="matricula" required maxlength="30" placeholder="  XXXXXXXXX"
+				<td>
+					<input type="text" id="matricula" name="matricula" required maxlength="30" placeholder="  XXXXXXXXX"
 						placeholder="<?php echo $id_description ?>" size="70" class="input"
 						value="<?php echo !empty($matricula) ? $matricula : ''; ?>">
 					<?php if (($matriculaError != null)) ?>

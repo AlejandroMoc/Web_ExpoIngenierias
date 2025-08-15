@@ -52,7 +52,7 @@ $_SESSION['pro'] = "CU0201";
 	<navbar>
 		<div id="navbarAzul">
 			<img src="../src/img/logo_expo_student.svg">
-			<a href="student_project.php"><span class="material-icons">home</span>MiEstudiante</a>
+			<a href="student_start.php"><span class="material-icons">home</span>MiEstudiante</a>
 		</div>
 	</navbar>
 
@@ -91,26 +91,37 @@ WHERE miembrosProyecto.id_estudiante IS NULL AND proyecto.lider IS NULL AND estu
 	$data = $q5->fetch(PDO::FETCH_ASSOC);
 	$h = $id;
 	if ($h == $data['id_estudiante']) {
-		echo '<H2  style="color: #082460">&nbsp &nbsp Aùn no te encuentras en ningun Proyecto</H2>';
+		echo '<H2  style="color: #082460">&nbsp &nbsp Aún no te encuentras en ningun Proyecto</H2>';
 		echo '<br>';
 		echo '<center>';
 		echo '<center>
-        <table>
-          <tr></tr>
-          <tr>
-          <td style="width: 4%;"> </td>
-          <th align="center" class="botonbordeR" style="width: 12%;"><a style="text-decoration:none" href="student_create_project.php">
-          <button align="center" class="botonfinalR" id="botonfinalR"><strong>Crear Proyecto</strong></button>
-        </a></th>
-            <td style="width: 4%;"> </td>
-        
-            <th align="center" class="botonbordeR" style="width: 10%;"><a style="text-decoration:none" href="student_join_proyect.php?id=' . $id . '">
-            <button align="center" class="botonfinalR" id="botonfinalR"><strong>Unirme a un Proyecto</strong></button>
-          </a></th>
-            <td style="width: 7%;"> </td>
-          
-          </tr>
-        </table>
+			<table>
+
+			<tr>
+				<td style="width: 4%;"> </td>
+				
+				<th align="center" class="botonbordeR" style="width: 12%;">
+					<a style="text-decoration:none" href="student_create_project.php">
+						<button align="center" class="botonfinalR" id="botonfinalR">
+							<strong>Crear Proyecto</strong>
+						</button>
+					</a>
+				</th>
+
+				<td style="width: 4%;"> </td>
+				
+				<th align="center" class="botonbordeR" style="width: 10%;">
+					<a style="text-decoration:none" href="student_join_project.php?id=' . $id . '">
+						<button align="center" class="botonfinalR" id="botonfinalR">
+							<strong>Unirme a un Proyecto</strong>
+						</button>
+					</a>
+				</th>
+
+					<td style="width: 7%;"> </td>
+			
+			</tr>
+			</table>
         </center>';
 	}
 	?>
@@ -131,37 +142,44 @@ WHERE (miembrosProyecto.id_estudiante IS NOT NULL  OR proyecto.lider IS not NULl
 		echo '<br>';
 		echo '<center>';
 		echo '<center>
-        <table >
-          <tr></tr>
-          <tr>
-          <td style="width: 4%;"> </td>
-          <th align="center" class="botonbordeR" style="width: 1.2%;"><a style="text-decoration:none" href="student_project.php?id=' . $_SESSION['pro'] . '">
-          <button align="center" class="botonfinalR" id="botonfinalR"><strong>Ver detalles</strong></button>
-        </a></th>
-            <td style="width: 4%;"> </td>
+			<table >
+				<tr>
+					<td style="width: 4%;"></td>
+					
+					<th align="center" class="botonbordeR" style="width: 1.2%;">
+						<a style="text-decoration:none" href="student_project.php?id=' . $_SESSION['pro'] . '">
+							<button align="center" class="botonfinalR" id="botonfinalR">
+								<strong>Ver detalles</strong>
+							</button>
+						</a>
+					</th>
 
-          
-          </tr>
-        </table>
-        </center>';
+					<td style="width: 4%;"> </td>
+				</tr>
+			</table>
+		</center>';
+
 	} else {
 		echo '<H2  style="color: #082460">&nbsp &nbsp &nbsp &nbsp Estás inscrito en un proyecto</H2>';
 		echo '<br>';
 		echo '<center>';
 		echo '<center>
-      <table >
-        <tr></tr>
-        <tr>
-        <td style="width: 4%;"> </td>
-        <th align="center" class="botonbordeR" style="width: 1.2%;"><a style="text-decoration:none" href="student_project.php?id=' . $idpp . '">
-        <button align="center" class="botonfinalR" id="botonfinalR"><strong>Ver detalles</strong></button>
-      </a></th>
-          <td style="width: 4%;"> </td>
+			<table >
+				<tr>
+					<td style="width: 4%;"></td>
 
-        
-        </tr>
-      </table>
-      </center>';
+					<th align="center" class="botonbordeR" style="width: 1.2%;">
+						<a style="text-decoration:none" href="student_project.php?id=' . $idpp . '">
+							<button align="center" class="botonfinalR" id="botonfinalR">
+								<strong>Ver detalles</strong>
+							</button>
+						</a>
+					</th>
+
+					<td style="width: 4%;"></td>
+				</tr>
+			</table>
+		</center>';
 	}
 	?>
 </body>

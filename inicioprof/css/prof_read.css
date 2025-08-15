@@ -1,0 +1,28 @@
+.tabh {
+  padding: 0;
+  border-radius: 10px;
+  border: 0;
+  background-color: #082460;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: aliceblue;
+  font-size: 150%;
+  text-decoration: none;
+}
+
+.tabd {
+  padding: 0;
+  border-radius: 10px;
+  border: 0;
+  background-color: #e4e4e4;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: #00070e;
+  font-size: 150%;
+  text-decoration: none;
+  text-align: center;
+}

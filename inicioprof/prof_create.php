@@ -106,11 +106,10 @@ if (!empty($_POST)) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>MiProfesor</title>
-	<link rel="icon" href="../src/img/icon_admin.png">
+	<link rel="icon" href="../src/img/icon_student.png">
 
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" href="../src/css/common_create.css">
-	<link rel="stylesheet" href="css/prof_common.css">
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>

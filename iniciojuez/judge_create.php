@@ -106,7 +106,7 @@ if (!empty($_POST)) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>MiJuez</title>
-	<link rel="icon" href="../src/img/icon_admin.png">
+	<link rel="icon" href="../src/img/icon_student.png">
 
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" href="../src/css/common_create.css">
@@ -129,7 +129,7 @@ if (!empty($_POST)) {
 	<navbar>
 		<div id="navbarAzul">
 			<img src="../src/img/logo_expo_student.svg">
-			<a href="student_project.php"><span class="material-icons">home</span>MiEstudiante</a>
+			<a href="judge_start.php"><span class="material-icons">home</span>MiJuez</a>
 		</div>
 	</navbar>
 

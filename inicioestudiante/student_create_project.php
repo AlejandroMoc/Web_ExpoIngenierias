@@ -83,7 +83,7 @@ if (!empty($_POST)) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>MiEstudiante</title>
-	<link rel="icon" href="../src/img/icon_admin.png">
+	<link rel="icon" href="../src/img/icon_student.png">
 
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" href="../src/css/common_create.css">
@@ -105,7 +105,7 @@ if (!empty($_POST)) {
 		<navbar>
 			<div id="navbarAzul">
 				<img src="../src/img/logo_expo_student.svg">
-				<a href="student_project.php"><span class="material-icons">home</span>MiEstudiante</a>
+				<a href="student_start.php"><span class="material-icons">home</span>MiEstudiante</a>
 			</div>
 		</navbar>
 
@@ -118,7 +118,8 @@ if (!empty($_POST)) {
 				</tr>
 
 				<tr>
-					<td><input type="text" id="nombreProyecto" name="nombreProyecto" required maxlength="50"
+					<td>
+						<input type="text" id="nombreProyecto" name="nombreProyecto" required maxlength="50"
 							placeholder="   Ingresa el nombre del proyecto" size="50" class="input"
 							value="<?php echo !empty($nombreProyecto) ? $nombreProyecto : ''; ?>">
 						<?php if (($nombreProyectoError != null)) ?>
@@ -133,7 +134,8 @@ if (!empty($_POST)) {
 				</tr>
 
 				<tr>
-					<td><input type="text" id="descripcion" name="descripcion" required maxlength="400"
+					<td>
+						<input type="text" id="descripcion" name="descripcion" required maxlength="400"
 							placeholder="   Descripción del proyecto (máximo 300 caracteres)" size="70" class="input"
 							value="<?php echo !empty($descripcion) ? $descripcion : ''; ?>">
 						<?php if (($descripcionError != null)) ?>
@@ -232,7 +234,8 @@ if (!empty($_POST)) {
 				</tr>
 
 				<tr>
-					<td><input type="text" id="idproyecto" name="idproyecto" required maxlength="8"
+					<td>
+						<input type="text" id="idproyecto" name="idproyecto" required maxlength="8"
 							placeholder="   Con este ID se uniran los miembros del equipo" size="50" class="input"
 							value="<?php echo !empty($idproyecto) ? $idproyecto : ''; ?>">
 						<?php if (($idproyectoError != null)) ?>
@@ -274,7 +277,8 @@ if (!empty($_POST)) {
 				</tr>
 
 				<tr>
-					<td><input type="text" id="linkarchivo" name="linkarchivo" required maxlength="50"
+					<td>
+						<input type="text" id="linkarchivo" name="linkarchivo" required maxlength="50"
 							placeholder="   Ingresa el link de drive donde subiras tus archivos del proyecto" size="50"
 							class="input" value="<?php echo !empty($linkarchivo) ? $linkarchivo : ""; ?>">
 						<?php if (($linkarchivoError != null)) ?>

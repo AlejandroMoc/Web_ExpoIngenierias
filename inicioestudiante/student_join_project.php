@@ -80,7 +80,7 @@ if (!empty($_POST)) {
 		&nbsp &nbsp Unirme a un proyecto
 	</h1>
 	<br>
-	<form class="form-horizontal" action="student_join_proyect.php?id=<?php echo $id ?>" method="post">
+	<form class="form-horizontal" action="student_join_project.php?id=<?php echo $id ?>" method="post">
 		<table align="center" style="width: 23%;">
 			<tr style="width: 33.33%;">
 				<td style="width: 33.33%;"></td>

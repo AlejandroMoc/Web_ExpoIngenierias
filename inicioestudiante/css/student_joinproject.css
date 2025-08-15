@@ -1,0 +1,57 @@
+
+/* student_join_project.php */
+
+.botonbordeC {
+  margin: auto;
+  padding: 0;
+  border-radius: 10px;
+  border: 0;
+  background-color: #636e72;
+}
+.botonbordeC:hover {
+  background: #1d1d1d;
+}
+
+.botonfinalC {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: aliceblue;
+  font-size: larger;
+}
+#botonfinalC:hover {
+  background: #1d1d1d;
+  color: white;
+}
+
+.tabh {
+  padding: 0;
+  border-radius: 10px;
+  border: 0;
+  background-color: #082460;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: aliceblue;
+  font-size: 150%;
+  text-decoration: none;
+}
+
+.tabd {
+  padding: 0;
+  border-radius: 10px;
+  border: 0;
+  background-color: #e4e4e4;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: #00070e;
+  font-size: 150%;
+  text-decoration: none;
+  text-align: center;
+}

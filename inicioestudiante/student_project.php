@@ -58,7 +58,7 @@ if ($id == null) {
 	<navbar>
 		<div id="navbarAzul">
 			<img src="../src/img/logo_expo_student.svg">
-			<a href="student_project.php"><span class="material-icons">home</span>MiEstudiante</a>
+			<a href="student_start.php"><span class="material-icons">home</span>MiEstudiante</a>
 		</div>
 	</navbar>
 

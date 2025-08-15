@@ -32,7 +32,7 @@ if ($id == null) {
 	
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" href="css/prof_common.css">
-
+	<link rel="stylesheet" href="css/prof_read.css">
 	
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>

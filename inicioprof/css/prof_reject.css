@@ -1,0 +1,23 @@
+h3 {
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.botonfinalD {
+  padding: 0;
+  border-radius: 10px;
+  border: 0;
+  background-color: #d00000;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: aliceblue;
+  font-size: 150%;
+  text-decoration: none;
+}
+#botonfinalD:hover {
+  background: #600000;
+  color: white;
+  text-decoration: none;
+}

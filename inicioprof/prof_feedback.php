@@ -54,7 +54,7 @@ if (!empty($_POST)) {
 
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" href="css/prof_common.css">
-
+	<link rel="stylesheet" href="css/prof_feedback.css">
 	
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>

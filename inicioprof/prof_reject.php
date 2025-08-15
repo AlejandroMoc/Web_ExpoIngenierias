@@ -38,8 +38,7 @@ if (!empty($_POST)) {
 	<link rel="icon" href="../src/img/icon_prof.png">
 
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
-	<link rel="stylesheet" href="css/prof_common.css">
-
+	<link rel="stylesheet" href="css/prof_reject.css">
 	
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
