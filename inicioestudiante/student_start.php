@@ -100,9 +100,9 @@ WHERE miembrosProyecto.id_estudiante IS NULL AND proyecto.lider IS NULL AND estu
 			<tr>
 				<td style="width: 4%;"> </td>
 				
-				<th align="center" class="botonbordeR" style="width: 12%;">
+				<th align="center" class="button_border_x" style="width: 12%;">
 					<a style="text-decoration:none" href="student_create_project.php">
-						<button align="center" class="botonfinalR" id="botonfinalR">
+						<button align="center" class="button_start" id="button_start">
 							<strong>Crear Proyecto</strong>
 						</button>
 					</a>
@@ -110,9 +110,9 @@ WHERE miembrosProyecto.id_estudiante IS NULL AND proyecto.lider IS NULL AND estu
 
 				<td style="width: 4%;"> </td>
 				
-				<th align="center" class="botonbordeR" style="width: 10%;">
+				<th align="center" class="button_border_x" style="width: 10%;">
 					<a style="text-decoration:none" href="student_join_project.php?id=' . $id . '">
-						<button align="center" class="botonfinalR" id="botonfinalR">
+						<button align="center" class="button_start" id="button_start">
 							<strong>Unirme a un Proyecto</strong>
 						</button>
 					</a>
@@ -146,9 +146,9 @@ WHERE (miembrosProyecto.id_estudiante IS NOT NULL  OR proyecto.lider IS not NULl
 				<tr>
 					<td style="width: 4%;"></td>
 					
-					<th align="center" class="botonbordeR" style="width: 1.2%;">
+					<th align="center" class="button_border_x" style="width: 1.2%;">
 						<a style="text-decoration:none" href="student_project.php?id=' . $_SESSION['pro'] . '">
-							<button align="center" class="botonfinalR" id="botonfinalR">
+							<button align="center" class="button_start" id="button_start">
 								<strong>Ver detalles</strong>
 							</button>
 						</a>
@@ -168,9 +168,9 @@ WHERE (miembrosProyecto.id_estudiante IS NOT NULL  OR proyecto.lider IS not NULl
 				<tr>
 					<td style="width: 4%;"></td>
 
-					<th align="center" class="botonbordeR" style="width: 1.2%;">
+					<th align="center" class="button_border_x" style="width: 1.2%;">
 						<a style="text-decoration:none" href="student_project.php?id=' . $idpp . '">
-							<button align="center" class="botonfinalR" id="botonfinalR">
+							<button align="center" class="button_start" id="button_start">
 								<strong>Ver detalles</strong>
 							</button>
 						</a>

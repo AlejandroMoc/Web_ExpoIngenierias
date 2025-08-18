@@ -64,7 +64,9 @@ if (!empty($_POST)) {
 
 	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
+	<link rel="stylesheet" href="../src/css/common_delete.css">
 	<link rel="stylesheet" href="css/admin_common.css">
+	<link rel="stylesheet" href="css/admin_delete.css">
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -93,11 +95,11 @@ if (!empty($_POST)) {
 		<div class="center2">
 			<form class="form-horizontal" action="admin_delete.php" method="post">
 				<input type="hidden" name="id" value="<?php echo $id; ?>" />
-				<p class="subtitulo2">¿Estás seguro de que quieres eliminar a este Usuario?</p>
-				<br>
+				<p class="subtitle_delete">¿Estás seguro de que quieres eliminar a este Usuario?</p>
+				
 				<div class="form-actions">
-					<button class="botonrojo" type="submit">Si</button>
-					<a style="text-decoration: none;" class="boton" href="admin_start.php">No</a>
+					<button class="button_delete" type="submit">Sí</button>
+					<a style="text-decoration: none;" class="button_admin" href="admin_start.php">No</a>
 				</div>
 			</form>
 		</div>

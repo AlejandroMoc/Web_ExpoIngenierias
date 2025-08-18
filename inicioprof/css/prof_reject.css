@@ -3,7 +3,7 @@ h3 {
   font-size: 30px;
 }
 
-.botonfinalD {
+.button_reject {
   padding: 0;
   border-radius: 10px;
   border: 0;
@@ -16,7 +16,7 @@ h3 {
   font-size: 150%;
   text-decoration: none;
 }
-#botonfinalD:hover {
+#button_reject:hover {
   background: #600000;
   color: white;
   text-decoration: none;

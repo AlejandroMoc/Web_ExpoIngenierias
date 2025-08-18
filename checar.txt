@@ -28,11 +28,8 @@ Quitar esto?
     $_SESSION['color'];
 
 Cambiar esto:
-
     <a href="student_project.php"><span class="material-icons">home</span>MiEstudiante</a>
-
 a esto?
-
     <a href="student_start.php"><span class="material-icons">home</span>MiEstudiante</a>
 
 Unificar .botonfinal {
@@ -44,3 +41,15 @@ Unificar clases login
 prof_create.php
 
 En navbars checar navbarIcon (judge)
+
+<br>
+
+Cambiar esto:
+    .php">
+a esto:
+    .php?id=<?php echo $color; ?>">
+
+Unificar button_reject y button_delete
+
+alv
+student_project.php

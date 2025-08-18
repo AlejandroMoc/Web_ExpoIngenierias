@@ -61,8 +61,8 @@ if (!empty($_POST)) {
 		$pdo = Database::connect();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+		// Delete data
 		if ($matricula[0] == "A" and strlen($matricula) == 9) {
-			// Delete data
 			$sql2 = 'INSERT INTO estudiante (id_estudiante, nombre, apellido_paterno, apellido_materno, correo) values(?, ?, ?, ?, ?)';
 			$q2 = $pdo->prepare($sql2);
 			$q2->execute(array($matricula, $nombre, $apellidoP, $apellidoM, $correo));
@@ -70,7 +70,6 @@ if (!empty($_POST)) {
 			header("Location: http://localhost/Web_ExpoIngenierias/inicioadmin/admin_start.php");
 
 		} elseif ($matricula[0] == "L") {
-			// Delete data
 			$sql4 = 'INSERT INTO profesor (id_profesor, nombre, apellido_paterno, apellido_materno, correo) values(?, ?, ?, ?, ?)';
 			$q4 = $pdo->prepare($sql4);
 			$q4->execute(array($matricula, $nombre, $apellidoP, $apellidoM, $correo));
@@ -78,7 +77,6 @@ if (!empty($_POST)) {
 			header("Location: http://localhost/Web_ExpoIngenierias/inicioadmin/admin_start.php");
 
 		} elseif ($matricula[0] == "X") {
-			// Delete data
 			$sql5 = 'INSERT INTO juez (id_juez, nombre, apellido_paterno, apellido_materno, correo) values(?, ?, ?, ?, ?)';
 			$q5 = $pdo->prepare($sql5);
 			$q5->execute(array($matricula, $nombre, $apellidoP, $apellidoM, $correo));
@@ -96,7 +94,6 @@ if (!empty($_POST)) {
 		Database::disconnect();
 		header("Location: admin_start.php");*/
 	}
-
 }
 ?>
 
@@ -230,6 +227,7 @@ if (!empty($_POST)) {
 	</form>
 
 	<p class="footer">@2023 <a href="https://tec.mx/es"> Tecnológico de Monterrey.</a></p>
+
 </body>
 
 </html>

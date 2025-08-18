@@ -134,7 +134,7 @@ if (!empty($_POST)) {
 	</navbar>
 
 	<form class="divfix" action="judge_create.php" method="post" onsubmit="return verifyPassword()">
-		<table  width="100%">
+		<table width="100%">
 			<tr>
 				<td>
 					<p class="create_paragraph"><strong> Nombre(s) y apellidos</strong>
@@ -197,7 +197,8 @@ if (!empty($_POST)) {
 
 			<tr>
 				<td>
-					<p class="create_paragraph"><strong>Como crear tu matrícula de juez:</strong></td>
+					<p class="create_paragraph"><strong>Como crear tu matrícula de juez:</strong>
+				</td>
 				</td>
 			</tr>
 
@@ -251,8 +252,6 @@ if (!empty($_POST)) {
 				</td>
 			</tr>
 
-			<br>
-
 			<tr>
 				<td class="button_create" style="width: 33.33%;">
 					<button class="botonfinal" id="botonfinal" type="submit">
@@ -261,12 +260,11 @@ if (!empty($_POST)) {
 				</td>
 			</tr>
 
-			<br>
-
 			<tr>
 				<td class="botonborde2">
-					<button  class="botonfinal2"><strong><a href="index.php"
-								class="alv">Regresar</a></strong></button>
+					<button class="botonfinal2">
+						<strong><a href="index.php" class="alv">Regresar</a></strong>
+					</button>
 				</td>
 			</tr>
 		</table>

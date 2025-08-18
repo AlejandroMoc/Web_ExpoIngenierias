@@ -1,4 +1,4 @@
-.titulotabla {
+.title_table {
   background-color: #eef5ff;
   color: #082460;
   margin: auto;
@@ -18,7 +18,7 @@
 }
 
 .botonfinalA {
-  background-color: Transparent;
+  background-color: transparent;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
@@ -44,8 +44,8 @@
   background: #1d1d1d;
 }
 
-.botonfinalC {
-  background-color: Transparent;
+.button_accept {
+  background-color: transparent;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
@@ -54,13 +54,13 @@
   color: aliceblue;
   font-size: larger;
 }
-#botonfinalC:hover {
+#button_accept:hover {
   background: #1d1d1d;
   color: white;
 }
 
-.botonfinalR {
-  background-color: Transparent;
+.button_reject {
+  background-color: transparent;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
@@ -70,19 +70,19 @@
   font-size: larger;
   text-decoration: none;
 }
-#botonfinalR:hover {
+#button_reject:hover {
   background: #600000;
   color: white;
   text-decoration: none;
 }
 
-.botonbordeR {
+.button_border_reject {
   margin: auto;
   padding: 0;
   border-radius: 10px;
   border: 0;
   background-color: #d00000;
 }
-.botonbordeR:hover {
+.button_border_reject:hover {
   background: #600000;
 }

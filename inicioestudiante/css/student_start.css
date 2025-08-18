@@ -1,4 +1,4 @@
-.botonbordeR {
+.button_border_x {
   margin: auto;
   padding: 0;
   border-radius: 10px;
@@ -6,8 +6,8 @@
   background-color: #0095d0;
 }
 
-.botonfinalR {
-  background-color: Transparent;
+.button_start {
+  background-color: transparent;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
@@ -17,13 +17,13 @@
   font-size: larger;
   text-decoration: none;
 }
-#botonfinalR:hover {
+#button_start:hover {
   background: #004a68;
   color: white;
   text-decoration: none;
 }
 
-.botonbordeR:hover {
+.button_border_x:hover {
   background: #004a68;
 }
 

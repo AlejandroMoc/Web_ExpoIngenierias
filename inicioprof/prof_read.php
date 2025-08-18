@@ -84,9 +84,6 @@ if ($id == null) {
 		</table>
 	</center>
 
-	<br>
-	<br>
-
 	<?php
 
 	$pdo = Database::connect();
@@ -108,10 +105,7 @@ if ($id == null) {
 
 		echo '</center>';
 	}
-
 	?>
-
-
 </body>
 
 </html>

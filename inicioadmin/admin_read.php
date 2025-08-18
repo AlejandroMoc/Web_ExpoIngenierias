@@ -84,8 +84,7 @@ if ($id == null) {
 			<a href="admin_start.php"><span class="material-icons">home</span>MiAdmin</a>
 		</div>
 	</navbar>
-	
-	<br>
+
 	<div class="container">
 
 		<div class="span10 offset1">

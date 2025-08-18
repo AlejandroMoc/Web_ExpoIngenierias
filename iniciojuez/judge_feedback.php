@@ -62,7 +62,8 @@ if (!empty($_POST)) {
 	<link rel="icon" href="../src/img/icon_judge.png">
 
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
-	<link rel="stylesheet" href="css/judge_start.css">
+	<link rel="stylesheet" href="css/judge_common.css">
+	<link rel="stylesheet" href="css/judge_feedback.css">
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -84,41 +85,38 @@ if (!empty($_POST)) {
 		</div>
 	</navbar>
 
-	<h2 style="color:#082460">
-		<form class="form-horizontal" action="judge_feedback.php?id=<?php echo $id ?>" method="post">
-			<center>
-				<td style="width: 45%;">
-					<h2 style="color:#082460">
-						<center>
-							<br></br>
-							Comentarios y retroalimentación
-						</center>
-					</h2>
+	<form class="form-horizontal" action="judge_feedback.php?id=<?php echo $id ?>" method="post">
+		<center>
+			<td style="width: 45%;">
+				<h2 style="color:#082460">
+					<center>
+						Comentarios y retroalimentación
+					</center>
+				</h2>
+			</td>
+			<tr>
+				<td>
+					<input class=" input2" name="q5" style="width: 100% height: 100% "></input>
 				</td>
-				<tr>
-					<td>
-						<input class=" input2" name="q5" style="width: 100% height: 100% "></input>
-					</td>
-				</tr>
-			</center>
+			</tr>
+		</center>
 
-			<center>
-				<tr>
-					<td style="text-align: center;">
-						<br></br>
-						<button type="submit" style="color:#FFFFFF" class="btn"><strong>Enviar</strong></button>
-					</td>
+		<center>
+			<tr>
+				<td style="text-align: center;">
+					<button type="submit" style="color:#FFFFFF" class="btn"><strong>Enviar</strong></button>
+				</td>
 
-				</tr>
-			</center>
+			</tr>
+		</center>
 
-		</form>
+	</form>
 
-		<tr>
-			<a href="judge_start.php?id=<?php echo $color; ?>" style="color:#FFFFFF" class="btn"
-				id="btnreturn"><strong>Atrás</strong>
-			</a>
-		</tr>
+	<tr>
+		<a href="judge_start.php?id=<?php echo $color; ?>" style="color:#FFFFFF" class="btn"
+			id="btnreturn"><strong>Atrás</strong>
+		</a>
+	</tr>
 
 </body>
 

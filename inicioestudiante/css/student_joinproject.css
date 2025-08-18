@@ -12,8 +12,8 @@
   background: #1d1d1d;
 }
 
-.botonfinalC {
-  background-color: Transparent;
+.button_accept {
+  background-color: transparent;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
@@ -22,7 +22,7 @@
   color: aliceblue;
   font-size: larger;
 }
-#botonfinalC:hover {
+#button_accept:hover {
   background: #1d1d1d;
   color: white;
 }

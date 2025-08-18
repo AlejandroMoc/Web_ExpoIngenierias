@@ -34,7 +34,6 @@ if (!empty($_POST)) {
 		Database::disconnect();
 		header("Location: student_start.php?id=$color");
 	}
-
 }
 
 ?>
@@ -54,7 +53,6 @@ if (!empty($_POST)) {
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" href="css/student_dani.css">
 
-	
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -71,15 +69,15 @@ if (!empty($_POST)) {
 	<navbar>
 		<div id="navbarAzul">
 			<img src="../src/img/logo_expo_student.svg">
-			<a href="student_start.php?id=<?php echo $color; ?>"><span class="material-icons">home</span>MiEstudiante</a>
+			<a href="student_start.php?id=<?php echo $color; ?>"><span
+					class="material-icons">home</span>MiEstudiante</a>
 		</div>
 	</navbar>
 
-	<br>
 	<h1 style="color: #082460">
 		&nbsp &nbsp Unirme a un proyecto
 	</h1>
-	<br>
+
 	<form class="form-horizontal" action="student_join_project.php?id=<?php echo $id ?>" method="post">
 		<table align="center" style="width: 23%;">
 			<tr style="width: 33.33%;">
@@ -122,15 +120,14 @@ if (!empty($_POST)) {
 			</tr>
 
 			<tr>
-				<td style="height: 50px;">
-
-				</td>
+				<td style="height: 50px;"></td>
 			</tr>
 
 			<tr>
 				<td style="width: 33.33%;"></td>
-				<td align="center" class="botonbordeC" style="width: 33.33%;"><button align="center" class="botonfinalC"
-						id="botonfinalC" type="submit"><strong>Crear cuenta</strong></button></td>
+				<td align="center" class="botonbordeC" style="width: 33.33%;"><button align="center"
+						class="button_accept" id="button_accept" type="submit"><strong>Crear cuenta</strong></button>
+				</td>
 				<td style="width: 33.33%;"></td>
 			</tr>
 

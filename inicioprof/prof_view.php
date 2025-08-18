@@ -40,7 +40,7 @@ $_SESSION['color'] = $data['id_profesor'];
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" href="css/prof_common.css">
 	<link rel="stylesheet" href="css/prof_view.css">
-	
+
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -74,7 +74,7 @@ $_SESSION['color'] = $data['id_profesor'];
 		<table width="60%" style=border:0;>
 
 			<tr>
-				<th class="titulotabla">
+				<th class="title_table">
 					Nombre del proyecto
 				</th>
 				<th><?php echo $data['nombre']; ?></th>
@@ -82,14 +82,14 @@ $_SESSION['color'] = $data['id_profesor'];
 			</tr>
 
 			<tr>
-				<th class="titulotabla">
+				<th class="title_table">
 					Clave del proyecto
 				</th>
 				<th><?php echo $data['id_proyecto']; ?></th>
 
 			</tr>
 			<tr>
-				<th class="titulotabla">
+				<th class="title_table">
 					Lider del Proyecto
 				</th>
 				<th><?php echo $data['nombrelider'] . " " . $data['apellido_paterno'] . " " . $data['apellido_materno']; ?>
@@ -97,7 +97,7 @@ $_SESSION['color'] = $data['id_profesor'];
 
 			</tr>
 			<tr>
-				<th class="titulotabla">
+				<th class="title_table">
 					Miembros del equipo
 				</th>
 				<th>
@@ -129,25 +129,23 @@ $_SESSION['color'] = $data['id_profesor'];
 
 		</script>
 	</center>
-	<br>
-	<br>
+
 	<h2 style="color: #082460">
 		&nbsp &nbsp Realizar comentarios al proyecto
 	</h2>
 	<label for="comentarios"></label>
+
 	<center>
 		<table>
 			<th align="center" class="botonbordeV" style="width: 100%;"><a style="text-decoration:none"
 					href="prof_feedback.php?id=<?php echo $data['id_proyecto']; ?>">
 					<button align="center" class="botonfinalV" id="botonfinalV">Comentar</button>
-				</a></th>
+				</a>
+			</th>
 		</table>
+	</center>
+
 </body>
-</center>
-<br>
-<br>
-<br>
-<br>
 
 <center>
 	<table>
@@ -163,21 +161,21 @@ $_SESSION['color'] = $data['id_profesor'];
 			<th align="center" class="botonbordeC" style="width: 23.33%;">
 				<form action="prof_edit.php" method="post">
 					<input type="hidden" name="id" value="<?php echo $id; ?>" />
-					<button class="botonfinalC" id="botonfinalC" type="submit"><strong>Corregir</strong></button>
+					<button class="button_accept" id="button_accept" type="submit"><strong>Corregir</strong></button>
 				</form>
 			</th>
 			<td style="width: 7%;"> </td>
 
-			<th align="center" class="botonbordeR" style="width: 23.33%;"><a style="text-decoration:none"
+			<th align="center" class="button_border_reject" style="width: 23.33%;"><a style="text-decoration:none"
 					href="prof_reject.php?id=<?php echo $data['id_proyecto']; ?>">
-					<button align="center" class="botonfinalR" id="botonfinalR"><strong>Rechazado</strong></button>
-				</a></th>
+					<button align="center" class="button_reject" id="button_reject">
+						<strong>Rechazado</strong>
+					</button>
+				</a>
+			</th>
 
 		</tr>
 	</table>
 </center>
-
-<br>
-</body>
 
 </html>

@@ -38,8 +38,9 @@ if (!empty($_POST)) {
 	<link rel="icon" href="../src/img/icon_prof.png">
 
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
+	<link rel="stylesheet" href="../src/css/common_delete.css">
 	<link rel="stylesheet" href="css/prof_reject.css">
-	
+
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -65,27 +66,24 @@ if (!empty($_POST)) {
 
 	<br>
 
-	<center>
-		<div class="center">
-			<div class="center2">
-				<div>
-					<h3>Rechazar Proyecto</h3>
-				</div>
-
-				<form action="prof_reject.php" method="post">
-					<input type="hidden" name="id" value="<?php echo $id; ?>" />
-					<p class="subtitulo2">¿Estás seguro de que quieres rechazar este proyecto?</p>
-					<br>
-					<div>
-						<button style="width: 3%;" class="botonfinalD" id="botonfinalD" type="submit">Si</button>
-						<a style="width: 3%; heigth:3%;" href="prof_view.php?id=<?php echo $id; ?>">No</a>
-					</div>
-				</form>
-
+	<div class="center">
+		<div class="center2">
+			<div>
+				<h3>Rechazar Proyecto</h3>
 			</div>
+
+			<form action="prof_reject.php" method="post">
+				<input type="hidden" name="id" value="<?php echo $id; ?>" />
+				<p class="subtitle_delete">¿Estás seguro de que quieres rechazar este proyecto?</p>
+				<br>
+				<div>
+					<button style="width: 3%;" class="button_reject" id="button_reject" type="submit">Sí</button>
+					<a style="width: 3%; heigth:3%;" href="prof_view.php?id=<?php echo $id; ?>">No</a>
+				</div>
+			</form>
+
 		</div>
-		</div>
-	</center>
+	</div>
 </body>
 
 </html>

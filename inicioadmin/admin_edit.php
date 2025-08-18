@@ -176,6 +176,7 @@ if (!empty($_POST)) {
 	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" href="css/admin_common.css">
+	<link rel="stylesheet" href="css/admin_edit.css">
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -206,7 +207,7 @@ if (!empty($_POST)) {
 				<!-- ID -->
 				<div class="padding" <?php echo !empty($f_idError) ? 'error' : ''; ?>>
 
-					<label class="subtitulo1">ID</label>
+					<label class="subtitle_params">ID</label>
 					<div class="padding2">
 						<input class="input" name="id" type="text" readonly
 							value="<?php echo !empty($id) ? $id : ''; ?>">
@@ -219,7 +220,7 @@ if (!empty($_POST)) {
 				<!-- Nombre -->
 				<div class="padding" <?php echo !empty($nombreError) ? 'error' : ''; ?>>
 
-					<label class="subtitulo1">Nombre</label>
+					<label class="subtitle_params">Nombre</label>
 
 					<div class="padding2">
 						<input class="input" name="nombre" type="text"
@@ -233,7 +234,7 @@ if (!empty($_POST)) {
 				<!-- Apellido paterno -->
 				<div class="padding" <?php echo !empty($apellidoPError) ? 'error' : ''; ?>>
 
-					<label class="subtitulo1">Apellido paterno</label>
+					<label class="subtitle_params">Apellido paterno</label>
 					<div class="padding2">
 						<input class="input" name="apellidoP" type="text"
 							value="<?php echo !empty($apellidoP) ? $apellidoP : ''; ?>">
@@ -246,7 +247,7 @@ if (!empty($_POST)) {
 				<!-- Apellido materno -->
 				<div class="padding" <?php echo !empty($apellidoMError) ? 'error' : ''; ?>>
 
-					<label class="subtitulo1">Apellido materno</label>
+					<label class="subtitle_params">Apellido materno</label>
 					<div class="padding2">
 						<input class="input" name="apellidoM" type="text"
 							value="<?php echo !empty($apellidoM) ? $apellidoM : ''; ?>">
@@ -258,7 +259,7 @@ if (!empty($_POST)) {
 
 				<!-- Correo -->
 				<div class="padding" <?php echo !empty($correoError) ? 'error' : ''; ?>>
-					<label class="subtitulo1">Correo electrónico</label>
+					<label class="subtitle_params">Correo electrónico</label>
 					<div class="padding2">
 						<input class="input" name="correo" type="text"
 							value="<?php echo !empty($correo) ? $correo : ''; ?>">
@@ -268,10 +269,9 @@ if (!empty($_POST)) {
 					</div>
 				</div>
 
-				<br>
 				<div class="center2">
-					<a style="text-decoration:none;" class="boton" href="admin_start.php">Regresar</a>
-					<button type="submit" class="boton">Actualizar</button>
+					<a style="text-decoration:none;" class="button_admin" href="admin_start.php">Regresar</a>
+					<button type="submit" class="button_admin">Actualizar</button>
 				</div>
 			</form>
 		</div>

@@ -228,8 +228,6 @@ if (!empty($_POST)) {
 				</td>
 			</tr>
 
-			<br>
-
 			<tr>
 				<td class="button_create" style="width: 33.33%;">
 					<button class="botonfinal" id="botonfinal" type="submit">
@@ -237,8 +235,6 @@ if (!empty($_POST)) {
 					</button>
 				</td>
 			</tr>
-
-			<br>
 
 			<tr>
 				<td class="botonborde2">

@@ -2,13 +2,10 @@
 session_start();
 require '../src/php/database.php';
 $id = null;
-// $idjuez=  null;
 if (!empty($_GET['id'])) {
 	$id = $_REQUEST['id'];
 }
-/*if ( !empty($_GET['idjuez'])) {
-	$id = $_REQUEST['idjuez'];
-}*/
+
 if ($id == null) {
 	header("Location: index.php");
 } else {
@@ -35,15 +32,11 @@ if ($id == null) {
 
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" href="css/student_start.css">
+	<link rel="stylesheet" href="css/student_project.css">
 
-	
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<title>MiEstudiante</title>
 </head>
-
-
-
-<link rel="stylesheet" href="css/student_index.css">
 
 <body>
 	<!--Nueva barra de navegación-->
@@ -62,13 +55,13 @@ if ($id == null) {
 		</div>
 	</navbar>
 
-	<!--Información proyecto-->
+	<!-- Project information -->
 	<div>
 
-		<!--Objeto con un contenedor-->
+		<!-- Object with a container -->
 		<form class="paddingcontenedor">
 
-			<!--Tipo de proyecto; Campus Puebla-->
+			<!-- Type of project; Campus Puebla -->
 			<table width="100%" class="expobanner1">
 				<tr>
 					<td>
@@ -85,7 +78,7 @@ if ($id == null) {
 				</tr>
 			</table>
 
-			<!--Descripción proyecto, Nombre proyecto-->
+			<!-- Description and name of project -->
 			<table class="expobanner2">
 				<tr>
 
@@ -104,6 +97,7 @@ if ($id == null) {
 							</p>
 						</div>
 					</td>
+
 					<td class="expotexto5">
 						<div>
 							<p>
@@ -123,7 +117,7 @@ if ($id == null) {
 			</table>
 		</form>
 
-		<!--Info detallada-->
+		<!-- Detailed information -->
 		<table width="100%" class="tablainfo1">
 
 			<tr>
@@ -179,7 +173,6 @@ if ($id == null) {
 
 					<p class="expotexto7">
 						Proyecto grupal
-						<br>
 					</p>
 
 					<table class="expotexto8">
@@ -294,7 +287,7 @@ if ($id == null) {
 					<h class="expotexto6"> Comentarios y retroalimentación </h>
 					<p class="expotexto7">Profesor</p>
 					<p class="expotexto10"></p>
-					
+
 					<?php
 
 					$pdo3 = Database::connect();
@@ -312,7 +305,7 @@ if ($id == null) {
 					?>
 
 					<p class="expotexto7">Juez</p>
-					
+
 					<?php
 
 					$pdo3 = Database::connect();
@@ -334,30 +327,9 @@ if ($id == null) {
 		</table>
 	</div>
 
-	<!--
-		<div class="expobanner22">
-			<div class="expofondo">
-				<img src="/images/img-principal.png" alt="" height="100px">
-				<div class="expotexto">
-					<h1><b>Your Title</b></h1>
-					<p>The information you want to present.</p>
-					</a></p>
-				</div>
-			</div>            
-		</div>
-		-->
-
-	<div id="footerline">
-
-	</div>
 	<!--Footer-->
 	<div id="footer">
-		<!--Footer izquierdo-->
-		<!-- <h3 class="footerizquierdo">Copyright Stuff.</h3> -->
-
-		<!--Footer derecho-->
 		<p class="footerderecho">©2023 Tecnológico de Monterrey. Todos los derechos reservados.</p>
-		<div style="clear: both"></div>
 	</div>
 
 </body>

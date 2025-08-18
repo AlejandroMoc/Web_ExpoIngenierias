@@ -39,11 +39,12 @@
   color: rgb(255, 255, 255);
 }
 
-.login_text_footer {
-    position: fixed;
-    right: 10px;
-    bottom: 0;
-    width: 100%;
-    color: rgb(255, 255, 255);
-    text-align: right;
-  }
+/* TODO can't rename without breaking */
+.footer {
+  position: fixed;
+  right: 10px;
+  bottom: 0;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  text-align: right;
+}

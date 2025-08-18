@@ -121,8 +121,6 @@
   font-size: 16px;
 }
 
-/* Parte 2 */
-
 body {
   font-family: "Inter";
   margin: 0;
@@ -134,15 +132,6 @@ body {
 
 .center2 {
   text-align: center;
-}
-
-.subtitulo2 {
-  font-weight: 300;
-  font-size: 20px;
-  text-align: center;
-  padding: 10px;
-  display: inline-block;
-  width: 300px;
 }
 
 .padding2 {
@@ -165,7 +154,7 @@ body {
   box-sizing: border-box;
 }
 
-.boton {
+.button_admin {
   background-color: #f1f1f1;
   color: black;
   font-size: 16px;
@@ -176,34 +165,8 @@ body {
   font-size: 15px;
   font-weight: 400;
 }
-.boton:hover {
+.button_admin:hover {
   background-color: black;
   color: white;
 }
 
-/* admin_edit.php */
-.subtitulo1 {
-  font-weight: 600;
-  font-size: 20px;
-  text-align: left;
-  padding: 10px;
-  display: inline-block;
-  width: 300px;
-}
-
-/* admin_delete.php */
-.botonrojo {
-  background-color: rgb(208, 27, 27);
-  color: white;
-  font-size: 16px;
-  padding: 16px 30px;
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 15px;
-  font-weight: 400;
-}
-.botonrojo:hover {
-  background-color: black;
-  color: white;
-}

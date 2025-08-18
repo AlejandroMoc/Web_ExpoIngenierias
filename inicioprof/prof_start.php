@@ -50,9 +50,7 @@ if ($id == null) {
 		</div>
 	</navbar>
 
-	<br>
 	<h1 align="center" style="color: #082460">Proyectos</h1>
-	<br>
 
 	<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
 		<div class="accordion-body">
@@ -78,11 +76,11 @@ if ($id == null) {
 					foreach ($pdo->query($sql) as $row) {
 
 						echo '<tr  style="border:0px; border-radius:1px; ">';
-						echo '<td align="center" class="proyectoV">' . $row['id_proyecto'] . '<br></br> </td>';
-						echo '<td align="center" class="proyectoV">' . $row['nombre'] . '<br></br>  </td>';
-						echo '<td align="center" class="proyectoV">' . $row['cat'] . '<br></br>  </td>';
-						echo '<td align="center" class="proyectoV">' . $row['status'] . '<br></br> </td>';
-						echo '<td align="center" class="proyectoV">' . $row['est'] . ' ' . $row['apellido_paterno'] . ' ' . $row['apellido_materno'] . '<br></br> </td>';
+						echo '<td align="center" class="td_params">' . $row['id_proyecto'] . '<br></br> </td>';
+						echo '<td align="center" class="td_params">' . $row['nombre'] . '<br></br>  </td>';
+						echo '<td align="center" class="td_params">' . $row['cat'] . '<br></br>  </td>';
+						echo '<td align="center" class="td_params">' . $row['status'] . '<br></br> </td>';
+						echo '<td align="center" class="td_params">' . $row['est'] . ' ' . $row['apellido_paterno'] . ' ' . $row['apellido_materno'] . '<br></br> </td>';
 						echo '<td align="center" width=250>';
 						echo '<a class="material-icons" href="prof_view.php?id=' . $row['id_proyecto'] . '" style="color: white; text-decoration:none;">visibility</a>';
 						echo '</td>';

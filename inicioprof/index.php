@@ -142,7 +142,7 @@
 		</tr>
 
 	</table>
-	<p class="login_text_footer">
+	<p class="footer">
 		@2023 <a class="login_link_footer" href="https://tec.mx/es"> Tecnológico de Monterrey.</a>
 	</p>
 </body>

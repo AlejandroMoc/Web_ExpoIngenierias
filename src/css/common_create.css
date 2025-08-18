@@ -46,9 +46,12 @@ body {
   border: 0;
   background-color: #00b1ff;
 }
+.button_create:hover {
+  background: #006590;
+}
 
 .botonfinal {
-  background-color: Transparent;
+  background-color: transparent;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
@@ -58,20 +61,15 @@ body {
   font-size: larger;
   width: 95%;
 }
-
-.logo {
-  background-color: #003944;
-  height: 100%;
-  border-radius: 10px;
-}
-
 #botonfinal:hover {
   background: #006590;
   color: white;
 }
 
-.button_create:hover {
-  background: #006590;
+.logo {
+  background-color: #003944;
+  height: 100%;
+  border-radius: 10px;
 }
 
 .footer {
@@ -126,15 +124,6 @@ hr {
   color: white;
 }
 
-#botonfinal2:hover {
-  background: #f29d9d;
-  color: white;
-}
-
-.botonborde2:hover {
-  background: #f29d9d;
-}
-
 .botonborde2 {
   margin: auto;
   padding: 0;
@@ -142,9 +131,12 @@ hr {
   border: 0;
   background-color: #e64545;
 }
+.botonborde2:hover {
+  background: #f29d9d;
+}
 
 .botonfinal2 {
-  background-color: Transparent;
+  background-color: transparent;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
@@ -152,6 +144,10 @@ hr {
   outline: none;
   color: aliceblue;
   font-size: larger;
+}
+#botonfinal2:hover {
+  background: #f29d9d;
+  color: white;
 }
 
 /*-------------------MENU TOOGLE----------------------------*/
