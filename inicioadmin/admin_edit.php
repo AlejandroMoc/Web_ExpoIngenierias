@@ -1,5 +1,4 @@
 <?php
-
 require '../src/php/database.php';
 
 $id = null;
@@ -82,8 +81,6 @@ if (!empty($_POST)) {
 			$q4 = $pdo->prepare($sql4);
 			$q4->execute(array($nombre, $apellidoP, $apellidoM, $correo, $id));
 		} elseif ($id[0] == "X") {
-			//$id = ltrim($id, 'X');
-
 			$sql5 = "UPDATE juez set nombre = ?, apellido_paterno = ?, apellido_materno = ?, correo= ? WHERE id_juez = ?";
 			$q5 = $pdo->prepare($sql5);
 			$q5->execute(array($nombre, $apellidoP, $apellidoM, $correo, $id));
@@ -128,8 +125,7 @@ if (!empty($_POST)) {
 		$apellidoM = $data['apellido_materno'];
 		$correo = $data['correo'];
 
-	} elseif ($id[0] == "X") {
-		//$id = ltrim($id, 'X');
+	} elseif ($id[0] == "X") {		
 		$sql5 = "SELECT * FROM juez where id_juez = ?";
 		$q5 = $pdo->prepare($sql5);
 		$q5->execute(array($id));
@@ -163,12 +159,12 @@ if (!empty($_POST)) {
 
 <!DOCTYPE html>
 <html lang="es">
-<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 	<title>MiAdmin</title>
 	<link rel="icon" href="../src/img/icon_admin.png">
@@ -186,15 +182,15 @@ if (!empty($_POST)) {
 	<navbar>
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
-			<div id="navbarIconsContainer">
-				<a id="navbarIcon" href="" class="material-icons">person</a>
-				<a id="navbarIcon" href="admin_assign.php" class="material-icons">rate_review</a>
-				<a id="navbarIcon" href="admin_logout.php" class="material-icons">logout</a>
+			<div id="navbar_icon_container">
+				<a id="navbar_icon" href="" class="material-icons">person</a>
+				<a id="navbar_icon" href="admin_assign.php" class="material-icons">rate_review</a>
+				<a id="navbar_icon" href="admin_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>
 	</navbar>
 	<navbar>
-		<div id="navbarAzul">
+		<div id="navbar_blue">
 			<img src="../src/img/logo_expo_admin.svg">
 			<a href=""><?php echo "Modificar" . $user_type ?></a>
 			<a href="admin_start.php"><span class="material-icons">home</span>MiAdmin</a>

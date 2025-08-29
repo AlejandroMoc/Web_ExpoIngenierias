@@ -81,13 +81,12 @@ if (!empty($_POST)) {
 
 <!DOCTYPE html>
 <html lang="es">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 	<title>MiJuez</title>
 
@@ -101,13 +100,13 @@ if (!empty($_POST)) {
 	<navbar>
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
-			<div id="navbarIconsContainer">
-				<a id="navbarIcon" href="prof_logout.php" class="material-icons">logout</a>
+			<div id="navbar_icon_container">
+				<a id="navbar_icon" href="prof_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>
 	</navbar>
 	<navbar>
-		<div id="navbarAzul">
+		<div id="navbar_blue">
 			<img src="../src/img/logo_expo_prof.svg">
 			<a href="prof_start.php"><span class="material-icons">home</span>MiProfesor</a>
 		</div>
@@ -314,7 +313,7 @@ if (!empty($_POST)) {
 		<center>
 			<tr>
 				<td style="text-align: center;">
-					<br></br>
+			
 					<button type="submit" style="color:#FFFFFF" class="btn"><strong>Calificar</strong></button>
 				</td>
 			</tr>

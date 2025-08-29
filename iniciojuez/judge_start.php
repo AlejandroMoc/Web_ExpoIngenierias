@@ -4,13 +4,11 @@ session_start();
 <!DOCTYPE html>
 <html lang="es">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 	<title>MiJuez</title>
 	<link rel="icon" href="../src/img/icon_judge.png">
@@ -27,13 +25,13 @@ session_start();
 	<navbar>
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
-			<div id="navbarIconsContainer">
-				<a id="navbarIcon" href="judge_logout.php" class="material-icons">logout</a>
+			<div id="navbar_icon_container">
+				<a id="navbar_icon" href="judge_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>
 	</navbar>
 	<navbar>
-		<div id="navbarAzul">
+		<div id="navbar_blue">
 			<img src="../src/img/logo_expo_judge.svg">
 			<a href="judge_start.php"><span class="material-icons">home</span>MiJuez</a>
 		</div>
@@ -65,16 +63,16 @@ session_start();
 			echo '<div id="Renglon2">';
 			echo '<span>' . 'PROYECTO ' . $idNegro . '</span>';
 			echo '</div>';
-			echo '<div id="Renglon" >';
+			echo '<div id="judge_start_div" >';
 			echo '<div style = "width : 20%"><span>' . $row['nombre'] . '</span> </div>';
 			echo '<div style = "width : 9%"><span>' . $row['id_proyecto'] . '</span></div>';
 			echo '<div style = "width : 18%"><span>' . $row['nombrelider'] . ' ' . $row['apellido_paterno'] . ' ' . $row['apellido_materno'] . '</span></div>';
 			echo '<div style = "width : 12%"><span>' . $row['cat'] . '</span></div>';
 			echo '<div style = "width : 1%"><span>' . $row['calificacion'] . '</span></div>';
 			echo '<div class="botones">';
-			echo '<a href="' . $row['link_archivo'] . '" style="color:#FFFFFF" id="text1">Visualizar proyecto</a>';
-			echo '<a href="judge_rubric.php?id=' . $row['id_proyecto'] . '" style="color:#FFFFFF" id="text1">Rubrica</a>';
-			echo '<a href="judge_feedback.php?id=' . $row['id_proyecto'] . '" style="color:#FFFFFF" id="text1">C/R</a>';
+			echo '<a href="' . $row['link_archivo'] . '" style="color:#FFFFFF" id="judge_text_x">Visualizar proyecto</a>';
+			echo '<a href="judge_rubric.php?id=' . $row['id_proyecto'] . '" style="color:#FFFFFF" id="judge_text_x">Rubrica</a>';
+			echo '<a href="judge_feedback.php?id=' . $row['id_proyecto'] . '" style="color:#FFFFFF" id="judge_text_x">C/R</a>';
 			echo '</div>';
 			echo '  </div>';
 			$idNegro = $idNegro + 1;
@@ -90,6 +88,5 @@ session_start();
 		?>
 	</div>
 </body>
-
 
 </html>

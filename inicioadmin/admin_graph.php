@@ -1,10 +1,10 @@
 <html lang="es">
-<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 	<title>MiAdmin</title>
 	<link rel="icon" href="../src/img/icon_admin.png">
@@ -21,15 +21,15 @@
 	<navbar>
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
-			<div id="navbarIconsContainer">
-				<a id="navbarIcon" href="" class="material-icons">person</a>
-				<a id="navbarIcon" href="admin_assign.php" class="material-icons">rate_review</a>
-				<a id="navbarIcon" href="admin_logout.php" class="material-icons">logout</a>
+			<div id="navbar_icon_container">
+				<a id="navbar_icon" href="" class="material-icons">person</a>
+				<a id="navbar_icon" href="admin_assign.php" class="material-icons">rate_review</a>
+				<a id="navbar_icon" href="admin_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>
 	</navbar>
 	<navbar>
-		<div id="navbarAzul">
+		<div id="navbar_blue">
 			<img src="../src/img/logo_expo_admin.svg">
 			<a href="">Proyectos calificados</a>
 			<a href="admin_start.php"><span class="material-icons">home</span>MiAdmin</a>

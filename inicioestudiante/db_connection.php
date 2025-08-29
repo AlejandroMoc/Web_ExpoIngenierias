@@ -28,7 +28,6 @@ if (isset($_POST['correo']) && isset($_POST['password'])) {
 				$pdo = Database::connect();
 				$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-
 				$sql = "SELECT id_estudiante AS matricula FROM estudiante WHERE correo = '" . $correo . "'";
 				$q = $pdo->prepare($sql);
 				$q->execute();

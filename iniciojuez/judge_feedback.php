@@ -50,20 +50,19 @@ if (!empty($_POST)) {
 
 <!DOCTYPE html>
 <html lang="es">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 	<title>MiJuez</title>
 	<link rel="icon" href="../src/img/icon_judge.png">
 
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
+	<link rel="stylesheet" href="../src/css/common_feedback.css">
 	<link rel="stylesheet" href="css/judge_common.css">
-	<link rel="stylesheet" href="css/judge_feedback.css">
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -73,13 +72,13 @@ if (!empty($_POST)) {
 	<navbar>
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
-			<div id="navbarIconsContainer">
-				<a id="navbarIcon" href="judge_logout.php" class="material-icons">logout</a>
+			<div id="navbar_icon_container">
+				<a id="navbar_icon" href="judge_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>
 	</navbar>
 	<navbar>
-		<div id="navbarAzul">
+		<div id="navbar_blue">
 			<img src="../src/img/logo_expo_judge.svg">
 			<a href="judge_start.php"><span class="material-icons">home</span>MiJuez</a>
 		</div>
@@ -96,7 +95,7 @@ if (!empty($_POST)) {
 			</td>
 			<tr>
 				<td>
-					<input class=" input2" name="q5" style="width: 100% height: 100% "></input>
+					<input class=" input_feedback" name="q5" style="width: 100% height: 100% "></input>
 				</td>
 			</tr>
 		</center>

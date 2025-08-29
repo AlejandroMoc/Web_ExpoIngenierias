@@ -7,7 +7,6 @@ require '../src/php/database.php';
 $idError = null;
 $proyectoError = null;
 
-
 if (!empty($_GET['id'])) {
 	$id = $_REQUEST['id'];
 }
@@ -40,12 +39,12 @@ if (!empty($_POST)) {
 
 <!DOCTYPE html>
 <html lang="es">
-<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 	<title>MiEstudiante</title>
 	<link rel="icon" href="../src/img/icon_student.png">
@@ -67,7 +66,7 @@ if (!empty($_POST)) {
 		</div>
 	</navbar>
 	<navbar>
-		<div id="navbarAzul">
+		<div id="navbar_blue">
 			<img src="../src/img/logo_expo_student.svg">
 			<a href="student_start.php?id=<?php echo $color; ?>"><span
 					class="material-icons">home</span>MiEstudiante</a>
@@ -98,7 +97,6 @@ if (!empty($_POST)) {
 				</td>
 				<td style="width: 33.33%;"></td>
 			</tr>
-
 
 			<tr>
 				<td style="width: 33.33%;"></td>

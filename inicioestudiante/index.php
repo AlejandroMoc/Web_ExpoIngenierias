@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 	<title>MiEstudiante</title>
 	<link rel="icon" href="../src/img/icon_student.png">
@@ -25,18 +24,9 @@
 		</tr>
 	</table>
 
-	<br>
-
-	<table>
-		<tr>
-			<td style="width: 33.33%;"></td>
-			<td align="center" style="width: 33.33%;" class="logo"><img src="../src/img/logo_expo_student.svg"
-					style="width: 100%;height: 100%;" id="logo-tec"></td>
-			<td style="width: 33.33%;"></td>
-		</tr>
-	</table>
-
-	<br>
+	<div class="logo">
+		<img src="../src/img/logo_expo_student.svg" class="logo">
+	</div>
 
 	<form class="form-horizontal" action="db_connection.php" method="POST">
 		<table align="center" width="100%">
@@ -49,8 +39,6 @@
 			</tr>
 
 		</table>
-
-		<br>
 
 		<table align="center" width="100%">
 			<tr>
@@ -68,8 +56,6 @@
 			</div>
 		</center>
 
-		<br>
-
 		<?php
 		if (isset($_GET['error'])) {
 			?>
@@ -84,17 +70,16 @@
 					</p>
 				</div>
 			</center>
-			<br>
+	
 			<?php
 		}
-
 		?>
 
 		<table align="center" width="100%">
 			<tr>
 				<td style="width: 42"></td>
-				<td align="center" class="button_login" style="width: 23%;">
-					<button align="center" class="botonfinal" id="botonfinal" type="submit">
+				<td align="center" class="button_login_td" style="width: 23%;">
+					<button align="center" class="button_login" id="button_login" type="submit">
 						<strong>Iniciar sesión</strong>
 					</button>
 				</td>
@@ -103,13 +88,12 @@
 		</table>
 	</form>
 
-	<br>
-
 	<table align="center" width="100%">
 		<tr>
 			<td style="width: 46;"></td>
-			<td align="center" class="botonborde2" style="width: 20%;"><button align="center" class="botonfinal2"
-					id="botonfinal2" name="botonfinal2">
+			<td align="center" class="button_login_border" style="width: 20%;">
+				<button align="center" class=" button_create_account"
+					id=" button_create_account" name=" button_create_account">
 					<strong>
 						<a href="student_create.php" class="login_text_create">Crear cuenta</a>
 					</strong>
@@ -118,8 +102,6 @@
 			<td style="width: 46;"></td>
 		</tr>
 	</table>
-
-	<br>
 
 	<table align="center" width="100%">
 		<tr>

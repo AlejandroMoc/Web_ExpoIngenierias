@@ -1,3 +1,19 @@
+body {
+  background-size: cover;
+  background-position: center center;
+  font-family: "Inter";
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 .login_header {
   color: white;
   font-size: 45px;
@@ -12,7 +28,6 @@
   background-color: #e6e6e6;
   height: 40px;
   width: 100%;
-  font-size: 14px;
 }
 
 .login_text_create {
@@ -47,4 +62,5 @@
   width: 100%;
   color: rgb(255, 255, 255);
   text-align: right;
+  margin-top: auto;
 }

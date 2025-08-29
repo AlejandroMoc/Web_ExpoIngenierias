@@ -23,7 +23,7 @@ Unificar en inicioadmin
     <body id="cuerpazo">
     <body>
 
-Quitar esto?
+Unificar esto
     ?id=<?php echo $color; ?>">
     $_SESSION['color'];
 
@@ -32,15 +32,13 @@ Cambiar esto:
 a esto?
     <a href="student_start.php"><span class="material-icons">home</span>MiEstudiante</a>
 
-Unificar .botonfinal {
-
 Hover de botón de admin_login
 
 Unificar clases login
 
 prof_create.php
 
-En navbars checar navbarIcon (judge)
+En navbars checar navbar_icon (judge)
 
 <br>
 
@@ -51,5 +49,4 @@ a esto:
 
 Unificar button_reject y button_delete
 
-alv
 student_project.php

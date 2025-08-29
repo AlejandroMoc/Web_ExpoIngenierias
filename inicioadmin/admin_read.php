@@ -1,10 +1,13 @@
 <?php
 require '../src/php/database.php';
 $id = null;
+
+//Request ID if necessary
 if (!empty($_GET['id'])) {
 	$id = $_REQUEST['id'];
 }
 
+// Assign user_type based on ID
 if ($id[0] == "A") {
 	$user_type = " Estudiante";
 } elseif ($id[0] == "L") {
@@ -21,22 +24,21 @@ if ($id == null) {
 	$pdo = Database::connect();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+	// Select student data from database (based on ID)
 	if ($id[0] == "A") {
-		// Delete data
 		$sql2 = "SELECT * FROM estudiante WHERE id_estudiante = ?";
 		$q2 = $pdo->prepare($sql2);
 		$q2->execute(array($id));
 		$data = $q2->fetch(PDO::FETCH_ASSOC);
+	
 	} elseif ($id[0] == "L") {
-		// Delete data
 		$sql4 = "SELECT * FROM profesor WHERE id_profesor = ?";
 		$q4 = $pdo->prepare($sql4);
 		$q4->execute(array($id));
 		$data = $q4->fetch(PDO::FETCH_ASSOC);
+	
 	} elseif ($id[0] == "X") {
 		$cont = 1;
-		//$id = ltrim($id, 'X');
-		// Delete data
 		$sql5 = "SELECT * FROM juez WHERE id_juez = ?";
 		$q5 = $pdo->prepare($sql5);
 		$q5->execute(array($id));
@@ -48,12 +50,12 @@ if ($id == null) {
 
 <!DOCTYPE html>
 <html lang="es">
-<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 	<title>MiAdmin</title>
 	<link rel="icon" href="../src/img/icon_admin.png">
@@ -70,15 +72,15 @@ if ($id == null) {
 	<navbar>
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
-			<div id="navbarIconsContainer">
-				<a id="navbarIcon" href="" class="material-icons">person</a>
-				<a id="navbarIcon" href="admin_assign.php" class="material-icons">rate_review</a>
-				<a id="navbarIcon" href="admin_logout.php" class="material-icons">logout</a>
+			<div id="navbar_icon_container">
+				<a id="navbar_icon" href="" class="material-icons">person</a>
+				<a id="navbar_icon" href="admin_assign.php" class="material-icons">rate_review</a>
+				<a id="navbar_icon" href="admin_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>
 	</navbar>
 	<navbar>
-		<div id="navbarAzul">
+		<div id="navbar_blue">
 			<img src="../src/img/logo_expo_admin.svg">
 			<a href=""><?php echo "Detalles del" . $user_type ?></a>
 			<a href="admin_start.php"><span class="material-icons">home</span>MiAdmin</a>
@@ -90,7 +92,7 @@ if ($id == null) {
 		<div class="span10 offset1">
 			<div class="form-horizontal">
 				
-				<!-- MATRICULA-->
+				<!-- MATRICULA -->
 				<?php
 
 				if ($id[0] == "A") {
@@ -114,7 +116,6 @@ if ($id == null) {
 					echo '</div>';
 
 				} elseif ($cont == 1) {
-					//$id = ltrim($id, 'X');
 					echo '<div class="control-group">';
 					echo '<label class="control-label">Identificador</label>';
 					echo '<div class="controls">';
@@ -126,7 +127,7 @@ if ($id == null) {
 				}
 
 				?>
-				<!--NOMBRE-->
+				<!-- Nombre -->
 				<div class="control-group">
 					<label class="control-label">Nombre(s)</label>
 					<div class="controls">
@@ -135,7 +136,7 @@ if ($id == null) {
 						</label>
 					</div>
 				</div>
-				<!-- APELLIDO PATERNO-->
+				<!-- Apellido Paterno -->
 				<div class="control-group">
 					<label class="control-label">Apellido Paterno</label>
 					<div class="controls">
@@ -144,7 +145,7 @@ if ($id == null) {
 						</label>
 					</div>
 				</div>
-				<!-- APELLIDO MATERNO-->
+				<!-- Apellido Materno -->
 				<div class="control-group">
 					<label class="control-label">Apellido Materno</label>
 					<div class="controls">
@@ -153,7 +154,7 @@ if ($id == null) {
 						</label>
 					</div>
 				</div>
-				<!-- Correo-->
+				<!-- Correo -->
 				<div class="control-group">
 					<label class="control-label">Correo</label>
 					<div class="controls">

@@ -1,0 +1,5 @@
+#user_list_div {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}

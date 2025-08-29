@@ -99,13 +99,12 @@ if (!empty($_POST)) {
 
 <!DOCTYPE html>
 <html lang="es">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 	<title>MiAdmin</title>
 	<link rel="icon" href="../src/img/icon_admin.png">
@@ -114,6 +113,7 @@ if (!empty($_POST)) {
 	<link rel="stylesheet" href="../src/css/common_create.css">
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
 </head>
 
 <body>
@@ -121,15 +121,15 @@ if (!empty($_POST)) {
 	<navbar>
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
-			<div id="navbarIconsContainer">
-				<a id="navbarIcon" href="" class="material-icons">person</a>
-				<a id="navbarIcon" href="admin_assign.php" class="material-icons">rate_review</a>
-				<a id="navbarIcon" href="admin_logout.php" class="material-icons">logout</a>
+			<div id="navbar_icon_container">
+				<a id="navbar_icon" href="" class="material-icons">person</a>
+				<a id="navbar_icon" href="admin_assign.php" class="material-icons">rate_review</a>
+				<a id="navbar_icon" href="admin_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>
 	</navbar>
 	<navbar>
-		<div id="navbarAzul">
+		<div id="navbar_blue">
 			<img src="../src/img/logo_expo_admin.svg">
 			<!-- <a href="">Crear proyectos</a> -->
 			<a href="admin_start.php"><span class="material-icons">home</span>MiAdmin</a>
@@ -140,7 +140,7 @@ if (!empty($_POST)) {
 		<table width="100%">
 			<tr>
 				<td>
-					<p class="create_paragraph"><strong> Nombre(s) y apellidos</strong>
+					<p class="create_paragraph"><strong> Nombre(s) y apellidos</strong></p>
 				</td>
 			</tr>
 
@@ -156,9 +156,9 @@ if (!empty($_POST)) {
 			<tr>
 				<td>
 					<input type="text" id="apellidoP" name="apellidoP" required maxlength="30"
-						placeholder="  Apellido Pat." size="50" class="input2"
+						placeholder="  Apellido Pat." size="50" class="input_create"
 						value="<?php echo !empty($apellidoP) ? $apellidoP : ''; ?>"><input type="text" id="apellidoM"
-						name="apellidoM" required maxlength="30" placeholder="  Apellido Mat." size="50" class="input2"
+						name="apellidoM" required maxlength="30" placeholder="  Apellido Mat." size="50" class="input_create"
 						value="<?php echo !empty($apellidoM) ? $apellidoM : ''; ?>">
 					<?php if (($apellidoPError != null)) ?>
 					<span class="help-inline"><?php echo $apellidoPError; ?></span>
@@ -199,27 +199,18 @@ if (!empty($_POST)) {
 			</tr>
 
 			<tr>
-				<td style="height: 15px;">
-				</td>
-			</tr>
-
-			<tr>
 				<td class="button_create" style="width: 33.33%;">
-					<button class="botonfinal" id="botonfinal" type="submit">
+					<button class="button_create" id="button_create" type="submit">
 						<strong>Crear cuenta</strong>
 					</button>
 				</td>
 			</tr>
 
 			<tr>
-				<td style="height: 15px;">
-
-				</td>
-			</tr>
-
-			<tr>
-				<td class="botonborde2" style="width: 33.33%;"><button class="botonfinal2"><strong><a
-								href="admin_start.php" class="alv">Regresar</a></strong></button>
+				<td class="button_create_border" style="width: 33.33%;">
+					<button class="button_create_return">
+						<strong><a href="admin_start.php" class="return_button_text">Regresar</a></strong>
+					</button>
 				</td>
 			</tr>
 

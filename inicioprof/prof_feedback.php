@@ -15,7 +15,6 @@ if ($id == null) {
 
 $q5Error = NULL;
 
-
 if (!empty($_POST)) {
 
 	$q5 = $_POST['q5'];
@@ -42,20 +41,20 @@ if (!empty($_POST)) {
 
 <!DOCTYPE html>
 <html lang="es">
-<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 	<title>MiProfesor</title>
 	<link rel="icon" href="../src/img/icon_prof.png">
 
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
+	<link rel="stylesheet" href="../src/css/common_feedback.css">
 	<link rel="stylesheet" href="css/prof_common.css">
-	<link rel="stylesheet" href="css/prof_feedback.css">
-	
+
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -65,15 +64,15 @@ if (!empty($_POST)) {
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
 
-			<div id="navbarIconsContainer">
-				<a id="navbarIcon" href="prof_read.php?id=<?php echo $color; ?>" class="material-icons">person</a>
-				<!-- <a id="navbarIcon" href="" class="material-icons">rate_review</a> -->
-				<a id="navbarIcon" href="prof_logout.php" class="material-icons">logout</a>
+			<div id="navbar_icon_container">
+				<a id="navbar_icon" href="prof_read.php?id=<?php echo $color; ?>" class="material-icons">person</a>
+				<!-- <a id="navbar_icon" href="" class="material-icons">rate_review</a> -->
+				<a id="navbar_icon" href="prof_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>
 	</navbar>
 	<navbar>
-		<div id="navbarAzul">
+		<div id="navbar_blue">
 			<img src="../src/img/logo_expo_prof.svg">
 			<a href="prof_start.php?id=<?php echo $color; ?>"><span class="material-icons">home</span>MiProfesor</a>
 		</div>
@@ -83,26 +82,21 @@ if (!empty($_POST)) {
 		<center>
 			<td style="width: 45%;">
 				<h2 style="color:#082460">
-					<center>
-						<br></br>
-						Comentarios y retroalimentación
-					</center>
+					Comentarios y retroalimentación
 				</h2>
 			</td>
 			<tr>
 				<td>
-					<input class=" input2" name="q5" style="width: 100% height: 100% "></input>
+					<input class="input_feedback" name="q5" style="width: 100% height: 100% "></input>
 				</td>
 			</tr>
 		</center>
-		<br>
 
-		<br>
 		<center>
 			<table style="width: 10%;">
-				<th class="botonbordeV" style=" text-align: center;">
-
-					<button type="submit" class="botonfinalV" id="botonfinalV"><strong>Enviar</strong></button>
+				<th class="prof_button_action_td" style=" text-align: center;">
+					<button type="submit" class="prof_button_action"
+						id="prof_button_action"><strong>Enviar</strong></button>
 				</th>
 			</table>
 		</center>

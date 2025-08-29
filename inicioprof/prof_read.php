@@ -19,13 +19,12 @@ if ($id == null) {
 
 <!DOCTYPE html>
 <html lang="es">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 	
 	<title>MiProfesor</title>
 	<link rel="icon" href="../src/img/icon_prof.png">
@@ -42,22 +41,20 @@ if ($id == null) {
 	<navbar>
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
-			<div id="navbarIconsContainer">
-				<a id="navbarIcon" href="prof_logout.php" class="material-icons">logout</a>
+			<div id="navbar_icon_container">
+				<a id="navbar_icon" href="prof_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>
 	</navbar>
 	<navbar>
-		<div id="navbarAzul">
+		<div id="navbar_blue">
 			<img src="../src/img/logo_expo_prof.svg">
 			<a href="prof_start.php"><span class="material-icons">home</span>MiProfesor</a>
 		</div>
 	</navbar>
 
-	<br>
 	<h1 align="center" style="color: #082460">Mis datos</h1>
 
-	<br>
 	<center>
 		<table>
 			<tr>
@@ -96,10 +93,10 @@ if ($id == null) {
 	if ($h == $data['id_profesor']) {
 		echo '<center>';
 
-		echo '<div class="botonbordeV" style="width: 14%; float: center;">';
+		echo '<div class="prof_button_action_td" style="width: 14%; float: center;">';
 		echo '<form  action="prof_promote.php" method="post">';
 		echo '<input type="hidden" name="id" value="' . $id . '"/>';
-		echo '<button class="botonfinalV" id="botonfinalV" type="submit">Convertirme en Juez</button>';
+		echo '<button class="prof_button_action" id="prof_button_action" type="submit">Convertirme en Juez</button>';
 		echo '</form></th>';
 		echo '</div>';
 

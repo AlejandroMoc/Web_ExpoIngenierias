@@ -29,21 +29,21 @@ body {
 }
 
 /* Íconos de barra blanca */
-#navbarIconsContainer {
+#navbar_icon_container {
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-#navbarIcon {
+#navbar_icon {
   font-size: 40px;
   text-decoration: none;
   color: black;
   margin-right: 10px;
 }
 
-/* Barra de navegación azul */
-#navbarAzul {
+/* Blue NavBar */
+#navbar_blue {
   background-color: #004d5b;
   height: 70px;
   display: flex;
@@ -52,20 +52,20 @@ body {
   align-items: center;
 }
 
-#navbarAzul img {
+#navbar_blue img {
   height: 80%;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-#navbarAzul a {
+#navbar_blue a {
   text-decoration: none;
   color: white;
   font-size: 30px;
   margin-right: 15px;
 }
 
-#navbarAzul span {
+#navbar_blue span {
   text-decoration: none;
   color: white;
   font-size: 30px;

@@ -1,7 +1,5 @@
 body {
   background-image: url("../../src/img/bg_login_student.png");
-  background-size: 100%;
-  font-family: "Inter";
 }
 
 .error {
@@ -12,6 +10,22 @@ body {
 }
 
 .button_login {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: aliceblue;
+  font-size: larger;
+  width: 95%;
+}
+#button_login:hover {
+  background: #006590;
+  color: white;
+}
+
+.button_login_td {
   margin: auto;
   padding: 0;
   border-radius: 40px;
@@ -20,11 +34,11 @@ body {
   width: 50%;
   height: 50px;
 }
-.button_login:hover {
+.button_login_td:hover {
   background: #006590;
 }
 
-.botonfinal {
+.button_login {
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
@@ -35,12 +49,12 @@ body {
   font-size: 150%;
   width: 50%;
 }
-#botonfinal:hover {
+#button_login:hover {
   background: #006590;
   color: white;
 }
 
-.botonborde2 {
+.button_login_border {
   margin: auto;
   padding: 0;
   border-radius: 30px;
@@ -49,11 +63,11 @@ body {
   width: 50%;
   height: 50px;
 }
-.botonborde2:hover {
+.button_login_border:hover {
   background: #006590;
 }
 
-.botonfinal2 {
+. button_create_account {
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
@@ -64,7 +78,7 @@ body {
   font-size: 135%;
   width: 50%;
 }
-#botonfinal2:hover {
+# button_create_account:hover {
   background: #006590;
   color: white;
 }

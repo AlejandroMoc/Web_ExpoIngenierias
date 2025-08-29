@@ -7,10 +7,10 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  font-family: Inter;
+  font-family: "Inter";
 }
 
-#buscador {
+#div_search {
   height: 10px;
   width: 30%;
   min-width: 300px;
@@ -18,12 +18,12 @@
   margin-top: 70px;
 }
 
-#buscador span {
+#div_search span {
   color: black;
   font-size: 20px;
 }
 
-.bloqueDesplegable {
+.dropdown_block {
   margin-top: 90px;
 }
 
@@ -43,12 +43,6 @@
   text-decoration: none;
   font-weight: 900;
   margin-left: 10px;
-}
-
-#listaUsuarios {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
 }
 
 #renglonListaUsuarios {
@@ -98,7 +92,7 @@
   min-width: 200px;
 }
 
-.botonesRenglonListaUsuarios {
+.button_row_userlist {
   margin-left: auto;
   display: flex;
   align-items: center;

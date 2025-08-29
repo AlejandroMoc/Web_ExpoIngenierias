@@ -1,20 +1,8 @@
-
-
-#cuerpazo {
-  background-image: url("../../src/img/bg_admin.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  font-family: Inter;
-}
-
-/* Sitio */
-.bloqueDesplegable {
+.dropdown_block {
   margin-top: 50px;
 }
 
-.bloqueDesplegable2 {
+.dropdown_block2 {
   margin-bottom: 50px;
 }
 
@@ -38,12 +26,6 @@
   text-decoration: none;
   font-weight: 900;
   margin-left: 10px;
-}
-
-#listaUsuarios {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
 }
 
 #renglonListaUsuarios {
@@ -83,11 +65,11 @@
   color: white;
 }
 
-.botonesRenglonListaUsuarios {
+.button_row_userlist {
   margin-left: auto;
 }
 
-#menuProfes {
+#prof_menu {
   padding: 5px;
   margin-right: 10px;
   color: white;
@@ -96,13 +78,13 @@
   border-radius: 10px;
 }
 
-#botonSubm {
+#button_submit {
   border: none;
   background-color: transparent;
   color: white;
 }
 
-#tituloProy {
+#proj_title {
   margin-top: 50px;
   margin-bottom: 10px;
   color: #004d5b;

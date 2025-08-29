@@ -2,13 +2,16 @@
 session_start();
 require '../src/php/database.php';
 $id = null;
+// Check if an ID is provided
 if (!empty($_GET['id'])) {
 	$id = $_REQUEST['id'];
 }
 
+// If an ID is not provided, redirect to the index
 if ($id == null) {
 	header("Location: index.php");
 } else {
+	// Get the project data using the ID
 	$pdo = Database::connect();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$sql = "SELECT id_proyecto AS proyecmat FROM proyecto status WHERE id_proyecto=?";
@@ -21,13 +24,12 @@ if ($id == null) {
 
 <!DOCTYPE html>
 <html lang="es">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 	<link rel="icon" href="../src/img/icon_student.png">
 
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
@@ -43,13 +45,13 @@ if ($id == null) {
 	<navbar>
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
-			<div id="navbarIconsContainer">
-				<a id="navbarIcon" href="student_logout.php" class="material-icons">logout</a>
+			<div id="navbar_icon_container">
+				<a id="navbar_icon" href="student_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>
 	</navbar>
 	<navbar>
-		<div id="navbarAzul">
+		<div id="navbar_blue">
 			<img src="../src/img/logo_expo_student.svg">
 			<a href="student_start.php"><span class="material-icons">home</span>MiEstudiante</a>
 		</div>

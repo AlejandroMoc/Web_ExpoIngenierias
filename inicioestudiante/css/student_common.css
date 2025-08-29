@@ -19,20 +19,6 @@ body {
   background-color: #e6e6e6;
   height: 30px;
   width: 100%;
-  font-size: 14px;
-}
-
-.input2 {
-  margin: 0;
-  padding: 0;
-  border-radius: 10px;
-  border: 0;
-  background-color: #e6e6e6;
-  height: 30px;
-  width: 50%;
-  font-size: 14px;
-  border-spacing: 1000px;
-  border-collapse: collapse;
 }
 
 .button_create {
@@ -47,27 +33,10 @@ body {
   background: #bb93d5ff;
 }
 
-.botonfinal {
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
-  color: aliceblue;
-  font-size: larger;
-  width: 95%;
-}
-
 .logo {
   background-color: #003944;
   height: 100%;
   border-radius: 10px;
-}
-
-#botonfinal:hover {
-  background: #006590;
-  color: white;
 }
 
 .button_create:hover {
@@ -108,46 +77,4 @@ hr {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: #f1f1f1;
-}
-
-.scrollogo {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  background-color: white;
-}
-
-.alv {
-  text-decoration: none;
-  color: white;
-}
-
-#botonfinal2:hover {
-  background: #f29d9d;
-  color: white;
-}
-
-.botonborde2:hover {
-  background: #f29d9d;
-}
-
-.botonborde2 {
-  margin: auto;
-  padding: 0;
-  border-radius: 10px;
-  border: 0;
-  background-color: #e64545;
-}
-
-.botonfinal2 {
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
-  color: aliceblue;
-  font-size: larger;
 }

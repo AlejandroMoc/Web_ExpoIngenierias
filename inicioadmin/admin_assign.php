@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 	<title>MiAdmin</title>
 	<link rel="icon" href="../src/img/icon_admin.png">
 
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" href="css/admin_assign.css">
-	
 	
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -24,15 +23,15 @@
 	<navbar>
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
-			<div id="navbarIconsContainer">
-				<a id="navbarIcon" href="" class="material-icons">person</a>
-				<a id="navbarIcon" href="admin_assign.php" class="material-icons">rate_review</a>
-				<a id="navbarIcon" href="admin_logout.php" class="material-icons">logout</a>
+			<div id="navbar_icon_container">
+				<a id="navbar_icon" href="" class="material-icons">person</a>
+				<a id="navbar_icon" href="admin_assign.php" class="material-icons">rate_review</a>
+				<a id="navbar_icon" href="admin_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>
 	</navbar>
 	<navbar>
-		<div id="navbarAzul">
+		<div id="navbar_blue">
 			<img src="../src/img/logo_expo_admin.svg">
 			<a href="">Asignar proyectos</a>
 			<a href="admin_start.php"><span class="material-icons">home</span>MiAdmin</a>
@@ -64,8 +63,9 @@
 		}
 	}
 	?>
+
 	<center>
-		<div class="accordion bloqueDesplegable" id="desplegableGeneral">
+		<div class="accordion dropdown_block" id="desplegableGeneral">
 			<div class="accordion-item">
 				<h2 class="accordion-header">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -76,8 +76,7 @@
 				<div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#desplegableGeneral">
 					<div class="accordion-body">
 						<?php
-						//include '../src/php/database.php';
-						//$pdo = Database::connect();
+
 						$sql3 = 'SELECT * FROM proyecto WHERE id_proyecto not in (SELECT id_proyecto FROM califica) AND id_categoria = 1';
 						$sql4 = 'SELECT * FROM juez';
 
@@ -91,23 +90,21 @@
 							echo '<span>' . $proyecto['nombre'] . '</span>';
 							echo '</div>';
 							echo '<span id="lider">' . 'Líder: ' . $proyecto['lider'] . '</span>';
-							echo '<div class="botonesRenglonListaUsuarios">';
+							echo '<div class="button_row_userlist">';
 							echo '<form action="admin_assign_prof.php" method="post">';
-							echo '<select id="menuProfes" name="menuJuez">';
+							echo '<select id="prof_menu" name="menuJuez">';
 							echo '<option value="" disable selected>Jueces Disponibles</option>';
 							foreach ($pdo->query($sql4) as $jueze) {
 								echo '<option value=' . $proyecto['id_proyecto'] . '|' . $jueze['id_juez'] . '>' . $jueze['nombre'] . ' ' . $jueze['apellido_paterno'] . '</option>';
 							}
 							echo '</select>';
-							echo '<button type="submit" id="botonSubm" class="material-icons">save_as</button>';
+							echo '<button type="submit" id="button_submit" class="material-icons">save_as</button>';
 							echo '</form>';
 							echo '</div>';
 							echo '</div>';
 
 						}
-						//echo '</div>';
-						
-						//Database::disconnect();
+
 						?>
 					</div>
 				</div>
@@ -122,8 +119,7 @@
 				<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#desplegableGeneral">
 					<div class="accordion-body">
 						<?php
-						//include '../src/php/database.php';
-						//$pdo = Database::connect();
+
 						$sql3 = 'SELECT * FROM proyecto WHERE id_proyecto not in (SELECT id_proyecto FROM califica) AND id_categoria = 2';
 						$sql4 = 'SELECT * FROM juez';
 
@@ -137,23 +133,21 @@
 							echo '<span>' . $proyecto['nombre'] . '</span>';
 							echo '</div>';
 							echo '<span id="lider">' . 'Líder: ' . $proyecto['lider'] . '</span>';
-							echo '<div class="botonesRenglonListaUsuarios">';
+							echo '<div class="button_row_userlist">';
 							echo '<form action="admin_assign_prof.php" method="post">';
-							echo '<select id="menuProfes" name="menuJuez">';
+							echo '<select id="prof_menu" name="menuJuez">';
 							echo '<option value="" disable selected>Jueces Disponibles</option>';
 							foreach ($pdo->query($sql4) as $jueze) {
 								echo '<option value=' . $proyecto['id_proyecto'] . '|' . $jueze['id_juez'] . '>' . $jueze['nombre'] . ' ' . $jueze['apellido_paterno'] . '</option>';
 							}
 							echo '</select>';
-							echo '<button type="submit" id="botonSubm" class="material-icons">save_as</button>';
+							echo '<button type="submit" id="button_submit" class="material-icons">save_as</button>';
 							echo '</form>';
 							echo '</div>';
 							echo '</div>';
 
 						}
-						//echo '</div>';
-						
-						//Database::disconnect();
+
 						?>
 					</div>
 				</div>
@@ -168,8 +162,7 @@
 				<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#desplegableGeneral">
 					<div class="accordion-body">
 						<?php
-						//include '../src/php/database.php';
-						//$pdo = Database::connect();
+
 						$sql3 = 'SELECT * FROM proyecto WHERE id_proyecto not in (SELECT id_proyecto FROM califica) AND id_categoria = 3';
 						$sql4 = 'SELECT * FROM juez';
 
@@ -183,23 +176,21 @@
 							echo '<span>' . $proyecto['nombre'] . '</span>';
 							echo '</div>';
 							echo '<span id="lider">' . 'Líder: ' . $proyecto['lider'] . '</span>';
-							echo '<div class="botonesRenglonListaUsuarios">';
+							echo '<div class="button_row_userlist">';
 							echo '<form action="admin_assign_prof.php" method="post">';
-							echo '<select id="menuProfes" name="menuJuez">';
+							echo '<select id="prof_menu" name="menuJuez">';
 							echo '<option value="" disable selected>Jueces Disponibles</option>';
 							foreach ($pdo->query($sql4) as $jueze) {
 								echo '<option value=' . $proyecto['id_proyecto'] . '|' . $jueze['id_juez'] . '>' . $jueze['nombre'] . ' ' . $jueze['apellido_paterno'] . '</option>';
 							}
 							echo '</select>';
-							echo '<button type="submit" id="botonSubm" class="material-icons">save_as</button>';
+							echo '<button type="submit" id="button_submit" class="material-icons">save_as</button>';
 							echo '</form>';
 							echo '</div>';
 							echo '</div>';
 
 						}
-						//echo '</div>';
-						
-						//Database::disconnect();
+
 						?>
 					</div>
 				</div>
@@ -214,8 +205,7 @@
 				<div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#desplegableGeneral">
 					<div class="accordion-body">
 						<?php
-						//include '../src/php/database.php';
-						//$pdo = Database::connect();
+
 						$sql3 = 'SELECT * FROM proyecto WHERE id_proyecto not in (SELECT id_proyecto FROM califica) AND id_categoria = 4';
 						$sql4 = 'SELECT * FROM juez';
 
@@ -229,23 +219,21 @@
 							echo '<span>' . $proyecto['nombre'] . '</span>';
 							echo '</div>';
 							echo '<span id="lider">' . 'Líder: ' . $proyecto['lider'] . '</span>';
-							echo '<div class="botonesRenglonListaUsuarios">';
+							echo '<div class="button_row_userlist">';
 							echo '<form action="admin_assign_prof.php" method="post">';
-							echo '<select id="menuProfes" name="menuJuez">';
+							echo '<select id="prof_menu" name="menuJuez">';
 							echo '<option value="" disable selected>Jueces Disponibles</option>';
 							foreach ($pdo->query($sql4) as $jueze) {
 								echo '<option value=' . $proyecto['id_proyecto'] . '|' . $jueze['id_juez'] . '>' . $jueze['nombre'] . ' ' . $jueze['apellido_paterno'] . '</option>';
 							}
 							echo '</select>';
-							echo '<button type="submit" id="botonSubm" class="material-icons">save_as</button>';
+							echo '<button type="submit" id="button_submit" class="material-icons">save_as</button>';
 							echo '</form>';
 							echo '</div>';
 							echo '</div>';
 
 						}
-						//echo '</div>';
-						
-						//Database::disconnect();
+
 						?>
 					</div>
 				</div>
@@ -260,8 +248,7 @@
 				<div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#desplegableGeneral">
 					<div class="accordion-body">
 						<?php
-						//include '../src/php/database.php';
-						//$pdo = Database::connect();
+
 						$sql3 = 'SELECT * FROM proyecto WHERE id_proyecto not in (SELECT id_proyecto FROM califica) AND id_categoria = 5';
 						$sql4 = 'SELECT * FROM juez';
 
@@ -275,31 +262,27 @@
 							echo '<span>' . $proyecto['nombre'] . '</span>';
 							echo '</div>';
 							echo '<span id="lider">' . 'Líder: ' . $proyecto['lider'] . '</span>';
-							echo '<div class="botonesRenglonListaUsuarios">';
+							echo '<div class="button_row_userlist">';
 							echo '<form action="admin_assign_prof.php" method="post">';
-							echo '<select id="menuProfes" name="menuJuez">';
+							echo '<select id="prof_menu" name="menuJuez">';
 							echo '<option value="" disable selected>Jueces Disponibles</option>';
 							foreach ($pdo->query($sql4) as $jueze) {
 								echo '<option value=' . $proyecto['id_proyecto'] . '|' . $jueze['id_juez'] . '>' . $jueze['nombre'] . ' ' . $jueze['apellido_paterno'] . '</option>';
 							}
 							echo '</select>';
-							echo '<button type="submit" id="botonSubm" class="material-icons">save_as</button>';
+							echo '<button type="submit" id="button_submit" class="material-icons">save_as</button>';
 							echo '</form>';
 							echo '</div>';
 							echo '</div>';
-
 						}
-						//echo '</div>';
-						
-						//Database::disconnect();
+
 						?>
 					</div>
 				</div>
 			</div>
 		</div>
 
-
-		<label id="tituloProy">Proyectos Asignados</label>
+		<label id="proj_title">Proyectos Asignados</label>
 
 		<?php
 		//include '../src/php/database.php';
@@ -327,8 +310,7 @@
 		}
 		?>
 
-
-		<div class="accordion bloqueDesplegable2" id="desplegableGeneral2">
+		<div class="accordion dropdown_block2" id="desplegableGeneral2">
 			<div class="accordion-item">
 				<h2 class="accordion-header">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -339,8 +321,7 @@
 				<div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#desplegableGeneral2">
 					<div class="accordion-body">
 						<?php
-						//include '../src/php/database.php';
-						//$pdo = Database::connect();
+
 						$sql3 = 'SELECT * FROM proyecto 
                                     INNER JOIN califica ON proyecto.id_proyecto = califica.id_proyecto  
                                     WHERE proyecto.id_categoria = 1';
@@ -359,9 +340,7 @@
 							echo '</div>';
 
 						}
-						//echo '</div>';
-						
-						//Database::disconnect();
+
 						?>
 					</div>
 				</div>
@@ -376,8 +355,7 @@
 				<div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#desplegableGeneral2">
 					<div class="accordion-body">
 						<?php
-						//include '../src/php/database.php';
-						//$pdo = Database::connect();
+
 						$sql3 = 'SELECT * FROM proyecto 
                                     INNER JOIN califica ON proyecto.id_proyecto = califica.id_proyecto  
                                     WHERE proyecto.id_categoria = 2';
@@ -396,9 +374,7 @@
 							echo '</div>';
 
 						}
-						//echo '</div>';
-						
-						//Database::disconnect();
+
 						?>
 					</div>
 				</div>
@@ -413,8 +389,7 @@
 				<div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#desplegableGeneral2">
 					<div class="accordion-body">
 						<?php
-						//include '../src/php/database.php';
-						//$pdo = Database::connect();
+
 						$sql3 = 'SELECT * FROM proyecto 
                                     INNER JOIN califica ON proyecto.id_proyecto = califica.id_proyecto  
                                     WHERE proyecto.id_categoria = 3';
@@ -433,9 +408,7 @@
 							echo '</div>';
 
 						}
-						//echo '</div>';
-						
-						//Database::disconnect();
+
 						?>
 					</div>
 				</div>
@@ -450,8 +423,7 @@
 				<div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#desplegableGeneral2">
 					<div class="accordion-body">
 						<?php
-						//include '../src/php/database.php';
-						//$pdo = Database::connect();
+
 						$sql3 = 'SELECT * FROM proyecto 
                                     INNER JOIN califica ON proyecto.id_proyecto = califica.id_proyecto  
                                     WHERE proyecto.id_categoria = 4';
@@ -470,9 +442,7 @@
 							echo '</div>';
 
 						}
-						//echo '</div>';
-						
-						//Database::disconnect();
+
 						?>
 					</div>
 				</div>
@@ -487,8 +457,7 @@
 				<div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#desplegableGeneral2">
 					<div class="accordion-body">
 						<?php
-						//include '../src/php/database.php';
-						//$pdo = Database::connect();
+
 						$sql3 = 'SELECT * FROM proyecto 
                                     INNER JOIN califica ON proyecto.id_proyecto = califica.id_proyecto  
                                     WHERE proyecto.id_categoria = 5';
@@ -507,9 +476,7 @@
 							echo '</div>';
 
 						}
-						//echo '</div>';
-						
-						//Database::disconnect();
+
 						?>
 					</div>
 				</div>

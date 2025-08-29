@@ -20,7 +20,7 @@ Follow these steps to get the project running on your local machine.
 ### 1. Place Project Files
 
 1. Clone the project or download a `.zip` file. Then, unzip it.
-2. Copy the entire `Web_ExpoIngenierias` folder into your web server's document root. While using XAMPP, follow the next path: `C:\xampp\htdocs\`
+2. Copy the entire `Web_ExpoIngenierias` folder into your web server's document root. While using XAMPP, follow the next path on Windows: `C:\xampp\htdocs\`
 
 ### 2. Database Setup
 
@@ -52,11 +52,7 @@ The PHP application needs to know how to connect to the database. Therefore, it 
 1. You must update the database connection credentials in the project's PHP files. Navigate to the following files:
 
    - `src/php/db_credentials.php`
-
-   - `inicioadmin/../src/php/database.php`
-   - `inicioestudiante/../src/php/database.php`
-   - `iniciojuez/../src/php/database.php`
-   - `inicioprof/../src/php/database.php`
+   - `src/php/database.php`
 
 2. Open these file in a code editor. You will see code like this:
 

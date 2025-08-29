@@ -73,7 +73,7 @@ if (!empty($_POST)) {
 	function verifyPassword() {
 		var pw = document.getElementById("pass").value;
 		var vpw = document.getElementById("confirmPassword").value;
-		//check empty password field  
+		// Check empty password field  
 		if (pw != vpw) {
 			document.getElementById("message").innerHTML = "Las contraseñas no coinciden";
 			return false;
@@ -85,7 +85,7 @@ if (!empty($_POST)) {
 			return false;
 		}
 
-		// Maximum length of password validation  
+		// Maximum password length validation  
 		if (pw.length > 50) {
 			document.getElementById("message").innerHTML = "La contraseña no puede tener mas de 50 caracteres";
 			return false;
@@ -97,13 +97,12 @@ if (!empty($_POST)) {
 
 <!DOCTYPE html>
 <html lang="es">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 	<title>MiJuez</title>
 	<link rel="icon" href="../src/img/icon_student.png">
@@ -115,19 +114,19 @@ if (!empty($_POST)) {
 </head>
 
 <body>
-	<!-- Barra de navegación checar navbarIcon -->
+	<!-- Barra de navegación checar navbar_icon -->
 	<navbar>
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
-			<div id="navbarIconsContainer">
-				<a id="navbarIcon" href="" class="material-icons">person</a>
-				<!-- <a id="navbarIcon" href="" class="material-icons">rate_review</a> -->
-				<a id="navbarIcon" href="judge_logout.php" class="material-icons">logout</a>
+			<div id="navbar_icon_container">
+				<a id="navbar_icon" href="" class="material-icons">person</a>
+				<!-- <a id="navbar_icon" href="" class="material-icons">rate_review</a> -->
+				<a id="navbar_icon" href="judge_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>
 	</navbar>
 	<navbar>
-		<div id="navbarAzul">
+		<div id="navbar_blue">
 			<img src="../src/img/logo_expo_student.svg">
 			<a href="judge_start.php"><span class="material-icons">home</span>MiJuez</a>
 		</div>
@@ -137,7 +136,7 @@ if (!empty($_POST)) {
 		<table width="100%">
 			<tr>
 				<td>
-					<p class="create_paragraph"><strong> Nombre(s) y apellidos</strong>
+					<p class="create_paragraph"><strong> Nombre(s) y apellidos</strong></p>
 				</td>
 			</tr>
 
@@ -153,9 +152,9 @@ if (!empty($_POST)) {
 			<tr>
 				<td>
 					<input type="text" id="apellidoP" name="apellidoP" required maxlength="30"
-						placeholder="  Apellido Pat." size="50" class="input2"
+						placeholder="  Apellido Pat." size="50" class="input_create"
 						value="<?php echo !empty($apellidoP) ? $apellidoP : ''; ?>"><input type="text" id="apellidoM"
-						name="apellidoM" required maxlength="30" placeholder="  Apellido Mat." size="50" class="input2"
+						name="apellidoM" required maxlength="30" placeholder="  Apellido Mat." size="50" class="input_create"
 						value="<?php echo !empty($apellidoM) ? $apellidoM : ''; ?>">
 					<?php if (($apellidoPError != null)) ?>
 					<span class="help-inline"><?php echo $apellidoPError; ?></span>
@@ -235,7 +234,6 @@ if (!empty($_POST)) {
 				</td>
 			</tr>
 
-
 			<tr>
 				<td>
 					<p class="create_paragraph"><strong> Confirma tu contraseña</strong>
@@ -254,16 +252,16 @@ if (!empty($_POST)) {
 
 			<tr>
 				<td class="button_create" style="width: 33.33%;">
-					<button class="botonfinal" id="botonfinal" type="submit">
+					<button class="button_create" id="button_create" type="submit">
 						<strong>Crear cuenta</strong>
 					</button>
 				</td>
 			</tr>
 
 			<tr>
-				<td class="botonborde2">
-					<button class="botonfinal2">
-						<strong><a href="index.php" class="alv">Regresar</a></strong>
+				<td class="button_create_border">
+					<button class="button_create_return">
+						<strong><a href="index.php" class="return_button_text">Regresar</a></strong>
 					</button>
 				</td>
 			</tr>

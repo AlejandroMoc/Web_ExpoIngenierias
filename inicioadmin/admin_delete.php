@@ -1,12 +1,13 @@
 <?php
-
 require '../src/php/database.php';
 
+// Initialize ID variable and request ID
 $id = 0;
 if (!empty($_GET['id'])) {
 	$id = $_REQUEST['id'];
 }
 
+// Determine user type based on ID prefix
 if ($id[0] == "A") {
 	$user_type = " Estudiante";
 } elseif ($id[0] == "L") {
@@ -15,36 +16,35 @@ if ($id[0] == "A") {
 	$user_type = " Juez";
 }
 
+// Check if the form has been submitted (POST request)
 if (!empty($_POST)) {
 
+	// Get ID from POST request and connect to database
 	$id = $_POST['id'];
-
 	$pdo = Database::connect();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+	// Perform delete operation based on user type (first letter of ID)
 	if ($id[0] == "A") {
 		$id = $_POST['id'];
-		// Delete data
 		$sql2 = "DELETE FROM estudiante WHERE id_estudiante = ?";
 		$q2 = $pdo->prepare($sql2);
 		$q2->execute(array($id));
+	
 	} elseif ($id[0] == "L") {
 		$id = $_POST['id'];
-		// Delete data
 		$sql4 = "DELETE FROM profesor WHERE id_profesor = ?";
 		$q4 = $pdo->prepare($sql4);
 		$q4->execute(array($id));
+	
 	} elseif ($id[0] == "X") {
 		$id = $_POST['id'];
-
-		//$id = ltrim($id, 'X');
-		// Delete data
 		$sql5 = "DELETE FROM juez WHERE id_juez = ?";
 		$q5 = $pdo->prepare($sql5);
 		$q5->execute(array($id));
 	}
 
-	Database::disconnect();
+	// Disconnect from the database and redirect
 	header("Location: admin_start.php");
 }
 
@@ -52,12 +52,12 @@ if (!empty($_POST)) {
 
 <!DOCTYPE html>
 <html lang="es">
-<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 	<title>MiAdmin</title>
 	<link rel="icon" href="../src/img/icon_admin.png">
@@ -76,15 +76,15 @@ if (!empty($_POST)) {
 	<navbar>
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
-			<div id="navbarIconsContainer">
-				<a id="navbarIcon" href="" class="material-icons">person</a>
-				<a id="navbarIcon" href="admin_assign.php" class="material-icons">rate_review</a>
-				<a id="navbarIcon" href="admin_logout.php" class="material-icons">logout</a>
+			<div id="navbar_icon_container">
+				<a id="navbar_icon" href="" class="material-icons">person</a>
+				<a id="navbar_icon" href="admin_assign.php" class="material-icons">rate_review</a>
+				<a id="navbar_icon" href="admin_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>
 	</navbar>
 	<navbar>
-		<div id="navbarAzul">
+		<div id="navbar_blue">
 			<img src="../src/img/logo_expo_admin.svg">
 			<a href=""><?php echo "Eliminar" . $user_type ?></a>
 			<a href="admin_start.php"><span class="material-icons">home</span>MiAdmin</a>

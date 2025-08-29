@@ -2,7 +2,7 @@
 /* prof_read.php */
 /* prof_view.php */
 
-.botonbordeV {
+.prof_button_action_td {
   padding: 0;
   border-radius: 10px;
   border: 0;
@@ -10,12 +10,12 @@
   display: flex;
   justify-content: center;
 }
-.botonbordeV:hover {
+.prof_button_action_td:hover {
   border-radius: 10px;
   background: #082460;
 }
 
-.botonfinalV {
+.prof_button_action {
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
@@ -25,8 +25,27 @@
   color: aliceblue;
   font-size: 150%;
 }
-#botonfinalV:hover {
+#prof_button_action:hover {
   border-radius: 10px;
   background: #082460;
   color: white;
+}
+
+.button_reject {
+  padding: 0;
+  border-radius: 10px;
+  border: 0;
+  background-color: #d00000;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: aliceblue;
+  font-size: 150%;
+  text-decoration: none;
+}
+#button_reject:hover {
+  background: #600000;
+  color: white;
+  text-decoration: none;
 }

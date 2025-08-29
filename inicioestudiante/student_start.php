@@ -1,12 +1,15 @@
 <?php
 require '../src/php/database.php';
 $id = null;
+// Check if an ID is provided
 if (!empty($_GET['id'])) {
 	$id = $_REQUEST['id'];
 }
+// If no ID was passed, redirect to the index page
 if ($id == null) {
 	header("Location: index.php");
 } else {
+	// Retrieve the student data from the database
 	$pdo = Database::connect();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$sql = "SELECT * FROM estudiante where id_estudiante = ?";
@@ -22,19 +25,18 @@ $_SESSION['pro'] = "CU0201";
 
 <!DOCTYPE html>
 <html lang="es">
-<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 	<title>MiEstudiante</title>
 	<link rel="icon" href="../src/img/icon_student.png">
 	
 	<link rel="stylesheet" href="../src/css/common_navbar.css">
 	<link rel="stylesheet" href="css/student_start.css">
-	
 	
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -50,7 +52,7 @@ $_SESSION['pro'] = "CU0201";
 		</div>
 	</navbar>
 	<navbar>
-		<div id="navbarAzul">
+		<div id="navbar_blue">
 			<img src="../src/img/logo_expo_student.svg">
 			<a href="student_start.php"><span class="material-icons">home</span>MiEstudiante</a>
 		</div>
@@ -75,7 +77,7 @@ $_SESSION['pro'] = "CU0201";
 	$idpp = $data['id_proyecto'];
 
 	?>
-	<br>
+
 	<h1 align="center" style="color: #082460">Bienvenido <?php echo $data['nombre'] ?></h1>
 	<?php
 	$pdo = Database::connect();

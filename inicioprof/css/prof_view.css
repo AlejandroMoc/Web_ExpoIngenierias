@@ -59,23 +59,6 @@
   color: white;
 }
 
-.button_reject {
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
-  color: aliceblue;
-  font-size: larger;
-  text-decoration: none;
-}
-#button_reject:hover {
-  background: #600000;
-  color: white;
-  text-decoration: none;
-}
-
 .button_border_reject {
   margin: auto;
   padding: 0;

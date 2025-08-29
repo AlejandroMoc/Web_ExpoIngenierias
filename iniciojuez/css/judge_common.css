@@ -16,21 +16,11 @@ body {
   background-color: #e6e6e6;
   height: 30px;
   width: 100%;
-  font-size: 14px;
 }
 
-#text1 {
+#judge_text_x {
   text-decoration: none;
   background-color: #13466c;
-}
-
-.input2 {
-  margin: 0;
-  padding: 0;
-  border-radius: 10px;
-  border: 0;
-  background-color: #e6e6e6;
-  font-size: 14px;
 }
 
 .border {
@@ -60,19 +50,4 @@ td {
   border-radius: 10px;
 }
 
-.botonfinal2 {
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
-  color: aliceblue;
-  font-size: 135%;
-  width: 50%;
-}
 
-#botonfinal2:hover {
-  background: #a12a2a;
-  color: white;
-}

@@ -13,13 +13,12 @@ if ($id == null) {
 
 <!DOCTYPE html>
 <html lang="es">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 	<title>MiProfesor</title>
 	<link rel="icon" href="../src/img/icon_prof.png">
@@ -36,15 +35,15 @@ if ($id == null) {
 		<div id="navbar">
 			<img src="../src/img/logo_tec_blue.png">
 
-			<div id="navbarIconsContainer">
-				<a id="navbarIcon" href="prof_read.php?id=<?php echo $color; ?>" class="material-icons">person</a>
-				<!-- <a id="navbarIcon" href="" class="material-icons">rate_review</a> -->
-				<a id="navbarIcon" href="prof_logout.php" class="material-icons">logout</a>
+			<div id="navbar_icon_container">
+				<a id="navbar_icon" href="prof_read.php?id=<?php echo $color; ?>" class="material-icons">person</a>
+				<!-- <a id="navbar_icon" href="" class="material-icons">rate_review</a> -->
+				<a id="navbar_icon" href="prof_logout.php" class="material-icons">logout</a>
 			</div>
 		</div>
 	</navbar>
 	<navbar>
-		<div id="navbarAzul">
+		<div id="navbar_blue">
 			<img src="../src/img/logo_expo_prof.svg">
 			<a href="prof_start.php?id=<?php echo $color; ?>"><span class="material-icons">home</span>MiProfesor</a>
 		</div>
@@ -87,7 +86,6 @@ if ($id == null) {
 						echo '</tr>';
 					}
 					Database::disconnect();
-
 
 					?>
 
